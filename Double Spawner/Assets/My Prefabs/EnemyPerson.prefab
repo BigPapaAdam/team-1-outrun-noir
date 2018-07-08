@@ -109,4 +109,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHealth: 1
-  enemySpeed: 0
+  enemySpeed: -0.3
