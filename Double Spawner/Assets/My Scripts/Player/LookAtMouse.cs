@@ -5,7 +5,7 @@ using UnityEngine;
 public class LookAtMouse : MonoBehaviour {
 
 
-    float camRayLength = 100f;
+    float camRayLength = 1000f;
     //public Rigidbody playerRigidbody;
 
     // Use this for initialization

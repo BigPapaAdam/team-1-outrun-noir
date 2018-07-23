@@ -2,46 +2,47 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PistolShooter : MonoBehaviour {
+public class TommyShooter : MonoBehaviour {
 
-    public float pistolRate = 1.0f;
+    public float tommyRate = 0.5f;
     private float timeOfShot = 0.0f;
 
     public GameObject playerObj;
     public GameObject pistolObj;
     public GameObject tommyObj;
     public GameObject shotgunObj;
-
     public GameObject myBullet;
 
 
     public AudioSource aSource;
-    public AudioClip pistolShot;
+    public AudioClip tommyShot;
+
     // Use this for initialization
     void Start () {
         aSource = playerObj.GetComponent<AudioSource>();
+
     }
-	
-	// Update is called once per frame
-	void Update () {
-        pistolObj.SetActive(true);
-        tommyObj.SetActive(false);
+
+    // Update is called once per frame
+    void Update () {
+        pistolObj.SetActive(false);
+        tommyObj.SetActive(true);
         shotgunObj.SetActive(false);
 
-        PistolFire();
+        TommyFire();
+
     }
 
-    void PistolFire()
+    void TommyFire()
     {
         if (Input.GetButton("Fire1"))
         {
-            if (Time.time > timeOfShot + pistolRate)
+            if (Time.time > timeOfShot + tommyRate)
             {
                 Instantiate(myBullet, transform.position, transform.rotation);
-                aSource.PlayOneShot(pistolShot);
+                aSource.PlayOneShot(tommyShot);
                 timeOfShot = Time.time;
             }
         }
     }
-
 }
