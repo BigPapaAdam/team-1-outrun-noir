@@ -13,6 +13,12 @@ public class ShotgunShooter : MonoBehaviour {
     public GameObject shotgunObj;
     public GameObject myBullet;
 
+    public GameObject bulletSPLeft;
+    public GameObject bulletSPFrontLeft;
+    public GameObject bulletSPFrontRight;
+    public GameObject bulletSPRight;
+
+
 
     public AudioSource aSource;
     public AudioClip shotgunShot;
@@ -38,7 +44,11 @@ public class ShotgunShooter : MonoBehaviour {
             if (Time.time > timeOfShot + shotgunRate)
             {
                 aSource.PlayOneShot(shotgunShot);
-                Instantiate(myBullet, transform.position, transform.rotation);
+                Instantiate(myBullet, bulletSPLeft.transform.position, bulletSPLeft.transform.rotation);
+                Instantiate(myBullet, bulletSPFrontLeft.transform.position, bulletSPFrontLeft.transform.rotation);
+                Instantiate(myBullet, bulletSPFrontRight.transform.position, bulletSPFrontRight.transform.rotation);
+                Instantiate(myBullet, bulletSPRight.transform.position, bulletSPRight.transform.rotation);
+
                 timeOfShot = Time.time;
             }
         }
