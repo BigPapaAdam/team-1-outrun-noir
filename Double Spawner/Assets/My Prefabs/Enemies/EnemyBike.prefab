@@ -110,3 +110,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyHealth: 3
   enemySpeed: -0.05
+  pointWorth: 0
