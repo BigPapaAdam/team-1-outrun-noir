@@ -6,8 +6,6 @@ TagManager:
   tags:
   - Enemy
   - Bullet
-  - TommyPickup
-  - ShotgunPickup
   layers:
   - Default
   - TransparentFX

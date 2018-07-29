@@ -349,10 +349,6 @@ Transform:
   - {fileID: 330831514}
   - {fileID: 1321848033}
   - {fileID: 1775663824}
-  - {fileID: 1384390845}
-  - {fileID: 1067167554}
-  - {fileID: 1490635560}
-  - {fileID: 2056114729}
   m_Father: {fileID: 1274696122}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -460,6 +456,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 696609852}
+  - component: {fileID: 696609853}
   - component: {fileID: 696609856}
   - component: {fileID: 696609855}
   - component: {fileID: 696609854}
@@ -483,27 +480,46 @@ Transform:
   m_Father: {fileID: 371629939}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &696609853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 696609851}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67d42a2af0692f04198eb77210cb8b75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myBullet: {fileID: 1264289126699948, guid: 14435b0436a1c844fb6ee97ceb0de07b, type: 2}
+  pistolRate: 1
+  tommyRate: 0.5
+  shotgunRate: 0.2
+  playerObj: {fileID: 1274696118}
+  pistolObj: {fileID: 330831513}
+  tommyObj: {fileID: 1321848032}
+  shotgunObj: {fileID: 1775663823}
+  aSource: {fileID: 0}
+  pistolShot: {fileID: 0}
+  tommyShot: {fileID: 0}
+  shotgunShot: {fileID: 0}
 --- !u!114 &696609854
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 696609851}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 032ebf2e9f4a9ac4da51134dd6f0294d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shotgunRate: 0.5
+  shotgunRate: 0.2
   playerObj: {fileID: 1274696118}
   pistolObj: {fileID: 330831513}
   tommyObj: {fileID: 1321848032}
   shotgunObj: {fileID: 1775663823}
   myBullet: {fileID: 1264289126699948, guid: 14435b0436a1c844fb6ee97ceb0de07b, type: 2}
-  bulletSPLeft: {fileID: 1384390844}
-  bulletSPFrontLeft: {fileID: 1067167553}
-  bulletSPFrontRight: {fileID: 1490635559}
-  bulletSPRight: {fileID: 2056114728}
   aSource: {fileID: 0}
   shotgunShot: {fileID: 0}
 --- !u!114 &696609855
@@ -512,12 +528,12 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 696609851}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b107fda7d18436e49b57992facaffbb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tommyRate: 0.2
+  tommyRate: 0.5
   playerObj: {fileID: 1274696118}
   pistolObj: {fileID: 330831513}
   tommyObj: {fileID: 1321848032}
@@ -877,34 +893,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!1 &1067167553
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1067167554}
-  m_Layer: 0
-  m_Name: EGO BulletSPFrontLeft
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1067167554
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1067167553}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.53, y: 0, z: 1.98}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 371629939}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1192085227
 GameObject:
   m_ObjectHideFlags: 0
@@ -1117,7 +1105,6 @@ GameObject:
   - component: {fileID: 1274696123}
   - component: {fileID: 1274696125}
   - component: {fileID: 1274696126}
-  - component: {fileID: 1274696124}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1212,19 +1199,6 @@ MonoBehaviour:
   laneDif: 2
   currentLane: 0
   playerSpeed: 0
---- !u!114 &1274696124
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1274696118}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b32ba5365d471344bcae852b44269cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pickupDuration: 10
-  bulletSpawn: {fileID: 696609851}
 --- !u!114 &1274696125
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1236,7 +1210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e1cb4092a0ec5e46a6605da4678e679, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerMaxHealth: 3
+  playerMaxHealth: 0
   playerHealth: 0
   healthBarUI: {fileID: 0}
   activeAllies: 0
@@ -1246,7 +1220,6 @@ MonoBehaviour:
   pickupTimer: 0
   pickupDuration: 0
   weaponTimerUI: {fileID: 0}
-  bulletDamage: 1
 --- !u!54 &1274696126
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1257,7 +1230,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
@@ -1445,34 +1418,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1321848032}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1384390844
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1384390845}
-  m_Layer: 0
-  m_Name: EGO BulletSPLeft
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1384390845
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1384390844}
-  m_LocalRotation: {x: 0, y: -0.13052624, z: 0, w: 0.9914449}
-  m_LocalPosition: {x: -1.47, y: 0, z: 1.18}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 371629939}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: -15, z: 0}
 --- !u!1 &1412784224
 GameObject:
   m_ObjectHideFlags: 0
@@ -1575,34 +1520,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1490635559
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1490635560}
-  m_Layer: 0
-  m_Name: EGO BulletSPFrontRight
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1490635560
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1490635559}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.16, y: 0, z: 2.17}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 371629939}
-  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1554278783
 GameObject:
@@ -2216,34 +2133,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1775663823}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &2056114728
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 2056114729}
-  m_Layer: 0
-  m_Name: EGO BulletSPRight
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2056114729
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2056114728}
-  m_LocalRotation: {x: 0, y: 0.13052616, z: 0, w: 0.9914449}
-  m_LocalPosition: {x: 0.95, y: 0, z: 1.34}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 371629939}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 15, z: 0}
 --- !u!1 &2081090265
 GameObject:
   m_ObjectHideFlags: 0

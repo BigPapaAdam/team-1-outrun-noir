@@ -25,6 +25,7 @@ public class LookAtMouse : MonoBehaviour {
         int floorMask = LayerMask.GetMask("ground");
 
         Ray camRay = Camera.main.ScreenPointToRay(Input.mousePosition);
+        Debug.Log(floorMask);
         RaycastHit floorHit;
 
         if (Physics.Raycast(camRay, out floorHit, camRayLength, floorMask))
