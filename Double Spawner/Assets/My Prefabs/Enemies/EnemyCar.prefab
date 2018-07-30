@@ -354,4 +354,3 @@ MonoBehaviour:
   enemyHealth: 1
   enemySpeed: -0.02
   pointWorth: 0
-  tommyDrop: {fileID: 1157190410557384, guid: 3861b4ce41a93234f9af77b484c0b6df, type: 2}
