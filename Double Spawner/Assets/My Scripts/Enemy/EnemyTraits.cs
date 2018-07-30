@@ -6,6 +6,7 @@ public class EnemyTraits : MonoBehaviour {
     public int enemyHealth = 5;
     public float enemySpeed = 0.1f;
     public int pointWorth;
+    public GameObject tommyDrop;
 
 	// Use this for initialization
 	void Start () {
@@ -20,6 +21,7 @@ public class EnemyTraits : MonoBehaviour {
         {
             //Get scorecomponent of an object and add the pointWorth;
             Destroy(gameObject);
+            Instantiate(tommyDrop, transform.position, transform.rotation);
         }
     }
 

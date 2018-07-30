@@ -18,6 +18,8 @@ public class PlayerAttributes : MonoBehaviour {
     public float pickupDuration;
     public Text weaponTimerUI;
 
+    public GameObject bulletSpawn;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -49,6 +51,20 @@ public class PlayerAttributes : MonoBehaviour {
         {
             playerHealth -= 2;
             Destroy(collide.gameObject);
+        }
+
+
+
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("TommyDrop"))
+        {
+            bulletSpawn.GetComponent<PistolShooter>().enabled = false;
+            bulletSpawn.GetComponent<TommyShooter>().enabled = true;
+            bulletSpawn.GetComponent<ShotgunShooter>().enabled = false;
+            Destroy(other.gameObject);
         }
     }
     // End code added by Gordon-----------------------------------------------------------
