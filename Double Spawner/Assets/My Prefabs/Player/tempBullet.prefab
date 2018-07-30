@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 135731435091445210}
   - component: {fileID: 114250097962341630}
   - component: {fileID: 54185012221704326}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: tempBullet
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4864710029609898}
   - component: {fileID: 212836100606880222}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: ORN Bullet Reg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
