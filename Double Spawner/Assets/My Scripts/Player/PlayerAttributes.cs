@@ -26,31 +26,5 @@ public class PlayerAttributes : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         healthBarUI.fillAmount = playerHealth / playerMaxHealth;
-
-        // New code added by Gordon-----------------------------------------------------
-        // code to enable player to die for client meeting 2 (can be improved/changed later)
-        if (playerHealth <= 0)
-        {
-            Destroy(gameObject);
-
-        }
 	}
-
-    // New code added by Gordon
-    // code to enable player to lose health for client meeting 2 (can be improved/changed later)
-    public void OnCollisionEnter(Collision collide)
-    {
-        if(collide.gameObject.tag == "Bullet")
-        {
-            playerHealth -= 1;
-        }
-
-        if (collide.gameObject.tag == "Enemy")
-        {
-            playerHealth -= 2;
-            Destroy(collide.gameObject);
-        }
-    }
-    // End code added by Gordon-----------------------------------------------------------
-
 }
