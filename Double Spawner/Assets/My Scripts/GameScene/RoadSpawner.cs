@@ -8,7 +8,9 @@ public class RoadSpawner : MonoBehaviour {
     public GameObject roadSquare2;
     public GameObject roadSquare3;
 
-    public int roadSquareWidth = 10;
+    public float roadSquareWidth = 10.0f;
+    //*Gordon* - changed roadSquarewidth from 'int' to 'float'
+
     public GameObject roadLocationSpawn;
 
     private int WhichRoadType;
