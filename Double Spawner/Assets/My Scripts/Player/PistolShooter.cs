@@ -33,7 +33,7 @@ public class PistolShooter : MonoBehaviour {
 
     void PistolFire()
     {
-        if (Input.GetButton("Fire1"))
+        if (Input.GetKey(GameLoader.GameInstance.CharacterShoot))
         {
             if (Time.time > timeOfShot + pistolRate)
             {

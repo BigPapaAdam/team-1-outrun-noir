@@ -9,6 +9,20 @@ public class GameManager
     public string Upkey;
     public string Downkey;
     public string Firekey;
+    public int Highscore;
+
+    public int HighScore
+    {
+        get
+        {
+            return Highscore;
+        }
+
+        set
+        {
+            Highscore = value;
+        }
+    }
 
     public string DownKey
     {

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LookAtPlayer : MonoBehaviour {
 
@@ -14,6 +15,13 @@ public class LookAtPlayer : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        transform.LookAt(playerObj.transform.position);
+        if(playerObj == null)
+        {
+            SceneManager.LoadScene(0, LoadSceneMode.Single);
+        }
+        else
+        {
+            transform.LookAt(playerObj.transform.position);
+        }
     }
 }

@@ -8,10 +8,8 @@ public class PlayerAttributes : MonoBehaviour {
     public float playerHealth;
     public Image healthBarUI;
 
-    public int activeAllies;
-    public Image allyIcon1UI;
-    public Image allyIcon2UI;
-    public Image allyIcon3UI;
+    public int activeAllies = 0;
+    public Image[] allyIcon;
 
     public enum activeWeapon { Pistol, Tommy, Shotgun }
     public float pickupTimer;
@@ -28,16 +26,35 @@ public class PlayerAttributes : MonoBehaviour {
 	void Update () {
         if (playerHealth <= 0)
         {
+            GameLoader.GameInstance.Save();
             Destroy(gameObject);
         }
-        healthBarUI.fillAmount = playerHealth / playerMaxHealth;
+
+        if(activeAllies == 0)
+        {
+            healthBarUI.fillAmount = playerHealth / playerMaxHealth;
+        }
     }
 
     void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.CompareTag("Bullet"))
         {
-            playerHealth -= 1;
+            if(activeAllies <= 0)
+            {
+                playerHealth -= 1;
+            }
+            else
+            {
+                allyIcon[activeAllies].gameObject.SetActive(false);
+                activeAllies -= 1;
+            }
+        }
+
+        if(other.gameObject.tag == "AlliedMafia")
+        {
+            activeAllies += 1;
+            allyIcon[activeAllies].gameObject.SetActive(true);
         }
     }
 }

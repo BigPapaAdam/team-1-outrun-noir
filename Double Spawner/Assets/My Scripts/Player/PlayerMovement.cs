@@ -32,7 +32,7 @@ public class PlayerMovement : MonoBehaviour {
 	void Update () {
         transform.Translate(playerSpeed, 0, 0);
 
-        if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKeyDown(GameLoader.GameInstance.CharacterMoveUp))
         {
             if (currentLane == laneTwo)
             {
@@ -46,7 +46,7 @@ public class PlayerMovement : MonoBehaviour {
             }
 		}
 
-		if (Input.GetKeyDown(KeyCode.S))
+		if (Input.GetKeyDown(GameLoader.GameInstance.CharacterMoveDown))
 		{
             if (currentLane == laneOne)
             {

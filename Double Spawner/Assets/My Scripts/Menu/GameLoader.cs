@@ -29,14 +29,19 @@ public class GameLoader : MonoBehaviour
     public Button UpButton;
     public Button DownButton;
     public Button ShootButton;
-    public Dropdown UpDropdown;
-    public Dropdown DownDropdown;
-    public Dropdown ShootDropdown;
+    public Text ScoreText;
+    public Text HighScoreText;
+    //public Dropdown UpDropdown;
+    //public Dropdown DownDropdown;
+    //public Dropdown ShootDropdown;
     public KeyCode CharacterMoveUp;
     public KeyCode CharacterMoveDown;
     public KeyCode CharacterShoot;
     private KeyCode NewKey;
     private string ButtonText;
+    public int SceneNumber = 1;
+    public int Score = 0;
+    public int HighScore = 0;
 
     private bool IsButtonPressed = false;
 
@@ -78,9 +83,9 @@ public class GameLoader : MonoBehaviour
         SFXSlider.onValueChanged.AddListener(delegate { OnSFXSliderChange(); });
         MusicSlider.onValueChanged.AddListener(delegate { OnMusicSliderChange(); });
         ResolutionDropdown.ClearOptions();
-        UpDropdown.ClearOptions();
-        DownDropdown.ClearOptions();
-        ShootDropdown.ClearOptions();
+        //UpDropdown.ClearOptions();
+        //DownDropdown.ClearOptions();
+        //ShootDropdown.ClearOptions();
 
         Resolutions = Screen.resolutions;
         foreach (Resolution resolution in Resolutions)
@@ -153,11 +158,12 @@ public class GameLoader : MonoBehaviour
 
     public void Play()
     {
-        SceneManager.LoadScene(1, LoadSceneMode.Single);
+        SceneManager.LoadScene(SceneNumber, LoadSceneMode.Single);
     }
 
     public void Options()
     {
+        Time.timeScale = 0;
         Menu.SetActive(true);
     }
 
@@ -166,11 +172,15 @@ public class GameLoader : MonoBehaviour
         Application.Quit();
     }
 
-    public void Apply()
+    public void Save()
     {
+        Gamemanager.HighScore = HighScore;
+
         string jsondata = JsonUtility.ToJson(Gamemanager, true);
 
         File.WriteAllText(Application.persistentDataPath + "/gamesettings.json", jsondata);
+
+        Time.timeScale = 1;
         Menu.SetActive(false);
     }
 
@@ -309,14 +319,24 @@ public class GameLoader : MonoBehaviour
 
             CharacterShoot = (KeyCode)System.Enum.Parse(typeof(KeyCode), Gamemanager.FireKey, true);
             ShootButton.transform.GetChild(0).GetComponent<Text>().text = Gamemanager.FireKey;
+
+            if (SceneManager.GetActiveScene().buildIndex != 0)
+            {
+                HighScoreText = GameObject.Find("Canvas").transform.GetChild(1).GetComponent<Text>();
+                ScoreText = GameObject.Find("Canvas").transform.GetChild(2).GetComponent<Text>();
+                HighScoreText.text = "High Score: " + Gamemanager.HighScore.ToString();
+            }
         }
         else
         {
+            Gamemanager.ResolutionIndex = 1;
+            Gamemanager.FullScreen = FullscreenToggle.isOn;
             Gamemanager.MusicVolume = MusicSlider.value;
             Gamemanager.SFXVolume = SFXSlider.value;
             Gamemanager.UpKey = CharacterMoveUp.ToString();
             Gamemanager.DownKey = CharacterMoveDown.ToString();
             Gamemanager.FireKey = CharacterShoot.ToString();
+            Gamemanager.HighScore = 0;
 
 
             string jsondata = JsonUtility.ToJson(Gamemanager, true);

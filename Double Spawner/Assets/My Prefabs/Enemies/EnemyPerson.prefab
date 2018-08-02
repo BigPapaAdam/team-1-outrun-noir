@@ -110,3 +110,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyHealth: 1
   enemySpeed: -0.3
+  pointWorth: 0
+  tommyDrop: {fileID: 1157190410557384, guid: 3861b4ce41a93234f9af77b484c0b6df, type: 2}
+  shotgunDrop: {fileID: 1739118581839880, guid: 63bbb6fd525aa73458054b722c99adb8,
+    type: 2}
+  randomDropChance: 0

@@ -27,6 +27,14 @@ public class EnemyTraits : MonoBehaviour {
             //Get scorecomponent of an object and add the pointWorth;
             WeaponDrop();
             Destroy(gameObject);
+            GameLoader.GameInstance.Score += 100;
+            GameLoader.GameInstance.ScoreText.text = "Score: " + GameLoader.GameInstance.Score.ToString();
+
+            if(GameLoader.GameInstance.Score > GameLoader.GameInstance.HighScore)
+            {
+                GameLoader.GameInstance.HighScore = GameLoader.GameInstance.Score;
+                GameLoader.GameInstance.HighScoreText.text = "High Score : " + GameLoader.GameInstance.HighScore.ToString();
+            }
         }
     }
 
