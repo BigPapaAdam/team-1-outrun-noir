@@ -15,7 +15,10 @@ public class PlayerAttributes : MonoBehaviour {
     public float pickupTimer;
     public float pickupDuration;
     public Text weaponTimerUI;
+
+    //Damages
     public int bulletDamage = 1;
+    public int spikeDamage = 1;
 
 	// Use this for initialization
 	void Start () {
@@ -42,7 +45,7 @@ public class PlayerAttributes : MonoBehaviour {
         {
             if(activeAllies <= 0)
             {
-                playerHealth -= 1;
+                playerHealth -= bulletDamage;
             }
             else
             {
@@ -55,6 +58,12 @@ public class PlayerAttributes : MonoBehaviour {
         {
             activeAllies += 1;
             allyIcon[activeAllies].gameObject.SetActive(true);
+        }
+
+        if (other.gameObject.CompareTag("SpikeTrap"))
+        {
+            playerHealth -= spikeDamage;
+            Destroy(other.gameObject);
         }
     }
 }

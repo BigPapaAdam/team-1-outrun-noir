@@ -9,6 +9,7 @@ TagManager:
   - TommyPickup
   - ShotgunPickup
   - AlliedMafia
+  - SpikeTrap
   layers:
   - Default
   - TransparentFX

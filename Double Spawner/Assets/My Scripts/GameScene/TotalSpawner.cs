@@ -8,6 +8,7 @@ public class TotalSpawner : MonoBehaviour {
     public GameObject polBikePref;
     public GameObject polPersonPref;
     public GameObject playerObject;
+    public GameObject spikeTrapObj;
 
     //EGO SPAWN LOCATIONS
     public GameObject topLaneSpawn;
@@ -62,7 +63,7 @@ public class TotalSpawner : MonoBehaviour {
 
     void LaneOne()
     {
-        WhichEnemy = Random.Range(0, 2);
+        WhichEnemy = Random.Range(0, 3);
         switch (WhichEnemy)
         {
             case 0:
@@ -73,13 +74,17 @@ public class TotalSpawner : MonoBehaviour {
                 //Bike
                 Instantiate(polBikePref, topLaneSpawn.transform.position, transform.rotation);
                 break;
+            case 2:
+                //Bike
+                Instantiate(spikeTrapObj, topLaneSpawn.transform.position, transform.rotation);
+                break;
         }
     }
 
     void LaneTwo()
     {
 
-        WhichEnemy = Random.Range(0, 2);
+        WhichEnemy = Random.Range(0, 3);
         switch (WhichEnemy)
         {
             case 0:
@@ -90,13 +95,17 @@ public class TotalSpawner : MonoBehaviour {
                 //Bike
                 Instantiate(polBikePref, midLaneSpawn.transform.position, transform.rotation);
                 break;
+            case 2:
+                //Bike
+                Instantiate(spikeTrapObj, topLaneSpawn.transform.position, transform.rotation);
+                break;
         }
 
     }
 
     void LaneThree()
     {
-        WhichEnemy = Random.Range(0, 2);
+        WhichEnemy = Random.Range(0, 3);
         switch (WhichEnemy)
         {
             case 0:
@@ -106,6 +115,10 @@ public class TotalSpawner : MonoBehaviour {
             case 1:
                 //Bike
                 Instantiate(polBikePref, botLaneSpawn.transform.position, transform.rotation);
+                break;
+            case 2:
+                //Bike
+                Instantiate(spikeTrapObj, topLaneSpawn.transform.position, transform.rotation);
                 break;
         }
     }
