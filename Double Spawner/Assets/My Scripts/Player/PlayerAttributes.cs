@@ -19,6 +19,7 @@ public class PlayerAttributes : MonoBehaviour {
     //Damages
     public int bulletDamage = 1;
     public int spikeDamage = 1;
+    public int triadBlockCollisionDamage = 1;
 
 	// Use this for initialization
 	void Start () {
@@ -41,9 +42,11 @@ public class PlayerAttributes : MonoBehaviour {
 
     void OnCollisionEnter(Collision other)
     {
+        print("Collisione enter");
         if (other.gameObject.CompareTag("Bullet"))
         {
-            if(activeAllies <= 0)
+            print("bullet");
+            if (activeAllies <= 0)
             {
                 playerHealth -= bulletDamage;
             }
@@ -54,16 +57,33 @@ public class PlayerAttributes : MonoBehaviour {
             }
         }
 
-        if(other.gameObject.tag == "AlliedMafia")
+
+
+        if (other.gameObject.tag == "AlliedMafia")
         {
             activeAllies += 1;
             allyIcon[activeAllies].gameObject.SetActive(true);
         }
 
-        if (other.gameObject.CompareTag("SpikeTrap"))
+
+    }
+
+    private void OnTriggerEnter(Collider collide)
+    {
+        if (collide.gameObject.tag == "SpikeTrap")
         {
+            print("spike");
+
             playerHealth -= spikeDamage;
-            Destroy(other.gameObject);
+            Destroy(collide.gameObject);
+        }
+
+        if (collide.gameObject.tag == "TriadBlock")
+        {
+            print("triadBlock");
+
+            playerHealth -= triadBlockCollisionDamage;
+            Destroy(collide.gameObject);
         }
     }
 }

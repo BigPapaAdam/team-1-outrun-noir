@@ -14,5 +14,6 @@ public class ObstacleMover : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         transform.Translate(obstacleSpeed, 0, 0);
+
     }
 }

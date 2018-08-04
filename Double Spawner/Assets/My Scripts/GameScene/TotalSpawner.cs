@@ -6,9 +6,11 @@ public class TotalSpawner : MonoBehaviour {
     //CHARACTERS
     public GameObject polCarPref;
     public GameObject polBikePref;
-    public GameObject polPersonPref;
+    public GameObject polPersonPrefBot;
+    public GameObject polPersonPrefTop;
     public GameObject playerObject;
     public GameObject spikeTrapObj;
+    //public GameObject triadBlockObj;
 
     //EGO SPAWN LOCATIONS
     public GameObject topLaneSpawn;
@@ -75,7 +77,7 @@ public class TotalSpawner : MonoBehaviour {
                 Instantiate(polBikePref, topLaneSpawn.transform.position, transform.rotation);
                 break;
             case 2:
-                //Bike
+                //Spike
                 Instantiate(spikeTrapObj, topLaneSpawn.transform.position, transform.rotation);
                 break;
         }
@@ -96,7 +98,7 @@ public class TotalSpawner : MonoBehaviour {
                 Instantiate(polBikePref, midLaneSpawn.transform.position, transform.rotation);
                 break;
             case 2:
-                //Bike
+                //Spike
                 Instantiate(spikeTrapObj, topLaneSpawn.transform.position, transform.rotation);
                 break;
         }
@@ -117,19 +119,22 @@ public class TotalSpawner : MonoBehaviour {
                 Instantiate(polBikePref, botLaneSpawn.transform.position, transform.rotation);
                 break;
             case 2:
-                //Bike
+                //Spike
                 Instantiate(spikeTrapObj, topLaneSpawn.transform.position, transform.rotation);
                 break;
+
         }
     }
 
     void PathTop()
     {
-        Instantiate(polPersonPref, topPathSpawn.transform.position, transform.rotation);
+        Instantiate(polPersonPrefTop, topPathSpawn.transform.position, topPathSpawn.transform.rotation);
     }
 
     void PathBot()
     {
-        Instantiate(polPersonPref, botPathSpawn.transform.position, transform.rotation);
+        Instantiate(polPersonPrefBot, botPathSpawn.transform.position, botPathSpawn.transform.rotation);
     }
+
+    //USE OnTriggerStay to detect what is in the lane
 }

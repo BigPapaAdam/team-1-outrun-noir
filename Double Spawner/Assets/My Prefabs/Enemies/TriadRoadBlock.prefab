@@ -9,46 +9,46 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1867340339081774}
+  m_RootGameObject: {fileID: 1347458117717134}
   m_IsPrefabParent: 1
---- !u!1 &1867340339081774
+--- !u!1 &1347458117717134
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4870308697930182}
-  - component: {fileID: 33008496893006600}
-  - component: {fileID: 23909122049019884}
-  - component: {fileID: 65402578940022058}
-  - component: {fileID: 114987702324994454}
+  - component: {fileID: 4303065396443198}
+  - component: {fileID: 33009554225363896}
+  - component: {fileID: 23328613457164910}
+  - component: {fileID: 65093652291829334}
+  - component: {fileID: 114200832590864698}
   m_Layer: 0
-  m_Name: EnemyBike
-  m_TagString: Enemy
+  m_Name: TriadRoadBlock
+  m_TagString: TriadBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4870308697930182
+--- !u!4 &4303065396443198
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1867340339081774}
+  m_GameObject: {fileID: 1347458117717134}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 0.5}
+  m_LocalPosition: {x: -40.351147, y: -1.6699989, z: 8.52091}
+  m_LocalScale: {x: 0.7272011, y: 1, z: 1.2812808}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23909122049019884
+--- !u!23 &23328613457164910
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1867340339081774}
+  m_GameObject: {fileID: 1347458117717134}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -58,7 +58,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: e3b1b35daaf635d46b2287738156815d, type: 2}
+  - {fileID: 2100000, guid: 3cc5f1e1ee2700a4d8b47fe9291333cd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -78,40 +78,34 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33008496893006600
+--- !u!33 &33009554225363896
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1867340339081774}
+  m_GameObject: {fileID: 1347458117717134}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!65 &65402578940022058
+--- !u!65 &65093652291829334
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1867340339081774}
+  m_GameObject: {fileID: 1347458117717134}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114987702324994454
+--- !u!114 &114200832590864698
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1867340339081774}
+  m_GameObject: {fileID: 1347458117717134}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7cc13a9a9d686a438c6a18a10d0d9bb, type: 3}
+  m_Script: {fileID: 11500000, guid: f53ca02624af65d4a89f054fec0df3f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyHealth: 3
-  enemySpeed: -0.05
-  pointWorth: 0
-  tommyDrop: {fileID: 1157190410557384, guid: 3861b4ce41a93234f9af77b484c0b6df, type: 2}
-  shotgunDrop: {fileID: 1739118581839880, guid: 63bbb6fd525aa73458054b722c99adb8,
-    type: 2}
-  randomDropChance: 4
+  obstacleSpeed: -0.1

@@ -34,14 +34,4 @@ public class EnemyShooter : MonoBehaviour {
         }
 	}
 
-    void PistolFire()
-    {
-        //if (Time.time > timeOfShot + enemyRate)
-        //{
-        //    Instantiate(myBullet, transform.position, transform.rotation);
-        //    aSource.PlayOneShot(gunShot);
-        //    timeOfShot = Time.time;
-        //}
-        
-    }
 }

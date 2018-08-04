@@ -10,6 +10,7 @@ TagManager:
   - ShotgunPickup
   - AlliedMafia
   - SpikeTrap
+  - TriadBlock
   layers:
   - Default
   - TransparentFX
