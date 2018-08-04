@@ -70,7 +70,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1319984664971954}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -46.32624, y: -1.67, z: -0.83400327}
+  m_LocalPosition: {x: -51.258755, y: -1.6700009, z: -8.763758}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4443531707620078}
@@ -196,10 +196,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b6fea98055c2804384665d706d0c206, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyFireRate: 2
+  enemyFireRate: 3
   enemyObj: {fileID: 1319984664971954}
   gunObj: {fileID: 0}
   myBullet: {fileID: 1264289126699948, guid: 14435b0436a1c844fb6ee97ceb0de07b, type: 2}
+  bulletSPLeft: {fileID: 0}
+  bulletSPLeftFront: {fileID: 0}
+  bulletSPRightFront: {fileID: 0}
+  bulletSPRight: {fileID: 0}
+  isMotorbike: 0
   aSource: {fileID: 0}
   gunShot: {fileID: 0}
 --- !u!114 &114672860290803010

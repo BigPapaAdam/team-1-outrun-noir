@@ -16,12 +16,10 @@ public class EnemyTrigDelete : MonoBehaviour {
         transform.Translate(trigMoveSpeed, 0, 0);
 	}
 
-    private void OnCollisionStay(Collision collide)
+    private void OnTriggerEnter(Collider collide)
     {
-        Debug.Log("has collided");
         if (collide.gameObject.tag == "Enemy")
         {
-            Debug.Log("is enemy");
             Destroy (collide.gameObject);
         }
     }

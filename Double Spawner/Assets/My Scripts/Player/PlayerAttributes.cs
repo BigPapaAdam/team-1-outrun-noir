@@ -20,6 +20,7 @@ public class PlayerAttributes : MonoBehaviour {
     public int bulletDamage = 1;
     public int spikeDamage = 1;
     public int triadBlockCollisionDamage = 1;
+    public int enemyCrashDamage = 1;
 
 	// Use this for initialization
 	void Start () {
@@ -42,10 +43,8 @@ public class PlayerAttributes : MonoBehaviour {
 
     void OnCollisionEnter(Collision other)
     {
-        print("Collisione enter");
         if (other.gameObject.CompareTag("Bullet"))
         {
-            print("bullet");
             if (activeAllies <= 0)
             {
                 playerHealth -= bulletDamage;
@@ -56,6 +55,13 @@ public class PlayerAttributes : MonoBehaviour {
                 activeAllies -= 1;
             }
         }
+
+        //if (other.gameObject.tag == "Enemy")
+        //{
+        //    playerHealth -= enemyCrashDamage;
+        //    Destroy(other.gameObject);
+        //}
+
 
 
 

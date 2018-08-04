@@ -11,6 +11,16 @@ public class EnemyShooter : MonoBehaviour {
     public GameObject gunObj;
     public GameObject myBullet;
 
+    public GameObject bulletSPLeft;
+    public GameObject bulletSPLeftFront;
+    public GameObject bulletSPRightFront;
+    public GameObject bulletSPRight;
+
+    public bool isMotorbike = false;
+
+
+
+
     public AudioSource aSource;
     public AudioClip gunShot;
 
@@ -28,7 +38,20 @@ public class EnemyShooter : MonoBehaviour {
         enemyShootTimer -= Time.deltaTime;
         if (enemyShootTimer <= 0)
         {
-            Instantiate(myBullet, transform.position, transform.rotation);
+            if (isMotorbike)
+            {
+                Instantiate(myBullet, bulletSPLeft.transform.position, bulletSPLeft.transform.rotation);
+                Instantiate(myBullet, bulletSPLeftFront.transform.position, bulletSPLeftFront.transform.rotation);
+                Instantiate(myBullet, bulletSPRightFront.transform.position, bulletSPRightFront.transform.rotation);
+                Instantiate(myBullet, bulletSPRight.transform.position, bulletSPRight.transform.rotation);
+            }
+            else
+            {
+                Instantiate(myBullet, transform.position, transform.rotation);
+            }
+
+
+
             aSource.PlayOneShot(gunShot);
             enemyShootTimer = enemyFireRate;
         }

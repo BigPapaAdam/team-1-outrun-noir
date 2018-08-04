@@ -15,14 +15,12 @@ public class SidelinerRotator : MonoBehaviour {
         switch (rndRotate)
         {
             case 0:
-                //gameObject.transform.localRotation.Set(0, -45, 0, 0);
                 transform.eulerAngles = new Vector3(0, -rotationOffStraight, 0);
                 break;
             case 1:
                 transform.eulerAngles = new Vector3(0, straightAngle, 0);
                 break;
             case 2:
-                //gameObject.transform.localRotation.Set(0, 45, 0, 0);
                 transform.eulerAngles = new Vector3(0, rotationOffStraight, 0);
 
                 break;
