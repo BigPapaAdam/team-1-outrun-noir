@@ -28,12 +28,12 @@ public class GameLoader : MonoBehaviour
     public AudioClip SFX02;
     public Button UpButton;
     public Button DownButton;
-    public Button ShootButton;
-    public Text ScoreText;
-    public Text HighScoreText;
+    //public Button ShootButton;
     //public Dropdown UpDropdown;
     //public Dropdown DownDropdown;
-    //public Dropdown ShootDropdown;
+    public Dropdown ShootDropdown;
+    public Text ScoreText;
+    public Text HighScoreText;
     public KeyCode CharacterMoveUp;
     public KeyCode CharacterMoveDown;
     public KeyCode CharacterShoot;
@@ -47,7 +47,7 @@ public class GameLoader : MonoBehaviour
 
     Event KeyEvent;
 
-    //private string[] Codes;
+    private string[] Codes;
 
     private GameManager Gamemanager;
 
@@ -79,13 +79,13 @@ public class GameLoader : MonoBehaviour
         ResolutionDropdown.onValueChanged.AddListener(delegate { OnResolutionChanged(); });
         //UpDropdown.onValueChanged.AddListener(delegate { OnUpKeyChanged(); });
         //DownDropdown.onValueChanged.AddListener(delegate { OnDownKeyChanged(); });
-        //ShootDropdown.onValueChanged.AddListener(delegate { OnShootKeyChanged(); });
+        ShootDropdown.onValueChanged.AddListener(delegate { OnShootKeyChanged(); });
         SFXSlider.onValueChanged.AddListener(delegate { OnSFXSliderChange(); });
         MusicSlider.onValueChanged.AddListener(delegate { OnMusicSliderChange(); });
         ResolutionDropdown.ClearOptions();
         //UpDropdown.ClearOptions();
         //DownDropdown.ClearOptions();
-        //ShootDropdown.ClearOptions();
+        ShootDropdown.ClearOptions();
 
         Resolutions = Screen.resolutions;
         foreach (Resolution resolution in Resolutions)
@@ -93,14 +93,14 @@ public class GameLoader : MonoBehaviour
             ResolutionDropdown.options.Add(new Dropdown.OptionData(resolution.ToString()));
         }
 
-        //Codes = Enum.GetNames(typeof(KeyCode));
+        Codes = Enum.GetNames(typeof(KeyCode));
 
-        //foreach (string code in Codes)
-        //{
-        //    UpDropdown.options.Add(new Dropdown.OptionData(code));
-        //    DownDropdown.options.Add(new Dropdown.OptionData(code));
-        //    ShootDropdown.options.Add(new Dropdown.OptionData(code));
-        //}
+        foreach (string code in Codes)
+        {
+            //UpDropdown.options.Add(new Dropdown.OptionData(code));
+            //DownDropdown.options.Add(new Dropdown.OptionData(code));
+            ShootDropdown.options.Add(new Dropdown.OptionData(code));
+        }
 
         LoadSettings();
 
@@ -143,11 +143,11 @@ public class GameLoader : MonoBehaviour
     //    CharacterMoveDown = (KeyCode)System.Enum.Parse(typeof(KeyCode), Gamemanager.DownKey, true);
     //}
 
-    //public void OnShootKeyChanged()
-    //{
-    //    Gamemanager.FireKey = ShootDropdown.options[ShootDropdown.value].text;
-    //    CharacterShoot = (KeyCode)System.Enum.Parse(typeof(KeyCode), Gamemanager.FireKey, true);
-    //}
+    public void OnShootKeyChanged()
+    {
+        Gamemanager.FireKey = ShootDropdown.options[ShootDropdown.value].text;
+        CharacterShoot = (KeyCode)System.Enum.Parse(typeof(KeyCode), Gamemanager.FireKey, true);
+    }
 
     public void OnResolutionChanged()
     {
@@ -206,16 +206,16 @@ public class GameLoader : MonoBehaviour
         }
     }
 
-    public void ShootButtonClick()
-    {
-        ShootButton.transform.GetChild(0).GetComponent<Text>().text = "Please enter a new key";
-        ButtonText = "shoot";
+    //public void ShootButtonClick()
+    //{
+    //    ShootButton.transform.GetChild(0).GetComponent<Text>().text = "Please enter a new key";
+    //    ButtonText = "shoot";
 
-        if (IsButtonPressed == false)
-        {
-            StartCoroutine(GetNewKey());
-        }
-    }
+    //    if (IsButtonPressed == false)
+    //    {
+    //        StartCoroutine(GetNewKey());
+    //    }
+    //}
 
     private void Update()
     {
@@ -275,12 +275,12 @@ public class GameLoader : MonoBehaviour
                 StopCoroutine(GetNewKey());
                 break;
 
-            case "shoot":
-                CharacterShoot = NewKey;
-                Gamemanager.FireKey = NewKey.ToString();
-                ShootButton.transform.GetChild(0).GetComponent<Text>().text = NewKey.ToString();
-                StopCoroutine(GetNewKey());
-                break;
+            //case "shoot":
+            //    CharacterShoot = NewKey;
+            //    Gamemanager.FireKey = NewKey.ToString();
+            //    ShootButton.transform.GetChild(0).GetComponent<Text>().text = NewKey.ToString();
+            //    StopCoroutine(GetNewKey());
+            //    break;
         }
     }
 
@@ -318,7 +318,7 @@ public class GameLoader : MonoBehaviour
             DownButton.transform.GetChild(0).GetComponent<Text>().text = Gamemanager.DownKey;
 
             CharacterShoot = (KeyCode)System.Enum.Parse(typeof(KeyCode), Gamemanager.FireKey, true);
-            ShootButton.transform.GetChild(0).GetComponent<Text>().text = Gamemanager.FireKey;
+            //ShootButton.transform.GetChild(0).GetComponent<Text>().text = Gamemanager.FireKey;
 
             if (SceneManager.GetActiveScene().buildIndex != 0)
             {
