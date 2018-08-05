@@ -10,6 +10,7 @@ public class TotalSpawner : MonoBehaviour {
     public GameObject polPersonPrefTop;
     public GameObject playerObject;
     public GameObject spikeTrapObj;
+    public GameObject alliedMafiaObj;
     //public GameObject triadBlockObj;
 
     //EGO SPAWN LOCATIONS
@@ -25,6 +26,7 @@ public class TotalSpawner : MonoBehaviour {
 
     public int WhichLane;
     public int WhichEnemy;
+    public int SidelineRnd;
 
     // Use this for initialization
     void Start () {
@@ -128,12 +130,39 @@ public class TotalSpawner : MonoBehaviour {
 
     void PathTop()
     {
-        Instantiate(polPersonPrefTop, topPathSpawn.transform.position, topPathSpawn.transform.rotation);
+        //Instantiate(polPersonPrefTop, topPathSpawn.transform.position, topPathSpawn.transform.rotation);
+        //Instantiate(alliedMafiaObj, topPathSpawn.transform.position, transform.rotation);
+        SidelineRnd = Random.Range(0, 2);
+        switch (SidelineRnd)
+        {
+            case 0:
+                //Car                
+                Instantiate(polPersonPrefTop, topPathSpawn.transform.position, topPathSpawn.transform.rotation);
+                break;
+            case 1:
+                //Bike
+                Instantiate(alliedMafiaObj, topPathSpawn.transform.position, transform.rotation);
+                break;
+        }
     }
 
-    void PathBot()
+       void PathBot()
     {
-        Instantiate(polPersonPrefBot, botPathSpawn.transform.position, botPathSpawn.transform.rotation);
+        //Instantiate(polPersonPrefBot, botPathSpawn.transform.position, botPathSpawn.transform.rotation);
+        //Instantiate(alliedMafiaObj, botPathSpawn.transform.position, transform.rotation);
+
+        SidelineRnd = Random.Range(0, 2);
+        switch (SidelineRnd)
+        {
+            case 0:
+                //Car                
+                Instantiate(polPersonPrefBot, botPathSpawn.transform.position, botPathSpawn.transform.rotation);
+                break;
+            case 1:
+                //Bike
+                Instantiate(alliedMafiaObj, botPathSpawn.transform.position, transform.rotation);
+                break;
+        }
     }
 
     //USE OnTriggerStay to detect what is in the lane

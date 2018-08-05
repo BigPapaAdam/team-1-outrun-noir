@@ -10,6 +10,10 @@ public class PlayerAttributes : MonoBehaviour {
 
     public int activeAllies = 0;
     public Image[] allyIcon;
+    public GameObject shooterSeat1;
+    public GameObject shooterSeat2;
+    public GameObject shooterSeat3;
+
 
     public enum activeWeapon { Pistol, Tommy, Shotgun }
     public float pickupTimer;
@@ -39,6 +43,31 @@ public class PlayerAttributes : MonoBehaviour {
         {
             healthBarUI.fillAmount = playerHealth / playerMaxHealth;
         }
+
+        switch (activeAllies)
+        {
+            case 0:
+                shooterSeat1.gameObject.SetActive(false);
+                shooterSeat2.gameObject.SetActive(false);
+                shooterSeat3.gameObject.SetActive(false);
+                break;
+            case 1:
+                shooterSeat1.gameObject.SetActive(true);
+                shooterSeat2.gameObject.SetActive(false);
+                shooterSeat3.gameObject.SetActive(false);
+                break;
+            case 2:
+                shooterSeat1.gameObject.SetActive(true);
+                shooterSeat2.gameObject.SetActive(true);
+                shooterSeat3.gameObject.SetActive(false);
+                break;
+            case 3:
+                shooterSeat1.gameObject.SetActive(true);
+                shooterSeat2.gameObject.SetActive(true);
+                shooterSeat3.gameObject.SetActive(true);
+                break;
+
+        }
     }
 
     void OnCollisionEnter(Collision other)
@@ -65,17 +94,24 @@ public class PlayerAttributes : MonoBehaviour {
 
 
 
-        if (other.gameObject.tag == "AlliedMafia")
-        {
-            activeAllies += 1;
-            allyIcon[activeAllies].gameObject.SetActive(true);
-        }
+        //if (other.gameObject.tag == "AlliedMafia")
+        //{
+        //    activeAllies += 1;
+        //    allyIcon[activeAllies].gameObject.SetActive(true);
+        //}
 
 
     }
 
     private void OnTriggerEnter(Collider collide)
     {
+        if (collide.gameObject.tag == "AlliedMafia")
+        {
+            activeAllies += 1;
+            allyIcon[activeAllies].gameObject.SetActive(true);
+            Destroy(collide.gameObject);
+        }
+
         if (collide.gameObject.tag == "SpikeTrap")
         {
             print("spike");
