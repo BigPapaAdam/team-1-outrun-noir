@@ -32,6 +32,7 @@ public class PlayerAttributes : MonoBehaviour {
         for(int i = 0; i < activeAllies; i++)
         {
             allyIcon[i].gameObject.SetActive(true);
+            transform.GetChild(i).gameObject.SetActive(true);
         }
 
         playerHealth = playerMaxHealth;
