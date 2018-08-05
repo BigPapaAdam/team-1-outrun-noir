@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EndState : MonoBehaviour {
 
@@ -17,7 +18,19 @@ public class EndState : MonoBehaviour {
         levelTimer -= Time.deltaTime;
         if (levelTimer <= 0)
         {
-            //Scene Change
+            GameLoader.GameInstance.Save();
+
+            if(GameLoader.GameInstance.SceneNumber < SceneManager.sceneCountInBuildSettings)
+            {
+                GameLoader.GameInstance.SceneNumber += 1;
+                GameLoader.GameInstance.Play();
+            }
+            else
+            {
+                GameLoader.GameInstance.SceneNumber = 0;
+                GameLoader.GameInstance.Play();
+            }
+
         }
 	}
 }

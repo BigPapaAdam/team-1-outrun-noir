@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/My Scenes/Personal Scenes/AC_Main Menu.unity
     guid: 58b1bb2b03ef81b49bc3d6e7d710fa6c
   - enabled: 1
+    path: Assets/My Scenes/Shared Scenes/The Project/NoirDevV0.0.1.unity
+    guid: 879fb36f715231348bca7c7049306a7b
+  - enabled: 1
     path: Assets/My Scenes/Personal Scenes/in game UI.unity
     guid: 6ebd2db0a6466324dba81a0e1c361435
   m_configObjects: {}

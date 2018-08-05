@@ -8,7 +8,7 @@ public class PlayerAttributes : MonoBehaviour {
     public float playerHealth;
     public Image healthBarUI;
 
-    public int activeAllies = 0;
+    public static int activeAllies = 0;
     public Image[] allyIcon;
     public GameObject shooterSeat1;
     public GameObject shooterSeat2;
@@ -28,6 +28,12 @@ public class PlayerAttributes : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+
+        for(int i = 0; i < activeAllies; i++)
+        {
+            allyIcon[i].gameObject.SetActive(true);
+        }
+
         playerHealth = playerMaxHealth;
 	}
 	
@@ -39,7 +45,7 @@ public class PlayerAttributes : MonoBehaviour {
             Destroy(gameObject);
         }
 
-        if(activeAllies == 0)
+        if (activeAllies == 0)
         {
             healthBarUI.fillAmount = playerHealth / playerMaxHealth;
         }
@@ -80,8 +86,11 @@ public class PlayerAttributes : MonoBehaviour {
             }
             else
             {
-                allyIcon[activeAllies].gameObject.SetActive(false);
-                activeAllies -= 1;
+                if (activeAllies > 0)
+                {
+                    activeAllies -= 1;
+                    allyIcon[activeAllies].gameObject.SetActive(false);
+                }
             }
         }
 
@@ -107,8 +116,12 @@ public class PlayerAttributes : MonoBehaviour {
     {
         if (collide.gameObject.tag == "AlliedMafia")
         {
-            activeAllies += 1;
-            allyIcon[activeAllies].gameObject.SetActive(true);
+            if(activeAllies < 3)
+            {
+                allyIcon[activeAllies].gameObject.SetActive(true);
+                activeAllies += 1;
+            }
+
             Destroy(collide.gameObject);
         }
 
@@ -116,7 +129,16 @@ public class PlayerAttributes : MonoBehaviour {
         {
             print("spike");
 
-            playerHealth -= spikeDamage;
+            if (activeAllies <= 0)
+            {
+                playerHealth -= spikeDamage;
+            }
+            if (activeAllies > 0)
+            {
+                activeAllies -= 1;
+                allyIcon[activeAllies].gameObject.SetActive(false);
+            }
+
             Destroy(collide.gameObject);
         }
 
@@ -124,7 +146,17 @@ public class PlayerAttributes : MonoBehaviour {
         {
             print("triadBlock");
 
-            playerHealth -= triadBlockCollisionDamage;
+            if (activeAllies <= 0)
+            {
+                playerHealth -= triadBlockCollisionDamage;
+            }
+            else
+                if (activeAllies > 0)
+            {
+                activeAllies -= 1;
+                allyIcon[activeAllies].gameObject.SetActive(false);
+            }
+
             Destroy(collide.gameObject);
         }
     }

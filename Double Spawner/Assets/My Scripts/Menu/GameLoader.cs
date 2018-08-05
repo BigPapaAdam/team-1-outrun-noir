@@ -324,6 +324,7 @@ public class GameLoader : MonoBehaviour
             {
                 HighScoreText = GameObject.Find("Canvas").transform.GetChild(1).GetComponent<Text>();
                 ScoreText = GameObject.Find("Canvas").transform.GetChild(2).GetComponent<Text>();
+                HighScore = Gamemanager.HighScore;
                 HighScoreText.text = "High Score: " + Gamemanager.HighScore.ToString();
             }
         }
