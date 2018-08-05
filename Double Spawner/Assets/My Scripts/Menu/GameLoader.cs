@@ -318,7 +318,9 @@ public class GameLoader : MonoBehaviour
             DownButton.transform.GetChild(0).GetComponent<Text>().text = Gamemanager.DownKey;
 
             CharacterShoot = (KeyCode)System.Enum.Parse(typeof(KeyCode), Gamemanager.FireKey, true);
+
             //ShootButton.transform.GetChild(0).GetComponent<Text>().text = Gamemanager.FireKey;
+            ShootDropdown.options[ShootDropdown.value].text = Gamemanager.FireKey;
 
             if (SceneManager.GetActiveScene().buildIndex != 0)
             {
