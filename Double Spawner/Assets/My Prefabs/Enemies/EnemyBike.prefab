@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4775530085211834}
   - component: {fileID: 114244520597596964}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: EGO EnemyCentre
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35,7 +35,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4551377251215008}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: EGO BulletSPLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51,7 +51,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4387638931785304}
   - component: {fileID: 114904241868158148}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: EGO EnemyShootPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66,7 +66,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4252266561506286}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: EGO BulletSPFrontLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81,7 +81,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4937826994145948}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: EGO BulletSPFrontRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,7 +101,7 @@ GameObject:
   - component: {fileID: 65402578940022058}
   - component: {fileID: 114987702324994454}
   - component: {fileID: 114135996863679632}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: EnemyBike
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -116,7 +116,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4493804051095634}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: EGO BulletSPRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}

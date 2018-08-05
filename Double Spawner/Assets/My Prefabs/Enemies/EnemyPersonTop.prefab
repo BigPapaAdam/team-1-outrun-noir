@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 23328613457164910}
   - component: {fileID: 65093652291829334}
   - component: {fileID: 114915020744038062}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: EnemyPersonTop
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 4343817365675294}
   - component: {fileID: 114294942623750810}
   - component: {fileID: 114006159585280638}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: EGO Sideliner Centre
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56,7 +56,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4385697230222470}
   - component: {fileID: 114761088206773032}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: EGO Sideliner Bullet Spawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}

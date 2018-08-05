@@ -12,6 +12,7 @@ TagManager:
   - SpikeTrap
   - TriadBlock
   - MotoActivator
+  - PlayerBullet
   layers:
   - Default
   - TransparentFX
@@ -22,10 +23,10 @@ TagManager:
   - 
   - 
   - ground
-  - 
-  - 
-  - 
-  - 
+  - PlayerLayer
+  - EnemyLayer
+  - PlayerBulletsLayer
+  - EnemyBulletsLayer
   - 
   - 
   - 

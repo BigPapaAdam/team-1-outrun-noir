@@ -39,7 +39,7 @@ public class ShotgunShooter : MonoBehaviour {
 
     void ShotgunFire()
     {
-        if (Input.GetKeyDown(GameLoader.GameInstance.CharacterShoot))
+        if (Input.GetKey(GameLoader.GameInstance.CharacterShoot))
         {
             if (Time.time > timeOfShot + shotgunRate)
             {

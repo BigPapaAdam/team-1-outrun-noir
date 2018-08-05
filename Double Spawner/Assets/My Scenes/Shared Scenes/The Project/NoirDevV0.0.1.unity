@@ -164,7 +164,7 @@ Prefab:
     - target: {fileID: 224230976493238170, guid: 3724f42bcd472f241981ea083dfc87f0,
         type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224230976493238170, guid: 3724f42bcd472f241981ea083dfc87f0,
         type: 2}
@@ -204,7 +204,7 @@ Prefab:
     - target: {fileID: 224230976493238170, guid: 3724f42bcd472f241981ea083dfc87f0,
         type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224230976493238170, guid: 3724f42bcd472f241981ea083dfc87f0,
         type: 2}
@@ -315,7 +315,7 @@ Transform:
   m_Children:
   - {fileID: 863130531}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &303543599
 GameObject:
@@ -356,7 +356,7 @@ GameObject:
   - component: {fileID: 330831517}
   - component: {fileID: 330831516}
   - component: {fileID: 330831515}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: tempPist
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -439,7 +439,7 @@ GameObject:
   m_Component:
   - component: {fileID: 371629939}
   - component: {fileID: 371629940}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EGO Cube Centre
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -588,7 +588,7 @@ GameObject:
   - component: {fileID: 394869773}
   - component: {fileID: 394869772}
   - component: {fileID: 394869771}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: allySeat2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -705,7 +705,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4100785499941162, guid: 1ffb8a651f0d86e42b143e62edee6921, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114842970440432652, guid: 1ffb8a651f0d86e42b143e62edee6921,
         type: 2}
@@ -793,7 +793,7 @@ GameObject:
   - component: {fileID: 696609856}
   - component: {fileID: 696609855}
   - component: {fileID: 696609854}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EGO Bullet Spawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -829,7 +829,7 @@ MonoBehaviour:
   pistolObj: {fileID: 330831513}
   tommyObj: {fileID: 1321848032}
   shotgunObj: {fileID: 1775663823}
-  myBullet: {fileID: 1264289126699948, guid: 14435b0436a1c844fb6ee97ceb0de07b, type: 2}
+  myBullet: {fileID: 1264289126699948, guid: 2ab266d15ff72d7479c6601bb569d7e1, type: 2}
   bulletSPLeft: {fileID: 1384390844}
   bulletSPFrontLeft: {fileID: 1067167553}
   bulletSPFrontRight: {fileID: 1490635559}
@@ -852,7 +852,7 @@ MonoBehaviour:
   pistolObj: {fileID: 330831513}
   tommyObj: {fileID: 1321848032}
   shotgunObj: {fileID: 1775663823}
-  myBullet: {fileID: 1264289126699948, guid: 14435b0436a1c844fb6ee97ceb0de07b, type: 2}
+  myBullet: {fileID: 1264289126699948, guid: 2ab266d15ff72d7479c6601bb569d7e1, type: 2}
   aSource: {fileID: 0}
   tommyShot: {fileID: 0}
 --- !u!114 &696609856
@@ -871,7 +871,7 @@ MonoBehaviour:
   pistolObj: {fileID: 330831513}
   tommyObj: {fileID: 1321848032}
   shotgunObj: {fileID: 1775663823}
-  myBullet: {fileID: 1264289126699948, guid: 14435b0436a1c844fb6ee97ceb0de07b, type: 2}
+  myBullet: {fileID: 1264289126699948, guid: 2ab266d15ff72d7479c6601bb569d7e1, type: 2}
   aSource: {fileID: 0}
   pistolShot: {fileID: 0}
 --- !u!1 &743915684
@@ -998,7 +998,7 @@ GameObject:
   - component: {fileID: 813521455}
   - component: {fileID: 813521454}
   - component: {fileID: 813521453}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: allySeat3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1296,7 +1296,7 @@ Transform:
   m_LocalScale: {x: 73.191696, y: 73.191536, z: 73.191536}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!114 &973053979 stripped
 MonoBehaviour:
@@ -1318,7 +1318,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1067167554}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EGO BulletSPFrontLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1349,7 +1349,7 @@ GameObject:
   - component: {fileID: 1094852656}
   - component: {fileID: 1094852655}
   - component: {fileID: 1094852654}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: allySeat1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1459,7 +1459,7 @@ Transform:
   - {fileID: 380031653}
   - {fileID: 1589342622}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1206641792 stripped
 MonoBehaviour:
@@ -1567,7 +1567,7 @@ GameObject:
   - component: {fileID: 1274696125}
   - component: {fileID: 1274696126}
   - component: {fileID: 1274696124}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1643,7 +1643,7 @@ Transform:
   - {fileID: 1758218000}
   - {fileID: 371629939}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1274696123
 MonoBehaviour:
@@ -1738,6 +1738,7 @@ GameObject:
   - component: {fileID: 1306812279}
   - component: {fileID: 1306812278}
   - component: {fileID: 1306812277}
+  - component: {fileID: 1306812282}
   m_Layer: 0
   m_Name: Enemy Deleter
   m_TagString: Untagged
@@ -1819,11 +1820,26 @@ Transform:
   m_GameObject: {fileID: 1306812276}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -53.47, y: -0.27, z: 0}
-  m_LocalScale: {x: 1, y: 4.3292713, z: 10}
+  m_LocalScale: {x: 1, y: 6.4285183, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &1306812282
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1306812276}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1321848032
 GameObject:
   m_ObjectHideFlags: 0
@@ -1835,7 +1851,7 @@ GameObject:
   - component: {fileID: 1321848036}
   - component: {fileID: 1321848035}
   - component: {fileID: 1321848034}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: tempTommy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1909,48 +1925,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1321848032}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1001 &1355983190
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4152888411663786, guid: cfb0dcb0f25877d49b5d8e3dee040e8d, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 1.4205389
-      objectReference: {fileID: 0}
-    - target: {fileID: 4152888411663786, guid: cfb0dcb0f25877d49b5d8e3dee040e8d, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 9.342562
-      objectReference: {fileID: 0}
-    - target: {fileID: 4152888411663786, guid: cfb0dcb0f25877d49b5d8e3dee040e8d, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 9.317318
-      objectReference: {fileID: 0}
-    - target: {fileID: 4152888411663786, guid: cfb0dcb0f25877d49b5d8e3dee040e8d, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4152888411663786, guid: cfb0dcb0f25877d49b5d8e3dee040e8d, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4152888411663786, guid: cfb0dcb0f25877d49b5d8e3dee040e8d, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4152888411663786, guid: cfb0dcb0f25877d49b5d8e3dee040e8d, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4152888411663786, guid: cfb0dcb0f25877d49b5d8e3dee040e8d, type: 2}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: cfb0dcb0f25877d49b5d8e3dee040e8d, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &1384390844
 GameObject:
   m_ObjectHideFlags: 0
@@ -1959,7 +1933,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1384390845}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EGO BulletSPLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2080,7 +2054,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1482037878 stripped
 GameObject:
@@ -2095,7 +2069,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1490635560}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EGO BulletSPFrontRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2257,7 +2231,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4678772562719104, guid: defe113f73613c84dacb023254c75aca, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: defe113f73613c84dacb023254c75aca, type: 2}
@@ -2356,6 +2330,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1614341818}
   - component: {fileID: 1614341817}
+  - component: {fileID: 1614341819}
   m_Layer: 0
   m_Name: EGOSceneManager
   m_TagString: Untagged
@@ -2386,8 +2361,20 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1614341819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1614341816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72de1fb56ff1135408c2d40625c925df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelDuration: 30
 --- !u!1 &1624211029
 GameObject:
   m_ObjectHideFlags: 0
@@ -2533,7 +2520,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1716286849
 GameObject:
@@ -2585,7 +2572,7 @@ Transform:
   m_Children:
   - {fileID: 2135427552}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1743568231
 GameObject:
@@ -2696,7 +2683,7 @@ RectTransform:
   - {fileID: 1412784225}
   - {fileID: 75621285}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2713,7 +2700,7 @@ GameObject:
   - component: {fileID: 1758218000}
   - component: {fileID: 1758218002}
   - component: {fileID: 1758218001}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EGO Bullet Seat3 SP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2760,7 +2747,7 @@ MonoBehaviour:
   pistolObj: {fileID: 330831513}
   tommyObj: {fileID: 1321848032}
   shotgunObj: {fileID: 1775663823}
-  myBullet: {fileID: 1264289126699948, guid: 14435b0436a1c844fb6ee97ceb0de07b, type: 2}
+  myBullet: {fileID: 1264289126699948, guid: 2ab266d15ff72d7479c6601bb569d7e1, type: 2}
   aSource: {fileID: 0}
   pistolShot: {fileID: 0}
 --- !u!1 &1775663823
@@ -2774,7 +2761,7 @@ GameObject:
   - component: {fileID: 1775663827}
   - component: {fileID: 1775663826}
   - component: {fileID: 1775663825}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: tempShotgun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2858,7 +2845,7 @@ GameObject:
   - component: {fileID: 1886190790}
   - component: {fileID: 1886190792}
   - component: {fileID: 1886190791}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EGO Bullet Seat2 SP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2905,7 +2892,7 @@ MonoBehaviour:
   pistolObj: {fileID: 330831513}
   tommyObj: {fileID: 1321848032}
   shotgunObj: {fileID: 1775663823}
-  myBullet: {fileID: 1264289126699948, guid: 14435b0436a1c844fb6ee97ceb0de07b, type: 2}
+  myBullet: {fileID: 1264289126699948, guid: 2ab266d15ff72d7479c6601bb569d7e1, type: 2}
   aSource: {fileID: 0}
   pistolShot: {fileID: 0}
 --- !u!1 &2041123666
@@ -2992,7 +2979,7 @@ Transform:
   m_LocalScale: {x: 1, y: 4.26751, z: 13.527392}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &2041123671
 Rigidbody:
@@ -3017,7 +3004,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 2056114729}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EGO BulletSPRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3156,7 +3143,7 @@ Transform:
   m_LocalScale: {x: 10, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2098999814 stripped
 GameObject:
@@ -3201,7 +3188,7 @@ GameObject:
   - component: {fileID: 2130873865}
   - component: {fileID: 2130873866}
   - component: {fileID: 2130873867}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EGO Bullet Seat1 SP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3237,7 +3224,7 @@ MonoBehaviour:
   pistolObj: {fileID: 330831513}
   tommyObj: {fileID: 1321848032}
   shotgunObj: {fileID: 1775663823}
-  myBullet: {fileID: 1264289126699948, guid: 14435b0436a1c844fb6ee97ceb0de07b, type: 2}
+  myBullet: {fileID: 1264289126699948, guid: 2ab266d15ff72d7479c6601bb569d7e1, type: 2}
   aSource: {fileID: 0}
   pistolShot: {fileID: 0}
 --- !u!114 &2130873867
@@ -3369,7 +3356,7 @@ Transform:
   - {fileID: 2081090266}
   - {fileID: 1624211030}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2137464626
 MonoBehaviour:

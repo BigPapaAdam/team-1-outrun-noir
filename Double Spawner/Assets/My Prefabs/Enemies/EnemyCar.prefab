@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4434863631938750}
   - component: {fileID: 114550682374332978}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: EGO EnemyShootPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 65913366436060494}
   - component: {fileID: 114672860290803010}
   - component: {fileID: 54859876135686740}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: EnemyCar
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -56,7 +56,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4443531707620078}
   - component: {fileID: 114047099000631202}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: EGO EnemyCentre
   m_TagString: Untagged
   m_Icon: {fileID: 0}

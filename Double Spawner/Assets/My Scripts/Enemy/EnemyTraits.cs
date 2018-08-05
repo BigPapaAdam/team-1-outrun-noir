@@ -40,7 +40,7 @@ public class EnemyTraits : MonoBehaviour {
 
     public void OnCollisionEnter(Collision collide)
     {
-        if (collide.gameObject.tag == "Bullet")
+        if (collide.gameObject.tag == "PlayerBullet")
         {
             enemyHealth -= 1;
         }

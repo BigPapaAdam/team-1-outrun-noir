@@ -35,7 +35,7 @@ public class TommyShooter : MonoBehaviour {
 
     void TommyFire()
     {
-        if (Input.GetKeyDown(GameLoader.GameInstance.CharacterShoot))
+        if (Input.GetKey(GameLoader.GameInstance.CharacterShoot))
         {
             if (Time.time > timeOfShot + tommyRate)
             {
