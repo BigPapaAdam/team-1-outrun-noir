@@ -194,7 +194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b6fea98055c2804384665d706d0c206, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyFireRate: 0.5
+  enemyFireRate: 0.75
   enemyObj: {fileID: 1347458117717134}
   gunObj: {fileID: 0}
   myBullet: {fileID: 1264289126699948, guid: 14435b0436a1c844fb6ee97ceb0de07b, type: 2}
