@@ -10,13 +10,15 @@ public class EnemyTraits : MonoBehaviour {
 
     public GameObject tommyDrop;
     public GameObject shotgunDrop;
+    public GameObject Player;
     private int dropWeapon;
     public int randomDropChance;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
+    // Use this for initialization
+
+    void Start () {
+        Player = GameObject.FindGameObjectWithTag("Player");
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -27,7 +29,21 @@ public class EnemyTraits : MonoBehaviour {
             //Get scorecomponent of an object and add the pointWorth;
             WeaponDrop();
             Destroy(gameObject);
-            GameLoader.GameInstance.Score += 100;
+
+            //do NOT change this if statement
+            if(Player.GetComponent<PlayerAttributes>().allyIcon[1].enabled == true && Player.transform.GetChild(0).gameObject.activeSelf 
+                && Player.transform.GetChild(1).gameObject.activeSelf && Player.transform.GetChild(2).gameObject.activeSelf 
+                || Player.GetComponent<PlayerAttributes>().allyIcon[2].enabled == true && Player.transform.GetChild(0).gameObject.activeSelf
+                && Player.transform.GetChild(1).gameObject.activeSelf && Player.transform.GetChild(2).gameObject.activeSelf)
+            {
+                GameLoader.GameInstance.Score += (pointWorth * 2);
+            }
+            else
+            {
+                GameLoader.GameInstance.Score += pointWorth;
+                
+            }
+
             GameLoader.GameInstance.ScoreText.text = "Score: " + GameLoader.GameInstance.Score.ToString();
 
             if(GameLoader.GameInstance.Score > GameLoader.GameInstance.HighScore)

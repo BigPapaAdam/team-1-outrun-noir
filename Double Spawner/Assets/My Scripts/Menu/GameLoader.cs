@@ -69,7 +69,6 @@ public class GameLoader : MonoBehaviour
         Gamemanager = new GameManager();
 
         SoundManager = GameObject.Find("SoundManager");
-
         MusicSource = SoundManager.transform.GetChild(0).GetComponent<AudioSource>();
         SFXSource = SoundManager.transform.GetChild(1).GetComponent<AudioSource>();
 
