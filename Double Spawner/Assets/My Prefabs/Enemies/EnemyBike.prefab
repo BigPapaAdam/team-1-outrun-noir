@@ -200,7 +200,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1867340339081774}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -48.964836, y: -1.6700011, z: -7.864103}
+  m_LocalPosition: {x: -56.06159, y: 40.778316, z: -1.9911331}
   m_LocalScale: {x: 1, y: 1, z: 0.5}
   m_Children:
   - {fileID: 4775530085211834}
@@ -309,7 +309,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b6fea98055c2804384665d706d0c206, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyFireRate: 1
+  enemyFireRate: 2
   enemyObj: {fileID: 1867340339081774}
   gunObj: {fileID: 0}
   myBullet: {fileID: 1264289126699948, guid: 14435b0436a1c844fb6ee97ceb0de07b, type: 2}
@@ -332,9 +332,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHealth: 3
-  enemySpeed: -0.05
+  enemySpeed: 0.05
+  unchangedEnemySpeed: 0
   pointWorth: 0
   tommyDrop: {fileID: 1157190410557384, guid: 3861b4ce41a93234f9af77b484c0b6df, type: 2}
   shotgunDrop: {fileID: 1739118581839880, guid: 63bbb6fd525aa73458054b722c99adb8,
     type: 2}
+  Player: {fileID: 0}
   randomDropChance: 4

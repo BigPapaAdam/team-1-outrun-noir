@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyTraits : MonoBehaviour {
     public int enemyHealth = 5;
     public float enemySpeed = 0.1f;
+    public float unchangedEnemySpeed;
     public int pointWorth;
 
 
@@ -18,6 +19,7 @@ public class EnemyTraits : MonoBehaviour {
 
     void Start () {
         Player = GameObject.FindGameObjectWithTag("Player");
+        unchangedEnemySpeed = enemySpeed;
     }
 	
 	// Update is called once per frame
@@ -64,14 +66,17 @@ public class EnemyTraits : MonoBehaviour {
 
     void WeaponDrop()
     {
-        dropWeapon = Random.Range(1, randomDropChance);
-        if (dropWeapon == 1)
+        if (Player.GetComponent<PickupManager>().hasPickup == false)
         {
-            Instantiate(tommyDrop, transform.position, transform.rotation);
-        }
-        if (dropWeapon == 2)
-        {
-            Instantiate(shotgunDrop, transform.position, transform.rotation);
+            dropWeapon = Random.Range(1, randomDropChance);
+            if (dropWeapon == 1)
+            {
+                Instantiate(tommyDrop, transform.position, transform.rotation);
+            }
+            if (dropWeapon == 2)
+            {
+                Instantiate(shotgunDrop, transform.position, transform.rotation);
+            }
         }
     }
 }

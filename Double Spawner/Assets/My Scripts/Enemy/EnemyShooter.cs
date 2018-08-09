@@ -44,10 +44,13 @@ public class EnemyShooter : MonoBehaviour {
                 Instantiate(myBullet, bulletSPLeftFront.transform.position, bulletSPLeftFront.transform.rotation);
                 Instantiate(myBullet, bulletSPRightFront.transform.position, bulletSPRightFront.transform.rotation);
                 Instantiate(myBullet, bulletSPRight.transform.position, bulletSPRight.transform.rotation);
+                enemyObj.GetComponent<EnemyTraits>().enemySpeed = -enemyObj.GetComponent<EnemyTraits>().unchangedEnemySpeed;
             }
             else
             {
                 Instantiate(myBullet, transform.position, transform.rotation);
+                enemyShootTimer = enemyFireRate;
+
             }
 
 

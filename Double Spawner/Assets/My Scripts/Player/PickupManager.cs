@@ -12,6 +12,9 @@ public class PickupManager : MonoBehaviour {
     public Sprite[] Sprites;
     public GameObject CanvasObject;
 
+    public bool hasPickup;
+
+
     // Use this for initialization
     void Start () {
         CanvasObject = GameObject.Find("Canvas");
@@ -20,6 +23,7 @@ public class PickupManager : MonoBehaviour {
         bulletSpawn.GetComponent<PistolShooter>().enabled = true;
         bulletSpawn.GetComponent<TommyShooter>().enabled = false;
         bulletSpawn.GetComponent<ShotgunShooter>().enabled = false;
+        hasPickup = false;
     }
 	
 	// Update is called once per frame
@@ -32,7 +36,7 @@ public class PickupManager : MonoBehaviour {
             bulletSpawn.GetComponent<TommyShooter>().enabled = false;
             bulletSpawn.GetComponent<ShotgunShooter>().enabled = false;
 
-
+            hasPickup = false;
         }
     }
 
@@ -46,6 +50,7 @@ public class PickupManager : MonoBehaviour {
             CanvasObject.transform.GetChild(3).transform.GetChild(4).GetComponent<Image>().sprite = Sprites[1];
             pickupTimer = pickupDuration;
             Destroy(other.gameObject);
+            hasPickup = true;
         }
 
         if (other.gameObject.CompareTag("ShotgunPickup"))
@@ -56,6 +61,8 @@ public class PickupManager : MonoBehaviour {
             CanvasObject.transform.GetChild(3).transform.GetChild(4).GetComponent<Image>().sprite = Sprites[2];
             pickupTimer = pickupDuration;
             Destroy(other.gameObject);
+            hasPickup = true;
+
 
         }
     }
