@@ -955,8 +955,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 445753832}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -56.11, y: -0.27, z: 7.2}
-  m_LocalScale: {x: 1, y: 6.4285183, z: 10}
+  m_LocalPosition: {x: -56.11, y: -0.27, z: 5.6}
+  m_LocalScale: {x: 1, y: 6.4285183, z: 4.41833}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 17
@@ -1853,8 +1853,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1306812276}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -60.73, y: -0.27, z: 0}
-  m_LocalScale: {x: 1, y: 6.4285183, z: 10}
+  m_LocalPosition: {x: -58, y: -0.27, z: 0}
+  m_LocalScale: {x: 1, y: 6, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 16
@@ -2372,6 +2372,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2593c692d4bd6d141ad22d027a4c446c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerObj: {fileID: 1274696118}
   polCarPref: {fileID: 1319984664971954, guid: cfb0dcb0f25877d49b5d8e3dee040e8d, type: 2}
   polBikePref: {fileID: 1867340339081774, guid: 06e1d05afdb121f4a9845fb16a604eb3,
     type: 2}
@@ -2408,9 +2409,9 @@ MonoBehaviour:
   minCarChance: 0
   maxCarChance: 3
   minBikeChance: 4
-  maxBikeChance: 6
-  minObstacleChance: 7
-  maxObstacleChance: 9
+  maxBikeChance: 7
+  minObstacleChance: 8
+  maxObstacleChance: 10
   minPersonChance: 0
   maxPersonChance: 1
   minAllyChance: 2
@@ -2743,8 +2744,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1915222598}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -56.11, y: -0.27, z: -7.8}
-  m_LocalScale: {x: 1, y: 6.4285183, z: 10}
+  m_LocalPosition: {x: -56.11, y: -0.27, z: -5.01}
+  m_LocalScale: {x: 1, y: 6.4285183, z: 3.5468025}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 18

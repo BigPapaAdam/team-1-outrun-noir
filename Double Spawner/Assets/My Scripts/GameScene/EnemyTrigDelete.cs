@@ -18,7 +18,7 @@ public class EnemyTrigDelete : MonoBehaviour {
 
     private void OnTriggerEnter(Collider collide)
     {
-        if (collide.gameObject.tag == "Enemy")
+        if (collide.gameObject.tag == "Enemy" || collide.gameObject.tag == "SpikeTrap" || collide.gameObject.tag == "TriadBlock" || collide.gameObject.tag == "AlliedMafia")
         {
             Destroy (collide.gameObject);
         }

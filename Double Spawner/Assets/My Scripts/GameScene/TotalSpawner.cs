@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class TotalSpawner : MonoBehaviour {
+
+    //Player
+    public GameObject playerObj; 
+
     //CHARACTERS
     public GameObject polCarPref;
     public GameObject polBikePref;
@@ -262,7 +266,10 @@ public class TotalSpawner : MonoBehaviour {
                 break;
             case 1:
                 //Bike
-                Instantiate(alliedMafiaObj, topPathSpawn.transform.position, transform.rotation);
+                if (playerObj.GetComponent<PlayerAttributes>().carIsFull == false)
+                {
+                    Instantiate(alliedMafiaObj, topPathSpawn.transform.position, transform.rotation);
+                }
                 break;
         }
     }
@@ -289,7 +296,10 @@ public class TotalSpawner : MonoBehaviour {
                 break;
             case 1:
                 //Bike
-                Instantiate(alliedMafiaObj, botPathSpawn.transform.position, transform.rotation);
+                if (playerObj.GetComponent<PlayerAttributes>().carIsFull == false)
+                {
+                    Instantiate(alliedMafiaObj, botPathSpawn.transform.position, transform.rotation);
+                }
                 break;
         }
     }

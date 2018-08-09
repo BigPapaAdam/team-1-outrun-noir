@@ -26,6 +26,8 @@ public class PlayerAttributes : MonoBehaviour {
     public int triadBlockCollisionDamage = 1;
     public int enemyCrashDamage = 1;
 
+    public bool carIsFull;
+
 	// Use this for initialization
 	void Start () {
 
@@ -91,6 +93,7 @@ public class PlayerAttributes : MonoBehaviour {
                 {
                     activeAllies -= 1;
                     allyIcon[activeAllies].gameObject.SetActive(false);
+                    carIsFull = false;
                 }
             }
         }
@@ -117,11 +120,18 @@ public class PlayerAttributes : MonoBehaviour {
     {
         if (collide.gameObject.tag == "AlliedMafia")
         {
-            if(activeAllies < 3)
+            if (activeAllies < 3)
             {
                 allyIcon[activeAllies].gameObject.SetActive(true);
                 activeAllies += 1;
             }
+
+            if (activeAllies == 3)
+            {
+                carIsFull = true;
+            }
+
+            
 
             Destroy(collide.gameObject);
         }
