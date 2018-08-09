@@ -13,6 +13,7 @@ public class PlayerAttributes : MonoBehaviour {
     public GameObject shooterSeat1;
     public GameObject shooterSeat2;
     public GameObject shooterSeat3;
+    public GameObject FullHouseIcon;
 
 
     public enum activeWeapon { Pistol, Tommy, Shotgun }
@@ -76,6 +77,15 @@ public class PlayerAttributes : MonoBehaviour {
                 shooterSeat3.gameObject.SetActive(true);
                 break;
 
+        }
+
+        if(carIsFull == true)
+        {
+            FullHouseIcon.SetActive(true);
+        }
+        else
+        {
+            FullHouseIcon.SetActive(false);
         }
     }
 
@@ -144,7 +154,7 @@ public class PlayerAttributes : MonoBehaviour {
             {
                 playerHealth -= spikeDamage;
             }
-            if (activeAllies > 0)
+            else if (activeAllies > 0)
             {
                 activeAllies -= 1;
                 allyIcon[activeAllies].gameObject.SetActive(false);
@@ -161,8 +171,7 @@ public class PlayerAttributes : MonoBehaviour {
             {
                 playerHealth -= triadBlockCollisionDamage;
             }
-            else
-                if (activeAllies > 0)
+            else if (activeAllies > 0)
             {
                 activeAllies -= 1;
                 allyIcon[activeAllies].gameObject.SetActive(false);

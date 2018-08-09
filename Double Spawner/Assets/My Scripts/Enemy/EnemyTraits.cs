@@ -33,10 +33,7 @@ public class EnemyTraits : MonoBehaviour {
             Destroy(gameObject);
 
             //do NOT change this if statement
-            if(Player.GetComponent<PlayerAttributes>().allyIcon[1].enabled == true && Player.transform.GetChild(0).gameObject.activeSelf 
-                && Player.transform.GetChild(1).gameObject.activeSelf && Player.transform.GetChild(2).gameObject.activeSelf 
-                || Player.GetComponent<PlayerAttributes>().allyIcon[2].enabled == true && Player.transform.GetChild(0).gameObject.activeSelf
-                && Player.transform.GetChild(1).gameObject.activeSelf && Player.transform.GetChild(2).gameObject.activeSelf)
+            if(Player.GetComponent<PlayerAttributes>().carIsFull == true && Player.GetComponent<PickupManager>().hasPickup == true)
             {
                 GameLoader.GameInstance.Score += (pointWorth * 2);
             }

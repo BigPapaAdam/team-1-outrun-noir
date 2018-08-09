@@ -43,6 +43,8 @@ public class GameLoader : MonoBehaviour
     public int Score = 0;
     public int HighScore = 0;
 
+    private int Value;
+
     private bool IsButtonPressed = false;
 
     Event KeyEvent;
@@ -118,6 +120,7 @@ public class GameLoader : MonoBehaviour
     public void OnFullScreenToggle()
     {
         Gamemanager.FullScreen = Screen.fullScreen = FullscreenToggle.isOn;
+        OnResolutionChanged();
     }
 
     public void OnMusicSliderChange()
@@ -150,9 +153,14 @@ public class GameLoader : MonoBehaviour
 
     public void OnResolutionChanged()
     {
-        Screen.SetResolution(Resolutions[ResolutionDropdown.value].width, Resolutions[ResolutionDropdown.value].height, Screen.fullScreen);
+        Screen.SetResolution(Resolutions[ResolutionDropdown.value].width, Resolutions[ResolutionDropdown.value].height, Gamemanager.FullScreen);
         Gamemanager.Resolutionindex = ResolutionDropdown.value;
         ResolutionDropdown.RefreshShownValue();
+
+        if (!FullscreenToggle.isOn)
+        {
+            Menu.gameObject.transform.parent.transform.parent.GetComponent<CanvasScaler>().referenceResolution = new Vector2(Resolutions[ResolutionDropdown.value].width, Resolutions[ResolutionDropdown.value].height);
+        }
     }
 
     public void Play()
@@ -188,7 +196,7 @@ public class GameLoader : MonoBehaviour
         UpButton.transform.GetChild(0).GetComponent<Text>().text = "Please enter a new key";
         ButtonText = "up";
 
-        if(IsButtonPressed == false)
+        if (IsButtonPressed == false)
         {
             StartCoroutine(GetNewKey());
         }
@@ -218,11 +226,11 @@ public class GameLoader : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if(SceneManager.GetActiveScene().buildIndex !=0)
+            if (SceneManager.GetActiveScene().buildIndex != 0)
             {
-                if(!Menu.activeSelf)
+                if (!Menu.activeSelf)
                 {
                     Menu.SetActive(true);
                 }
@@ -247,7 +255,7 @@ public class GameLoader : MonoBehaviour
 
     IEnumerator WaitForKey()
     {
-        while(!KeyEvent.isKey)
+        while (!KeyEvent.isKey)
         {
             yield return null;
         }
@@ -258,7 +266,7 @@ public class GameLoader : MonoBehaviour
         IsButtonPressed = true;
         yield return WaitForKey();
 
-        switch(ButtonText)
+        switch (ButtonText)
         {
             case "up":
                 CharacterMoveUp = NewKey;
@@ -274,12 +282,12 @@ public class GameLoader : MonoBehaviour
                 StopCoroutine(GetNewKey());
                 break;
 
-            //case "shoot":
-            //    CharacterShoot = NewKey;
-            //    Gamemanager.FireKey = NewKey.ToString();
-            //    ShootButton.transform.GetChild(0).GetComponent<Text>().text = NewKey.ToString();
-            //    StopCoroutine(GetNewKey());
-            //    break;
+                //case "shoot":
+                //    CharacterShoot = NewKey;
+                //    Gamemanager.FireKey = NewKey.ToString();
+                //    ShootButton.transform.GetChild(0).GetComponent<Text>().text = NewKey.ToString();
+                //    StopCoroutine(GetNewKey());
+                //    break;
         }
     }
 
@@ -310,7 +318,7 @@ public class GameLoader : MonoBehaviour
             MusicSource.volume = MusicSlider.value = Gamemanager.Musicvolume;
             SFXSource.volume = SFXSlider.value = Gamemanager.SFXvolume;
 
-            CharacterMoveUp = (KeyCode)System.Enum.Parse(typeof(KeyCode),Gamemanager.UpKey,true);
+            CharacterMoveUp = (KeyCode)System.Enum.Parse(typeof(KeyCode), Gamemanager.UpKey, true);
             UpButton.transform.GetChild(0).GetComponent<Text>().text = Gamemanager.UpKey;
 
             CharacterMoveDown = (KeyCode)System.Enum.Parse(typeof(KeyCode), Gamemanager.DownKey, true);
@@ -340,6 +348,17 @@ public class GameLoader : MonoBehaviour
             Gamemanager.FireKey = CharacterShoot.ToString();
             Gamemanager.HighScore = 0;
 
+            Value = Screen.currentResolution.width;
+            ResolutionDropdown.value = 0;
+
+            int i = 0;
+            while(Value != Resolutions[i].width)
+            {
+                i++;
+            }
+
+            Gamemanager.ResolutionIndex = i;
+            ResolutionDropdown.value = i;
 
             string jsondata = JsonUtility.ToJson(Gamemanager, true);
 
