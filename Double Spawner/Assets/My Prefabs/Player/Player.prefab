@@ -1018,6 +1018,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 9b22189ce3c05384c912b979ec07b9cb, type: 3}
   - {fileID: 21300000, guid: aa30f5d226999ad44be32a0e7369b764, type: 3}
   CanvasObject: {fileID: 0}
+  hasPickup: 0
 --- !u!114 &114522747387685874
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1080,6 +1081,7 @@ MonoBehaviour:
   shooterSeat1: {fileID: 1814579845358706}
   shooterSeat2: {fileID: 1213065679170274}
   shooterSeat3: {fileID: 1589837848351500}
+  FullHouseIcon: {fileID: 0}
   pickupTimer: 0
   pickupDuration: 0
   weaponTimerUI: {fileID: 0}
@@ -1087,6 +1089,7 @@ MonoBehaviour:
   spikeDamage: 1
   triadBlockCollisionDamage: 1
   enemyCrashDamage: 1
+  carIsFull: 0
 --- !u!114 &114672956950396218
 MonoBehaviour:
   m_ObjectHideFlags: 1
