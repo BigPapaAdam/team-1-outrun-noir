@@ -34,6 +34,7 @@ public class GameLoader : MonoBehaviour
     public Dropdown ShootDropdown;
     public Text ScoreText;
     public Text HighScoreText;
+    public Canvas WindowSize;
     public KeyCode CharacterMoveUp;
     public KeyCode CharacterMoveDown;
     public KeyCode CharacterShoot;
@@ -159,7 +160,7 @@ public class GameLoader : MonoBehaviour
 
         if (!FullscreenToggle.isOn)
         {
-            Menu.gameObject.transform.parent.transform.parent.GetComponent<CanvasScaler>().referenceResolution = new Vector2(Resolutions[ResolutionDropdown.value].width, Resolutions[ResolutionDropdown.value].height);
+            WindowSize.GetComponent<CanvasScaler>().referenceResolution = new Vector2(Resolutions[ResolutionDropdown.value].width, Resolutions[ResolutionDropdown.value].height);
         }
     }
 

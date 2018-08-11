@@ -83,7 +83,7 @@ public class PlayerAttributes : MonoBehaviour {
 
         }
 
-        if(carIsFull == true)
+        if(carIsFull == true && GetComponent<PickupManager>().hasPickup == true)
         {
             FullHouseIcon.SetActive(true);
         }

@@ -35,8 +35,13 @@ public class PickupManager : MonoBehaviour {
             bulletSpawn.GetComponent<PistolShooter>().enabled = true;
             bulletSpawn.GetComponent<TommyShooter>().enabled = false;
             bulletSpawn.GetComponent<ShotgunShooter>().enabled = false;
+            GetComponent<PlayerAttributes>().weaponTimerUI.gameObject.SetActive(false);
 
             hasPickup = false;
+        }
+        else
+        {
+            GetComponent<PlayerAttributes>().weaponTimerUI.text = pickupTimer.ToString();
         }
     }
 
@@ -48,7 +53,12 @@ public class PickupManager : MonoBehaviour {
             bulletSpawn.GetComponent<TommyShooter>().enabled = true;
             bulletSpawn.GetComponent<ShotgunShooter>().enabled = false;
             CanvasObject.transform.GetChild(3).transform.GetChild(4).GetComponent<Image>().sprite = Sprites[1];
+
             pickupTimer = pickupDuration;
+
+            GetComponent<PlayerAttributes>().weaponTimerUI.gameObject.SetActive(true);
+            GetComponent<PlayerAttributes>().weaponTimerUI.text = pickupTimer.ToString();
+
             Destroy(other.gameObject);
             hasPickup = true;
         }
@@ -60,6 +70,10 @@ public class PickupManager : MonoBehaviour {
             bulletSpawn.GetComponent<ShotgunShooter>().enabled = true;
             CanvasObject.transform.GetChild(3).transform.GetChild(4).GetComponent<Image>().sprite = Sprites[2];
             pickupTimer = pickupDuration;
+
+            GetComponent<PlayerAttributes>().weaponTimerUI.gameObject.SetActive(true);
+            GetComponent<PlayerAttributes>().weaponTimerUI.text = pickupTimer.ToString();
+
             Destroy(other.gameObject);
             hasPickup = true;
 

@@ -525,7 +525,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.000015259}
+  m_AnchoredPosition: {x: 0, y: 0.000030517578}
   m_SizeDelta: {x: 0.00012207, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &163766289
@@ -2911,6 +2911,11 @@ Prefab:
       propertyPath: ShootDropdown
       value: 
       objectReference: {fileID: 438721350}
+    - target: {fileID: 114842970440432652, guid: 1ffb8a651f0d86e42b143e62edee6921,
+        type: 2}
+      propertyPath: WindowSize
+      value: 
+      objectReference: {fileID: 1819559091}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1ffb8a651f0d86e42b143e62edee6921, type: 2}
   m_IsPrefabParent: 0
