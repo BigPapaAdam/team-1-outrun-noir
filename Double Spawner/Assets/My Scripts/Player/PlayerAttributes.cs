@@ -116,12 +116,54 @@ public class PlayerAttributes : MonoBehaviour {
 
         if (other.gameObject.tag == "Enemy")
         {
-            Destroy(other.gameObject);
-            playerHealth -= enemyCrashDamage;
+            if (activeAllies <= 0)
+            {
+                playerHealth -= enemyCrashDamage;
+            }
+            else
+            {
+                if (activeAllies > 0)
+                {
+                    activeAllies -= 1;
+                    allyIcon[activeAllies].gameObject.SetActive(false);
+                    carIsFull = false;
+                }
+            }
         }
 
+        if (other.gameObject.tag == "TriadBlock")
+        {
+            if (activeAllies <= 0)
+            {
+                playerHealth -= triadBlockCollisionDamage;
+            }
+            else
+            {
+                if (activeAllies > 0)
+                {
+                    activeAllies -= 1;
+                    allyIcon[activeAllies].gameObject.SetActive(false);
+                    carIsFull = false;
+                }
+            }
+        }
 
-
+        if (other.gameObject.tag == "SpikeTrap")
+        {
+            if (activeAllies <= 0)
+            {
+                playerHealth -= spikeDamage;
+            }
+            else
+            {
+                if (activeAllies > 0)
+                {
+                    activeAllies -= 1;
+                    allyIcon[activeAllies].gameObject.SetActive(false);
+                    carIsFull = false;
+                }
+            }
+        }
 
         //if (other.gameObject.tag == "AlliedMafia")
         //{
