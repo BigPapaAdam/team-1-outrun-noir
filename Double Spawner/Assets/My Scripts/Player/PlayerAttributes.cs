@@ -9,6 +9,7 @@ public class PlayerAttributes : MonoBehaviour {
     public Image healthBarUI;
 
     public static int activeAllies = 0;
+    public int globalAlliesInCar;
     public Image[] allyIcon;
     public GameObject shooterSeat1;
     public GameObject shooterSeat2;
@@ -43,6 +44,9 @@ public class PlayerAttributes : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        globalAlliesInCar = activeAllies;
+
+
         if (playerHealth <= 0)
         {
             GameLoader.GameInstance.Save();
@@ -87,6 +91,8 @@ public class PlayerAttributes : MonoBehaviour {
         {
             FullHouseIcon.SetActive(false);
         }
+
+        
     }
 
     void OnCollisionEnter(Collision other)

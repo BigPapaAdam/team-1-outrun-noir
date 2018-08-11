@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 65105477250051444}
   - component: {fileID: 114729740125647386}
   m_Layer: 0
-  m_Name: AllideMafiaPickUp
+  m_Name: ThirdAllideMafiaPickUp
   m_TagString: AlliedMafia
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1492434405720300}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -48.964836, y: -1.67, z: -7.8641}
+  m_LocalPosition: {x: -58.242676, y: -1.1791894, z: -8.896095}
   m_LocalScale: {x: 1.7118945, y: 1.981623, z: 3.0257952}
   m_Children: []
   m_Father: {fileID: 0}
@@ -58,7 +58,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 5a2059d16983af344b95b2489be3e650, type: 2}
+  - {fileID: 2100000, guid: 115c4eed1b68f0040bce86242df49960, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

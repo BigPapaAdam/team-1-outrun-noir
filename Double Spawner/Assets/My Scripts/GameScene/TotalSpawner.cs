@@ -15,6 +15,8 @@ public class TotalSpawner : MonoBehaviour {
     public GameObject playerObject;
     public GameObject spikeTrapObj;
     public GameObject alliedMafiaObj;
+    public GameObject secondAlliedMafiaObj;
+    public GameObject thirdAlliedMafiaObj;
     //public GameObject triadBlockObj;
 
     //EGO SPAWN LOCATIONS
@@ -268,7 +270,19 @@ public class TotalSpawner : MonoBehaviour {
                 //Bike
                 if (playerObj.GetComponent<PlayerAttributes>().carIsFull == false)
                 {
-                    Instantiate(alliedMafiaObj, topPathSpawn.transform.position, transform.rotation);
+                    if (playerObj.GetComponent<PlayerAttributes>().globalAlliesInCar == 0)
+                    {
+                        Instantiate(alliedMafiaObj, topPathSpawn.transform.position, transform.rotation);
+                    }
+                    else if (playerObj.GetComponent<PlayerAttributes>().globalAlliesInCar == 1)
+                    {
+                        Instantiate(secondAlliedMafiaObj, topPathSpawn.transform.position, transform.rotation);
+                    }
+                    else if (playerObj.GetComponent<PlayerAttributes>().globalAlliesInCar == 2)
+                    {
+                        Instantiate(thirdAlliedMafiaObj, topPathSpawn.transform.position, transform.rotation);
+
+                    }
                 }
                 break;
         }
@@ -298,7 +312,19 @@ public class TotalSpawner : MonoBehaviour {
                 //Bike
                 if (playerObj.GetComponent<PlayerAttributes>().carIsFull == false)
                 {
-                    Instantiate(alliedMafiaObj, botPathSpawn.transform.position, transform.rotation);
+                    if (playerObj.GetComponent<PlayerAttributes>().globalAlliesInCar == 0)
+                    {
+                        Instantiate(alliedMafiaObj, botPathSpawn.transform.position, transform.rotation);
+                    }
+                    else if (playerObj.GetComponent<PlayerAttributes>().globalAlliesInCar == 1)
+                    {
+                        Instantiate(secondAlliedMafiaObj, botPathSpawn.transform.position, transform.rotation);
+                    }
+                    else if (playerObj.GetComponent<PlayerAttributes>().globalAlliesInCar == 2)
+                    {
+                        Instantiate(thirdAlliedMafiaObj, botPathSpawn.transform.position, transform.rotation);
+
+                    }
                 }
                 break;
         }
