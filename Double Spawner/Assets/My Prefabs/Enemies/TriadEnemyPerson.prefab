@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 65093652291829334}
   - component: {fileID: 114915020744038062}
   m_Layer: 10
-  m_Name: EnemyPersonBot
+  m_Name: TriadEnemyPerson
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -70,7 +70,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1347458117717134}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -69.00115, y: -1.6700014, z: -10.761866}
+  m_LocalPosition: {x: -50.321747, y: -1.6700004, z: -2.5684774}
   m_LocalScale: {x: 0.3, y: 1, z: 0.3}
   m_Children:
   - {fileID: 4343817365675294}
@@ -119,7 +119,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: e3b1b35daaf635d46b2287738156815d, type: 2}
+  - {fileID: 2100000, guid: c29c4d9c6be48ea48b9e4a35a0a99986, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -218,8 +218,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyHealth: 1
   enemySpeed: -0.2
+  unchangedEnemySpeed: 0
   pointWorth: 0
   tommyDrop: {fileID: 1157190410557384, guid: 3861b4ce41a93234f9af77b484c0b6df, type: 2}
   shotgunDrop: {fileID: 1739118581839880, guid: 63bbb6fd525aa73458054b722c99adb8,
     type: 2}
+  Player: {fileID: 0}
   randomDropChance: 4

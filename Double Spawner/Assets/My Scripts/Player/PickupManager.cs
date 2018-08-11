@@ -41,7 +41,7 @@ public class PickupManager : MonoBehaviour {
         }
         else
         {
-            GetComponent<PlayerAttributes>().weaponTimerUI.text = pickupTimer.ToString();
+            GetComponent<PlayerAttributes>().weaponTimerUI.text = pickupTimer.ToString("0.00");
         }
     }
 

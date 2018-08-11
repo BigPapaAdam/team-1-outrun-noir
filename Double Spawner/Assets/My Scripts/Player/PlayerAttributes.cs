@@ -114,11 +114,11 @@ public class PlayerAttributes : MonoBehaviour {
             }
         }
 
-        //if (other.gameObject.tag == "Enemy")
-        //{
-        //    playerHealth -= enemyCrashDamage;
-        //    Destroy(other.gameObject);
-        //}
+        if (other.gameObject.tag == "Enemy")
+        {
+            Destroy(other.gameObject);
+            playerHealth -= enemyCrashDamage;
+        }
 
 
 

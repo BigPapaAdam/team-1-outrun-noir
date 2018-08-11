@@ -102,7 +102,7 @@ GameObject:
   - component: {fileID: 114987702324994454}
   - component: {fileID: 114135996863679632}
   m_Layer: 10
-  m_Name: EnemyBike
+  m_Name: TriadEnemyBike
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -200,7 +200,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1867340339081774}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -39.63208, y: -1.6700009, z: -6.08776}
+  m_LocalPosition: {x: -34.822952, y: -1.6700008, z: -6.432234}
   m_LocalScale: {x: 1, y: 1, z: 0.5}
   m_Children:
   - {fileID: 4775530085211834}
@@ -235,7 +235,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 13f4ac36e33035f47a357b97849c48f1, type: 2}
+  - {fileID: 2100000, guid: c29c4d9c6be48ea48b9e4a35a0a99986, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

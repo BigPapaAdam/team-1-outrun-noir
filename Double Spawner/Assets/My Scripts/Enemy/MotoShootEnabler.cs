@@ -25,6 +25,16 @@ public class MotoShootEnabler : MonoBehaviour {
         }
     }
 
+    private void OnTriggerExit(Collider collide)
+    {
+        if (collide.gameObject.tag == "MotoActivator")
+        {
+            bulletSpawn.GetComponent<EnemyShooter>().enabled = false;
+        }
+    }
+
+
+
     //private void OnTriggerExit(Collider collide)
     //{
     //    if (collide.gameObject.tag == "MotoActivator")

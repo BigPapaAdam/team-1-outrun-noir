@@ -1046,7 +1046,7 @@ MonoBehaviour:
   pistolObj: {fileID: 1470152405131416}
   tommyObj: {fileID: 1435034926900038}
   shotgunObj: {fileID: 1288282571180624}
-  myBullet: {fileID: 1264289126699948, guid: 2ab266d15ff72d7479c6601bb569d7e1, type: 2}
+  myBullet: {fileID: 1264289126699948, guid: 144244547d1530e4186b30e850cad555, type: 2}
   aSource: {fileID: 0}
   tommyShot: {fileID: 0}
 --- !u!114 &114620638780567204

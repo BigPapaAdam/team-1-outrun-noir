@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -370,6 +370,45 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1694726830}
+    - target: {fileID: 1684712206534818, guid: 3724f42bcd472f241981ea083dfc87f0, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224238467146338368, guid: 3724f42bcd472f241981ea083dfc87f0,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -620.05005
+      objectReference: {fileID: 0}
+    - target: {fileID: 224238467146338368, guid: 3724f42bcd472f241981ea083dfc87f0,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 88.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 224238467146338368, guid: 3724f42bcd472f241981ea083dfc87f0,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -692.2101
+      objectReference: {fileID: 0}
+    - target: {fileID: 224238467146338368, guid: 3724f42bcd472f241981ea083dfc87f0,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 375.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114733821019434206, guid: 3724f42bcd472f241981ea083dfc87f0,
+        type: 2}
+      propertyPath: m_FontData.m_FontSize
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 114733821019434206, guid: 3724f42bcd472f241981ea083dfc87f0,
+        type: 2}
+      propertyPath: m_FontData.m_MinSize
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114733821019434206, guid: 3724f42bcd472f241981ea083dfc87f0,
+        type: 2}
+      propertyPath: m_FontData.m_MaxSize
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3724f42bcd472f241981ea083dfc87f0, type: 2}
   m_IsPrefabParent: 0
@@ -2349,12 +2388,17 @@ MonoBehaviour:
   polCarPref: {fileID: 1319984664971954, guid: cfb0dcb0f25877d49b5d8e3dee040e8d, type: 2}
   polBikePref: {fileID: 1867340339081774, guid: 06e1d05afdb121f4a9845fb16a604eb3,
     type: 2}
-  polPersonPrefBot: {fileID: 1347458117717134, guid: 335aa91d3a534f14ebabb897aa39fe46,
+  polPersonPref: {fileID: 1347458117717134, guid: 335aa91d3a534f14ebabb897aa39fe46,
     type: 2}
-  polPersonPrefTop: {fileID: 1347458117717134, guid: 918e10ea8e25bfd4aae1e9b60c312ba1,
+  triCarPref: {fileID: 1319984664971954, guid: 046556b2563587f489411cd2a808b17c, type: 2}
+  triBikePref: {fileID: 1867340339081774, guid: d85feb409c4c85f43bddb0c76f55372f,
+    type: 2}
+  triPersonPref: {fileID: 1347458117717134, guid: 1485c13e02e181a46bd2dac6d79f77d9,
     type: 2}
   playerObject: {fileID: 1274696118}
-  spikeTrapObj: {fileID: 1347458117717134, guid: dd46d6b7ac7705c4384836c000d6f517,
+  spikeTrapObj: {fileID: 1347458117717134, guid: d7e15eed4a79aab46b65b974afb4600a,
+    type: 2}
+  triadRoadBlock: {fileID: 1347458117717134, guid: dd46d6b7ac7705c4384836c000d6f517,
     type: 2}
   alliedMafiaObj: {fileID: 1492434405720300, guid: f5d8b75951b14e84494625fb8caf9193,
     type: 2}
@@ -2393,10 +2437,15 @@ MonoBehaviour:
   maxPersonChance: 1
   minAllyChance: 2
   maxAllyChance: 3
+  minPolChance: 0
+  maxPolChance: 1
+  minTriChance: 2
+  maxTriChance: 3
   SpawnTimer: 3
   TempTimer: 0
   WhichLane: 0
   WhichEnemy: 0
+  WhichFaction: 0
   SidelineRnd: 0
 --- !u!4 &1668757867
 Transform:
@@ -2849,13 +2898,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2081090265}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 15, y: 0, z: 4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2137464625}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2090193195
 GameObject:
   m_ObjectHideFlags: 0

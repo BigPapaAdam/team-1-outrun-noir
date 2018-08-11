@@ -10,14 +10,18 @@ public class TotalSpawner : MonoBehaviour {
     //CHARACTERS
     public GameObject polCarPref;
     public GameObject polBikePref;
-    public GameObject polPersonPrefBot;
-    public GameObject polPersonPrefTop;
+    public GameObject polPersonPref;
+    public GameObject triCarPref;
+    public GameObject triBikePref;
+    public GameObject triPersonPref;
+
     public GameObject playerObject;
     public GameObject spikeTrapObj;
+    public GameObject triadRoadBlock;
     public GameObject alliedMafiaObj;
     public GameObject secondAlliedMafiaObj;
     public GameObject thirdAlliedMafiaObj;
-    //public GameObject triadBlockObj;
+
 
     //EGO SPAWN LOCATIONS
     public GameObject topLaneSpawn;
@@ -43,8 +47,6 @@ public class TotalSpawner : MonoBehaviour {
     public int maxP1Chance = 12;
     public int minP2Chance = 13;
     public int maxP2Chance = 15;
-
-
     
     //ENEMY SPAWN CHANCES
     public int minCarChance = 0;
@@ -61,6 +63,12 @@ public class TotalSpawner : MonoBehaviour {
     public int minAllyChance = 2;
     public int maxAllyChance = 3;
 
+    //ENEMY FACTION CHANCES
+    public int minPolChance = 0;
+    public int maxPolChance = 1;
+    public int minTriChance = 2;
+    public int maxTriChance = 3;
+
 
 
 
@@ -69,6 +77,7 @@ public class TotalSpawner : MonoBehaviour {
 
     public int WhichLane;
     public int WhichEnemy;
+    public int WhichFaction;
     public int SidelineRnd;
 
     // Use this for initialization
@@ -152,19 +161,53 @@ public class TotalSpawner : MonoBehaviour {
         switch (WhichEnemy)
         {
             case 0:
-                //Car                
-                Instantiate(polCarPref, topLaneSpawn.transform.position, transform.rotation);
+                //Car
+                WhichFaction = Random.Range(minPolChance, maxTriChance + 1);
+
+                if (WhichFaction >= minPolChance && WhichFaction <= maxPolChance)
+                {
+                    Instantiate(polCarPref, topLaneSpawn.transform.position, transform.rotation);
+                }
+                else if (WhichFaction >= minTriChance && WhichFaction <= maxTriChance)
+                {
+                    Instantiate(triCarPref, topLaneSpawn.transform.position, transform.rotation);
+                }
+
                 break;
             case 1:
                 //Bike
-                if (topLaneDetector.GetComponent<LaneDetection>().motoSpawnable)
+                WhichFaction = Random.Range(minPolChance, maxTriChance + 1);
+
+                if (WhichFaction >= minPolChance && WhichFaction <= maxPolChance)
                 {
-                    Instantiate(polBikePref, backTopLaneSpawn.transform.position, transform.rotation);
+                    if (topLaneDetector.GetComponent<LaneDetection>().motoSpawnable)
+                    {
+                        Instantiate(polBikePref, backTopLaneSpawn.transform.position, transform.rotation);
+                    }
                 }
+                else if (WhichFaction >= minTriChance && WhichFaction <= maxTriChance)
+                {
+                    if (topLaneDetector.GetComponent<LaneDetection>().motoSpawnable)
+                    {
+                        Instantiate(triBikePref, backTopLaneSpawn.transform.position, transform.rotation);
+                    }
+                }
+
+
                 break;
             case 2:
                 //Spike
-                Instantiate(spikeTrapObj, topLaneSpawn.transform.position, transform.rotation);
+                WhichFaction = Random.Range(minPolChance, maxTriChance + 1);
+
+                if (WhichFaction >= minPolChance && WhichFaction <= maxPolChance)
+                {
+                    Instantiate(spikeTrapObj, topLaneSpawn.transform.position, transform.rotation);
+                }
+                else if (WhichFaction >= minTriChance && WhichFaction <= maxTriChance)
+                {
+                    Instantiate(triadRoadBlock, topLaneSpawn.transform.position, transform.rotation);
+                }
+
                 break;
         }
     }
@@ -190,19 +233,50 @@ public class TotalSpawner : MonoBehaviour {
         switch (WhichEnemy)
         {
             case 0:
-                //Car                
-                Instantiate(polCarPref, midLaneSpawn.transform.position, transform.rotation);
+                //Car   
+                WhichFaction = Random.Range(minPolChance, maxTriChance + 1);
+
+                if (WhichFaction >= minPolChance && WhichFaction <= maxPolChance)
+                {
+                    Instantiate(polCarPref, midLaneSpawn.transform.position, transform.rotation);
+                }
+                else if (WhichFaction >= minTriChance && WhichFaction <= maxTriChance)
+                {
+                    Instantiate(triCarPref, midLaneSpawn.transform.position, transform.rotation);
+                }
                 break;
             case 1:
                 //Bike
-                if (midLaneDetector.GetComponent<LaneDetection>().motoSpawnable)
+                WhichFaction = Random.Range(minPolChance, maxTriChance + 1);
+
+                if (WhichFaction >= minPolChance && WhichFaction <= maxPolChance)
                 {
-                    Instantiate(polBikePref, backMidLaneSpawn.transform.position, transform.rotation);
+                    if (midLaneDetector.GetComponent<LaneDetection>().motoSpawnable)
+                    {
+                        Instantiate(polBikePref, backMidLaneSpawn.transform.position, transform.rotation);
+                    }
                 }
+                else if (WhichFaction >= minTriChance && WhichFaction <= maxTriChance)
+                {
+                    if (midLaneDetector.GetComponent<LaneDetection>().motoSpawnable)
+                    {
+                        Instantiate(triBikePref, backMidLaneSpawn.transform.position, transform.rotation);
+                    }
+                }
+
                 break;
             case 2:
                 //Spike
-                Instantiate(spikeTrapObj, midLaneSpawn.transform.position, transform.rotation);
+                WhichFaction = Random.Range(minPolChance, maxTriChance + 1);
+
+                if (WhichFaction >= minPolChance && WhichFaction <= maxPolChance)
+                {
+                    Instantiate(spikeTrapObj, midLaneSpawn.transform.position, transform.rotation);
+                }
+                else if (WhichFaction >= minTriChance && WhichFaction <= maxTriChance)
+                {
+                    Instantiate(triadRoadBlock, midLaneSpawn.transform.position, transform.rotation);
+                }
                 break;
         }
 
@@ -228,19 +302,52 @@ public class TotalSpawner : MonoBehaviour {
         switch (WhichEnemy)
         {
             case 0:
-                //Car                
-                Instantiate(polCarPref, botLaneSpawn.transform.position, transform.rotation);
+                //Car
+                WhichFaction = Random.Range(minPolChance, maxTriChance + 1);
+
+                if (WhichFaction >= minPolChance && WhichFaction <= maxPolChance)
+                {
+                    Instantiate(polCarPref, botLaneSpawn.transform.position, transform.rotation);
+                }
+                else if (WhichFaction >= minTriChance && WhichFaction <= maxTriChance)
+                {
+                    Instantiate(triCarPref, botLaneSpawn.transform.position, transform.rotation);
+                }
                 break;
             case 1:
                 //Bike
-                if (botLaneDetector.GetComponent<LaneDetection>().motoSpawnable)
+                WhichFaction = Random.Range(minPolChance, maxTriChance + 1);
+
+                if (WhichFaction >= minPolChance && WhichFaction <= maxPolChance)
                 {
-                    Instantiate(polBikePref, backBotLaneSpawn.transform.position, transform.rotation);
+                    if (botLaneDetector.GetComponent<LaneDetection>().motoSpawnable)
+                    {
+                        Instantiate(polBikePref, backBotLaneSpawn.transform.position, transform.rotation);
+                    }
                 }
+                else if (WhichFaction >= minTriChance && WhichFaction <= maxTriChance)
+                {
+                    if (botLaneDetector.GetComponent<LaneDetection>().motoSpawnable)
+                    {
+                        Instantiate(triBikePref, backBotLaneSpawn.transform.position, transform.rotation);
+                    }
+                }
+
                 break;
             case 2:
                 //Spike
-                Instantiate(spikeTrapObj, botLaneSpawn.transform.position, transform.rotation);
+                WhichFaction = Random.Range(minPolChance, maxTriChance + 1);
+
+                if (WhichFaction >= minPolChance && WhichFaction <= maxPolChance)
+                {
+                    Instantiate(spikeTrapObj, botLaneSpawn.transform.position, transform.rotation);
+                }
+                else if (WhichFaction >= minTriChance && WhichFaction <= maxTriChance)
+                {
+                    Instantiate(triadRoadBlock, botLaneSpawn.transform.position, transform.rotation);
+                }
+
+
                 break;
 
         }
@@ -263,8 +370,17 @@ public class TotalSpawner : MonoBehaviour {
         switch (SidelineRnd)
         {
             case 0:
-                //Car                
-                Instantiate(polPersonPrefTop, topPathSpawn.transform.position, topPathSpawn.transform.rotation);
+                //Car    
+                WhichFaction = Random.Range(minPolChance, maxTriChance + 1);
+
+                if (WhichFaction >= minPolChance && WhichFaction <= maxPolChance)
+                {
+                    Instantiate(polPersonPref, topPathSpawn.transform.position, transform.rotation);
+                }
+                else if (WhichFaction >= minTriChance && WhichFaction <= maxTriChance)
+                {
+                    Instantiate(triPersonPref, topPathSpawn.transform.position, transform.rotation);
+                }
                 break;
             case 1:
                 //Bike
@@ -305,8 +421,18 @@ public class TotalSpawner : MonoBehaviour {
         switch (SidelineRnd)
         {
             case 0:
-                //Car                
-                Instantiate(polPersonPrefBot, botPathSpawn.transform.position, botPathSpawn.transform.rotation);
+                //Car    
+                WhichFaction = Random.Range(minPolChance, maxTriChance + 1);
+
+                if (WhichFaction >= minPolChance && WhichFaction <= maxPolChance)
+                {
+                    Instantiate(polPersonPref, botPathSpawn.transform.position, botPathSpawn.transform.rotation);
+                }
+                else if (WhichFaction >= minTriChance && WhichFaction <= maxTriChance)
+                {
+                    Instantiate(triPersonPref, botPathSpawn.transform.position, botPathSpawn.transform.rotation);
+                }
+
                 break;
             case 1:
                 //Bike

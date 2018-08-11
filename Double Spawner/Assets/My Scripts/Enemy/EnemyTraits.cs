@@ -14,6 +14,7 @@ public class EnemyTraits : MonoBehaviour {
     public GameObject Player;
     private int dropWeapon;
     public int randomDropChance;
+    public bool isCar;
 
     // Use this for initialization
 
@@ -59,21 +60,30 @@ public class EnemyTraits : MonoBehaviour {
         {
             enemyHealth -= 1;
         }
+
+        if (collide.gameObject.tag == "Enemy")
+        {
+            Destroy(gameObject);
+        }
     }
 
     void WeaponDrop()
     {
         if (Player.GetComponent<PickupManager>().hasPickup == false)
         {
-            dropWeapon = Random.Range(1, randomDropChance);
-            if (dropWeapon == 1)
+            if (isCar)
             {
-                Instantiate(tommyDrop, transform.position, transform.rotation);
-            }
-            if (dropWeapon == 2)
-            {
-                Instantiate(shotgunDrop, transform.position, transform.rotation);
-            }
+                dropWeapon = Random.Range(1, randomDropChance);
+                if (dropWeapon == 1)
+                {
+                    Instantiate(tommyDrop, transform.position, transform.rotation);
+                }
+                if (dropWeapon == 2)
+                {
+                    Instantiate(shotgunDrop, transform.position, transform.rotation);
+                }
+            }          
+            
         }
     }
 }
