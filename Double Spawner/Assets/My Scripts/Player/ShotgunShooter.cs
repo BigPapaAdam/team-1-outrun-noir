@@ -17,15 +17,15 @@ public class ShotgunShooter : MonoBehaviour {
     public GameObject bulletSPFrontLeft;
     public GameObject bulletSPFrontRight;
     public GameObject bulletSPRight;
+    public GameObject SoundManager;
 
-
-
-    public AudioSource aSource;
+    public AudioSource SFXSource;
     public AudioClip shotgunShot;
 
     // Use this for initialization
     void Start () {
-        aSource = playerObj.GetComponent<AudioSource>();
+        SoundManager = GameObject.Find("SoundManager");
+        SFXSource = SoundManager.transform.GetChild(1).GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -43,7 +43,7 @@ public class ShotgunShooter : MonoBehaviour {
         {
             if (Time.time > timeOfShot + shotgunRate)
             {
-                aSource.PlayOneShot(shotgunShot);
+                SFXSource.PlayOneShot(shotgunShot);
                 Instantiate(myBullet, bulletSPLeft.transform.position, bulletSPLeft.transform.rotation);
                 Instantiate(myBullet, bulletSPFrontLeft.transform.position, bulletSPFrontLeft.transform.rotation);
                 Instantiate(myBullet, bulletSPFrontRight.transform.position, bulletSPFrontRight.transform.rotation);

@@ -36,8 +36,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1742856182996860}
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -40.88, y: 25.69, z: 0.12}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -104,9 +104,11 @@ MonoBehaviour:
   SFXSlider: {fileID: 0}
   MusicSlider: {fileID: 0}
   MusicSource: {fileID: 0}
+  EngineSource: {fileID: 0}
   SFXSource: {fileID: 0}
   SFX01: {fileID: 8300000, guid: 0bad28b5ea5e9614a83c00966e2c86d0, type: 3}
-  SFX02: {fileID: 8300000, guid: 0bad28b5ea5e9614a83c00966e2c86d0, type: 3}
+  SFX02: {fileID: 0}
+  SFX03: {fileID: 0}
   UpButton: {fileID: 0}
   DownButton: {fileID: 0}
   ShootDropdown: {fileID: 0}

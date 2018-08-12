@@ -23,9 +23,11 @@ public class GameLoader : MonoBehaviour
     public Slider MusicSlider;
     public Resolution[] Resolutions;
     public AudioSource MusicSource;
+    public AudioSource EngineSource;
     public AudioSource SFXSource;
     public AudioClip SFX01;
     public AudioClip SFX02;
+    public AudioClip SFX03;
     public Button UpButton;
     public Button DownButton;
     //public Button ShootButton;
@@ -74,6 +76,7 @@ public class GameLoader : MonoBehaviour
         SoundManager = GameObject.Find("SoundManager");
         MusicSource = SoundManager.transform.GetChild(0).GetComponent<AudioSource>();
         SFXSource = SoundManager.transform.GetChild(1).GetComponent<AudioSource>();
+        EngineSource = SoundManager.transform.GetChild(2).GetComponent<AudioSource>();
 
         MusicSource.clip = SFX01;
 
@@ -132,6 +135,7 @@ public class GameLoader : MonoBehaviour
     public void OnSFXSliderChange()
     {
         SFXSource.volume = Gamemanager.SFXvolume = SFXSlider.value;
+        EngineSource.volume = Gamemanager.SFXVolume = SFXSlider.value;
     }
 
     //public void OnUpKeyChanged()

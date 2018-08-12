@@ -6,12 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/My Scenes/Personal Scenes/AC_Main Menu.unity
+    path: Assets/My Scenes/Shared Scenes/The Project/AC_Main Menu.unity
     guid: 58b1bb2b03ef81b49bc3d6e7d710fa6c
   - enabled: 1
-    path: Assets/My Scenes/Shared Scenes/The Project/NoirDevV0.0.2.unity
-    guid: 81dc3c4657a3ba145b8e6b8a3c61320e
+    path: Assets/My Scenes/Shared Scenes/The Project/level 1.unity
+    guid: fce198142a304c2469eb76d58edeb508
   - enabled: 1
-    path: Assets/My Scenes/Personal Scenes/in game UI.unity
-    guid: 6ebd2db0a6466324dba81a0e1c361435
+    path: Assets/My Scenes/Shared Scenes/The Project/level 2.unity
+    guid: f35e014866da0994e82803c0cded17ae
+  - enabled: 1
+    path: Assets/My Scenes/Shared Scenes/The Project/level 3.unity
+    guid: 2001072fc30bba74fb432887f07a1648
   m_configObjects: {}
