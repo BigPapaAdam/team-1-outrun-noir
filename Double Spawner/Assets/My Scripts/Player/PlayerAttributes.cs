@@ -30,10 +30,20 @@ public class PlayerAttributes : MonoBehaviour {
 
     public bool carIsFull;
 
-	// Use this for initialization
-	void Start () {
+    //Audio
+    public AudioSource aSource;
+    public AudioClip playerDeathAudio;
+    public AudioClip playerTakeDamageAudio;
+    public AudioClip allyDeathAudio;
+    public AudioClip spikeTrapAudio;
+    public AudioClip crashAudio;
+    public AudioClip pickupAllyAudio;
 
-        for(int i = 0; i < activeAllies; i++)
+    // Use this for initialization
+    void Start () {
+        aSource = GetComponent<AudioSource>();
+
+        for (int i = 0; i < activeAllies; i++)
         {
             allyIcon[i].gameObject.SetActive(true);
             transform.GetChild(i).gameObject.SetActive(true);
@@ -51,6 +61,8 @@ public class PlayerAttributes : MonoBehaviour {
         {
             GameLoader.GameInstance.Save();
             Destroy(gameObject);
+            aSource.PlayOneShot(playerDeathAudio);
+
         }
 
         if (activeAllies == 0)
@@ -102,6 +114,8 @@ public class PlayerAttributes : MonoBehaviour {
             if (activeAllies <= 0)
             {
                 playerHealth -= bulletDamage;
+                aSource.PlayOneShot(playerTakeDamageAudio);
+
             }
             else
             {
@@ -109,6 +123,8 @@ public class PlayerAttributes : MonoBehaviour {
                 {
                     activeAllies -= 1;
                     allyIcon[activeAllies].gameObject.SetActive(false);
+                    aSource.PlayOneShot(allyDeathAudio);
+
                     carIsFull = false;
                 }
             }
@@ -119,6 +135,8 @@ public class PlayerAttributes : MonoBehaviour {
             if (activeAllies <= 0)
             {
                 playerHealth -= enemyCrashDamage;
+                aSource.PlayOneShot(crashAudio);
+
             }
             else
             {
@@ -126,6 +144,8 @@ public class PlayerAttributes : MonoBehaviour {
                 {
                     activeAllies -= 1;
                     allyIcon[activeAllies].gameObject.SetActive(false);
+                    aSource.PlayOneShot(crashAudio);
+
                     carIsFull = false;
                 }
             }
@@ -136,6 +156,8 @@ public class PlayerAttributes : MonoBehaviour {
             if (activeAllies <= 0)
             {
                 playerHealth -= triadBlockCollisionDamage;
+                aSource.PlayOneShot(crashAudio);
+
             }
             else
             {
@@ -143,6 +165,8 @@ public class PlayerAttributes : MonoBehaviour {
                 {
                     activeAllies -= 1;
                     allyIcon[activeAllies].gameObject.SetActive(false);
+                    aSource.PlayOneShot(crashAudio);
+
                     carIsFull = false;
                 }
             }
@@ -153,6 +177,8 @@ public class PlayerAttributes : MonoBehaviour {
             if (activeAllies <= 0)
             {
                 playerHealth -= spikeDamage;
+                aSource.PlayOneShot(spikeTrapAudio);
+
             }
             else
             {
@@ -160,6 +186,8 @@ public class PlayerAttributes : MonoBehaviour {
                 {
                     activeAllies -= 1;
                     allyIcon[activeAllies].gameObject.SetActive(false);
+                    aSource.PlayOneShot(spikeTrapAudio);
+
                     carIsFull = false;
                 }
             }
@@ -182,6 +210,8 @@ public class PlayerAttributes : MonoBehaviour {
             {
                 allyIcon[activeAllies].gameObject.SetActive(true);
                 activeAllies += 1;
+                aSource.PlayOneShot(pickupAllyAudio);
+
             }
 
             if (activeAllies == 3)

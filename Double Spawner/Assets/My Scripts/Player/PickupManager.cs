@@ -14,6 +14,13 @@ public class PickupManager : MonoBehaviour {
 
     public bool hasPickup;
 
+    public AudioSource aSource;
+    public AudioClip tommyPickupAudio;
+    public AudioClip shotgunPickupAudio;
+    public AudioClip revertToPistolAudio;
+
+
+
 
     // Use this for initialization
     void Start () {
@@ -24,10 +31,12 @@ public class PickupManager : MonoBehaviour {
         bulletSpawn.GetComponent<TommyShooter>().enabled = false;
         bulletSpawn.GetComponent<ShotgunShooter>().enabled = false;
         hasPickup = false;
+        aSource = GetComponent<AudioSource>();
+
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update () {
         pickupTimer -= Time.deltaTime;
         if (pickupTimer <= 0)
         {
@@ -36,6 +45,7 @@ public class PickupManager : MonoBehaviour {
             bulletSpawn.GetComponent<TommyShooter>().enabled = false;
             bulletSpawn.GetComponent<ShotgunShooter>().enabled = false;
             GetComponent<PlayerAttributes>().weaponTimerUI.gameObject.SetActive(false);
+            aSource.PlayOneShot(revertToPistolAudio);
 
             hasPickup = false;
         }
@@ -60,6 +70,8 @@ public class PickupManager : MonoBehaviour {
             GetComponent<PlayerAttributes>().weaponTimerUI.text = pickupTimer.ToString();
 
             Destroy(other.gameObject);
+            aSource.PlayOneShot(tommyPickupAudio);
+
             hasPickup = true;
         }
 
@@ -75,6 +87,8 @@ public class PickupManager : MonoBehaviour {
             GetComponent<PlayerAttributes>().weaponTimerUI.text = pickupTimer.ToString();
 
             Destroy(other.gameObject);
+            aSource.PlayOneShot(shotgunPickupAudio);
+
             hasPickup = true;
 
 
