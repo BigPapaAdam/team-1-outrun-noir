@@ -35,7 +35,7 @@ public class EnemyTraits : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        transform.Translate(enemySpeed, 0, 0);
+        transform.Translate(enemySpeed*Time.deltaTime, 0, 0);
 
         if (enemyHealth <= 0)
         {

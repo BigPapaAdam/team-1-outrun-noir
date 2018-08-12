@@ -6,12 +6,12 @@ public class PlayerMovement : MonoBehaviour {
 
 	public float parLaneTop = 5f;
 	public float parLaneBot = -5f;
-	public int laneOne = 2;
-	public int  laneTwo = 0;
-	public int laneThree = -2;
+	public float laneOne = 2;
+	public float  laneTwo = 0;
+	public float laneThree = -2;
 
-	public int laneDif = 2;
-	public int currentLane = 0;
+	public float laneDif = 2;
+	public float currentLane = 0;
 
     public float playerSpeed = 0.1f;
 

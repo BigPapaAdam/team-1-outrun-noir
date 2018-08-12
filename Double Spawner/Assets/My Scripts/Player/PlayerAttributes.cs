@@ -14,6 +14,9 @@ public class PlayerAttributes : MonoBehaviour {
     public GameObject shooterSeat1;
     public GameObject shooterSeat2;
     public GameObject shooterSeat3;
+    public GameObject shooterSprite1;
+    public GameObject shooterSprite2;
+    public GameObject shooterSprite3;
     public GameObject FullHouseIcon;
 
 
@@ -34,10 +37,12 @@ public class PlayerAttributes : MonoBehaviour {
     public AudioSource aSource;
     public AudioClip playerDeathAudio;
     public AudioClip playerTakeDamageAudio;
-    public AudioClip allyDeathAudio;
+    public AudioClip allyDeathAudio1;
+    public AudioClip allyDeathAudio2;
+    public AudioClip allyDeathAudio3;
     public AudioClip spikeTrapAudio;
     public AudioClip crashAudio;
-    public AudioClip pickupAllyAudio;
+    public AudioClip pickupAllyAudio;    
 
     // Use this for initialization
     void Start () {
@@ -76,21 +81,33 @@ public class PlayerAttributes : MonoBehaviour {
                 shooterSeat1.gameObject.SetActive(false);
                 shooterSeat2.gameObject.SetActive(false);
                 shooterSeat3.gameObject.SetActive(false);
+                shooterSprite1.gameObject.SetActive(false);
+                shooterSprite2.gameObject.SetActive(false);
+                shooterSprite3.gameObject.SetActive(false);
                 break;
             case 1:
                 shooterSeat1.gameObject.SetActive(true);
                 shooterSeat2.gameObject.SetActive(false);
                 shooterSeat3.gameObject.SetActive(false);
+                shooterSprite1.gameObject.SetActive(true);
+                shooterSprite2.gameObject.SetActive(false);
+                shooterSprite3.gameObject.SetActive(false);
                 break;
             case 2:
                 shooterSeat1.gameObject.SetActive(true);
                 shooterSeat2.gameObject.SetActive(true);
                 shooterSeat3.gameObject.SetActive(false);
+                shooterSprite1.gameObject.SetActive(true);
+                shooterSprite2.gameObject.SetActive(true);
+                shooterSprite3.gameObject.SetActive(false);
                 break;
             case 3:
                 shooterSeat1.gameObject.SetActive(true);
                 shooterSeat2.gameObject.SetActive(true);
                 shooterSeat3.gameObject.SetActive(true);
+                shooterSprite1.gameObject.SetActive(true);
+                shooterSprite2.gameObject.SetActive(true);
+                shooterSprite3.gameObject.SetActive(true);
                 break;
 
         }
@@ -119,37 +136,53 @@ public class PlayerAttributes : MonoBehaviour {
             }
             else
             {
-                if (activeAllies > 0)
+                if (activeAllies > 2)
                 {
                     activeAllies -= 1;
                     allyIcon[activeAllies].gameObject.SetActive(false);
-                    aSource.PlayOneShot(allyDeathAudio);
+                    aSource.PlayOneShot(allyDeathAudio3);
+
+                    carIsFull = false;
+                }
+                else if (activeAllies > 1)
+                {
+                    activeAllies -= 1;
+                    allyIcon[activeAllies].gameObject.SetActive(false);
+                    aSource.PlayOneShot(allyDeathAudio2);
+
+                    carIsFull = false;
+                }
+                else if (activeAllies > 0)
+                {
+                    activeAllies -= 1;
+                    allyIcon[activeAllies].gameObject.SetActive(false);
+                    aSource.PlayOneShot(allyDeathAudio1);
 
                     carIsFull = false;
                 }
             }
         }
 
-        if (other.gameObject.tag == "Enemy")
-        {
-            if (activeAllies <= 0)
-            {
-                playerHealth -= enemyCrashDamage;
-                aSource.PlayOneShot(crashAudio);
+        //if (other.gameObject.tag == "Enemy")
+        //{
+        //    if (activeAllies <= 0)
+        //    {
+        //        playerHealth -= enemyCrashDamage;
+        //        aSource.PlayOneShot(crashAudio);
 
-            }
-            else
-            {
-                if (activeAllies > 0)
-                {
-                    activeAllies -= 1;
-                    allyIcon[activeAllies].gameObject.SetActive(false);
-                    aSource.PlayOneShot(crashAudio);
+        //    }
+        //    else
+        //    {
+        //        if (activeAllies > 0)
+        //        {
+        //            activeAllies -= 1;
+        //            allyIcon[activeAllies].gameObject.SetActive(false);
+        //            aSource.PlayOneShot(crashAudio);
 
-                    carIsFull = false;
-                }
-            }
-        }
+        //            carIsFull = false;
+        //        }
+        //    }
+        //}
 
         if (other.gameObject.tag == "TriadBlock")
         {
@@ -219,7 +252,7 @@ public class PlayerAttributes : MonoBehaviour {
                 carIsFull = true;
             }
 
-            
+            Debug.Log("picked up mafia");
 
             Destroy(collide.gameObject);
         }
@@ -253,6 +286,29 @@ public class PlayerAttributes : MonoBehaviour {
             {
                 activeAllies -= 1;
                 allyIcon[activeAllies].gameObject.SetActive(false);
+            }
+
+            Destroy(collide.gameObject);
+        }
+
+        if (collide.gameObject.tag == "Enemy")
+        {
+            if (activeAllies <= 0)
+            {
+                playerHealth -= enemyCrashDamage;
+                aSource.PlayOneShot(crashAudio);
+
+            }
+            else
+            {
+                if (activeAllies > 0)
+                {
+                    activeAllies -= 1;
+                    allyIcon[activeAllies].gameObject.SetActive(false);
+                    aSource.PlayOneShot(crashAudio);
+
+                    carIsFull = false;
+                }
             }
 
             Destroy(collide.gameObject);

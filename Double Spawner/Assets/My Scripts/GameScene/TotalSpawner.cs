@@ -82,7 +82,7 @@ public class TotalSpawner : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        SpawnTimer = 2.0f;
+        //SpawnTimer = 2.0f;
         TempTimer = 0.0f;
     }
 	

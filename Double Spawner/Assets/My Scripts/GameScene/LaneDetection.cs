@@ -21,15 +21,12 @@ public class LaneDetection : MonoBehaviour {
         if (collide.gameObject.tag == "Enemy" || collide.gameObject.tag == "SpikeTrap" || collide.gameObject.tag == "TriadBlock")
         {
             motoSpawnable = false;
-        }
+        }        
     }
 
     private void OnTriggerExit(Collider collide)
     {
-        if (collide.gameObject.tag == "Enemy" || collide.gameObject.tag == "SpikeTrap" || collide.gameObject.tag == "TriadBlock")
-        {
-            motoSpawnable = true;
-        }
+        motoSpawnable = true;
     }
 
 }

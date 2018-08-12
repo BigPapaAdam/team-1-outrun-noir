@@ -41,7 +41,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1460660879227620
 GameObject:
   m_ObjectHideFlags: 1
@@ -124,7 +124,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4252266561506286
 Transform:
   m_ObjectHideFlags: 1
@@ -290,7 +290,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0, z: 0.8}
 --- !u!82 &82257993104446252
 AudioSource:
   m_ObjectHideFlags: 1
@@ -300,11 +300,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: d878a8cbb2b3f30408d4958e80bff635, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -444,9 +444,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHealth: 3
-  enemySpeed: 0.05
+  enemySpeed: 1
   unchangedEnemySpeed: 0
-  pointWorth: 0
+  pointWorth: 500
   tommyDrop: {fileID: 1157190410557384, guid: 3861b4ce41a93234f9af77b484c0b6df, type: 2}
   shotgunDrop: {fileID: 1739118581839880, guid: 63bbb6fd525aa73458054b722c99adb8,
     type: 2}
@@ -454,7 +454,7 @@ MonoBehaviour:
   randomDropChance: 4
   isCar: 0
   aSource: {fileID: 0}
-  enemyDeathAudio: {fileID: 0}
+  enemyDeathAudio: {fileID: 8300000, guid: 90cbb7bf6ddcd0c4a9ade42f6f671cb6, type: 3}
   enemyTakeDamageAudio: {fileID: 0}
   dropWeaponAudio: {fileID: 0}
   spawnAudio: {fileID: 0}
