@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.IO;
 using System;
+using UnityEngine.Video;
 /**********************************************************
 /Code that is commented out allows for the use of dropdown/
 /instead of buttons for changing the keybindings          /
@@ -30,6 +31,10 @@ public class GameLoader : MonoBehaviour
     public AudioClip SFX03;
     public Button UpButton;
     public Button DownButton;
+    public Button ContinueButton;
+    public Button OptionsButton;
+    public Button QuitButton;
+    public VideoClip[] Cutscenes;
     //public Button ShootButton;
     //public Dropdown UpDropdown;
     //public Dropdown DownDropdown;
@@ -173,12 +178,6 @@ public class GameLoader : MonoBehaviour
         SceneManager.LoadScene(SceneNumber, LoadSceneMode.Single);
     }
 
-    public void Options()
-    {
-        Time.timeScale = 0;
-        Menu.SetActive(true);
-    }
-
     public void Exit()
     {
         Application.Quit();
@@ -196,7 +195,7 @@ public class GameLoader : MonoBehaviour
         Menu.SetActive(false);
     }
 
-    public void UpButtonClick()
+    public void OnUpButtonClick()
     {
         UpButton.transform.GetChild(0).GetComponent<Text>().text = "Please enter a new key";
         ButtonText = "up";
@@ -207,7 +206,7 @@ public class GameLoader : MonoBehaviour
         }
     }
 
-    public void DownButtonClick()
+    public void OnDownButtonClick()
     {
         DownButton.transform.GetChild(0).GetComponent<Text>().text = "Please enter a new key";
         ButtonText = "down";
@@ -235,16 +234,53 @@ public class GameLoader : MonoBehaviour
         {
             if (SceneManager.GetActiveScene().buildIndex != 0)
             {
-                if (!Menu.activeSelf)
+                if (!ContinueButton.gameObject.activeSelf && !Menu.activeSelf)
                 {
-                    Menu.SetActive(true);
+                    Time.timeScale = 0;
+                    ContinueButton.gameObject.SetActive(true);
+                    OptionsButton.gameObject.SetActive(true);
+                    QuitButton.gameObject.SetActive(true);
+                    //Menu.SetActive(true);
                 }
                 else
                 {
+                    Time.timeScale = 1;
+                    ContinueButton.gameObject.SetActive(false);
+                    OptionsButton.gameObject.SetActive(false);
+                    QuitButton.gameObject.SetActive(false);
                     Menu.SetActive(false);
+                    //Menu.SetActive(false);
                 }
             }
         }
+    }
+
+    public void OnInGameMenuClick()
+    {
+        Time.timeScale = 0;
+        ContinueButton.gameObject.SetActive(true);
+        OptionsButton.gameObject.SetActive(true);
+        QuitButton.gameObject.SetActive(true);
+    }
+
+    public void OnContinueButtonClick()
+    {
+        Time.timeScale = 1;
+        ContinueButton.gameObject.SetActive(false);
+        OptionsButton.gameObject.SetActive(false);
+        QuitButton.gameObject.SetActive(false);
+    }
+
+    public void OnOptionsButtonClick()
+    {
+        Menu.SetActive(true);
+    }
+
+    public void OnQuitButtonClick()
+    {
+        SceneNumber = 0;
+        SceneManager.LoadScene(SceneNumber, LoadSceneMode.Single);
+        SceneNumber = 1;
     }
 
     private void OnGUI()
@@ -309,7 +345,7 @@ public class GameLoader : MonoBehaviour
     {
         if (Gamemanager.SFXvolume > 0.0f)
         {
-            SFXSource.clip = SFX02;
+            SFXSource.clip = SFX03;
             SFXSource.Play();
         }
     }
