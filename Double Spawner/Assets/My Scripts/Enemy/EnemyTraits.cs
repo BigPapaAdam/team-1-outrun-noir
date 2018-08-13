@@ -16,7 +16,7 @@ public class EnemyTraits : MonoBehaviour {
     public int randomDropChance;
     public bool isCar;
 
-    public AudioSource aSource;
+    //public AudioSource aSource;
     public AudioClip enemyDeathAudio;
     public AudioClip enemyTakeDamageAudio;
     public AudioClip dropWeaponAudio;
@@ -25,11 +25,11 @@ public class EnemyTraits : MonoBehaviour {
     // Use this for initialization
 
     void Start () {
-        aSource = GetComponent<AudioSource>();
+        //aSource = GetComponent<AudioSource>();
 
         Player = GameObject.FindGameObjectWithTag("Player");
         unchangedEnemySpeed = enemySpeed;
-        aSource.PlayOneShot(spawnAudio);
+        GameLoader.GameInstance.SFXSource.PlayOneShot(spawnAudio);
 
     }
 
@@ -69,14 +69,14 @@ public class EnemyTraits : MonoBehaviour {
         if (collide.gameObject.tag == "PlayerBullet")
         {
             enemyHealth -= 1;
-            aSource.PlayOneShot(enemyTakeDamageAudio);
+            GameLoader.GameInstance.SFXSource.PlayOneShot(enemyTakeDamageAudio);
 
         }
 
         if (collide.gameObject.tag == "Enemy")
         {
             Destroy(gameObject);
-            aSource.PlayOneShot(enemyDeathAudio);
+            GameLoader.GameInstance.SFXSource.PlayOneShot(enemyDeathAudio);
 
         }
     }
@@ -91,13 +91,13 @@ public class EnemyTraits : MonoBehaviour {
                 if (dropWeapon == 1)
                 {
                     Instantiate(tommyDrop, transform.position, transform.rotation);
-                    aSource.PlayOneShot(dropWeaponAudio);
+                    GameLoader.GameInstance.SFXSource.PlayOneShot(dropWeaponAudio);
 
                 }
                 if (dropWeapon == 2)
                 {
                     Instantiate(shotgunDrop, transform.position, transform.rotation);
-                    aSource.PlayOneShot(dropWeaponAudio);
+                    GameLoader.GameInstance.SFXSource.PlayOneShot(dropWeaponAudio);
 
                 }
             }          

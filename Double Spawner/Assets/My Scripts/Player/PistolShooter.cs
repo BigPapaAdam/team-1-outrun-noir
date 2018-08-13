@@ -11,18 +11,16 @@ public class PistolShooter : MonoBehaviour {
     public GameObject pistolObj;
     public GameObject tommyObj;
     public GameObject shotgunObj;
-    public GameObject SoundManager;
-    public AudioSource SFXSource;
+    //public GameObject SoundManager;
+    //public AudioSource SFXSource;
 
     public GameObject myBullet;
 
-
-    public AudioSource aSource;
     public AudioClip pistolShot;
     // Use this for initialization
     void Start () {
-        SoundManager = GameObject.Find("SoundManager");
-        SFXSource = SoundManager.transform.GetChild(1).GetComponent<AudioSource>();
+        //SoundManager = GameObject.Find("SoundManager");
+        //SFXSource = SoundManager.transform.GetChild(1).GetComponent<AudioSource>();
     }
 	
 	// Update is called once per frame
@@ -41,7 +39,9 @@ public class PistolShooter : MonoBehaviour {
             if (Time.time > timeOfShot + pistolRate)
             {
                 Instantiate(myBullet, transform.position, transform.rotation);
-                SFXSource.PlayOneShot(pistolShot);
+                GameLoader.GameInstance.SFXSource.clip = pistolShot;
+                GameLoader.GameInstance.SFXSource.Play();
+                //SFXSource.PlayOneShot(pistolShot);
                 timeOfShot = Time.time;
             }
         }

@@ -404,7 +404,6 @@ MonoBehaviour:
   bulletSPRightFront: {fileID: 0}
   bulletSPRight: {fileID: 0}
   isMotorbike: 0
-  aSource: {fileID: 0}
   gunShot: {fileID: 8300000, guid: dcf4dc67df122ef499ec0697218c30d8, type: 3}
 --- !u!114 &114672860290803010
 MonoBehaviour:
@@ -427,7 +426,6 @@ MonoBehaviour:
   Player: {fileID: 0}
   randomDropChance: 4
   isCar: 1
-  aSource: {fileID: 0}
   enemyDeathAudio: {fileID: 8300000, guid: a6c703e9d340c6f44a962d363ce1e5a9, type: 3}
   enemyTakeDamageAudio: {fileID: 8300000, guid: 43244e9a031734041b07692f3cb10558,
     type: 3}

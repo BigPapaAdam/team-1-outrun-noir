@@ -18,17 +18,11 @@ public class EnemyShooter : MonoBehaviour {
 
     public bool isMotorbike = false;
 
-
-
-
-    public AudioSource aSource;
     public AudioClip gunShot;
 
 
     // Use this for initialization
     void Start () {
-        aSource = enemyObj.GetComponent<AudioSource>();
-
         enemyShootTimer = enemyFireRate;
 
     }
@@ -55,7 +49,8 @@ public class EnemyShooter : MonoBehaviour {
 
 
 
-            aSource.PlayOneShot(gunShot);
+            GameLoader.GameInstance.SFXSource.clip = gunShot;
+            GameLoader.GameInstance.SFXSource.Play();
             enemyShootTimer = enemyFireRate;
         }
 	}

@@ -12,15 +12,16 @@ public class TommyShooter : MonoBehaviour {
     public GameObject tommyObj;
     public GameObject shotgunObj;
     public GameObject myBullet;
-    public GameObject SoundManager;
+    //public GameObject SoundManager;
 
-    public AudioSource SFXSource;
+    //public AudioSource SFXSource;
     public AudioClip tommyShot;
 
     // Use this for initialization
     void Start () {
-        SoundManager = GameObject.Find("SoundManager");
-        SFXSource = SoundManager.transform.GetChild(1).GetComponent<AudioSource>();
+        //SoundManager = GameObject.Find("SoundManager");
+        //SFXSource = SoundManager.transform.GetChild(1).GetComponent<AudioSource>();
+
 
     }
 
@@ -41,7 +42,9 @@ public class TommyShooter : MonoBehaviour {
             if (Time.time > timeOfShot + tommyRate)
             {
                 Instantiate(myBullet, transform.position, transform.rotation);
-                SFXSource.PlayOneShot(tommyShot);
+                GameLoader.GameInstance.SFXSource.clip = tommyShot;
+                GameLoader.GameInstance.SFXSource.Play();
+                //SFXSource.PlayOneShot(tommyShot);
                 timeOfShot = Time.time;
             }
         }
