@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class EndState : MonoBehaviour {
 
-    private float levelTimer;
+    public float levelTimer;
     public float levelDuration;
 
 	// Use this for initialization
@@ -22,7 +22,10 @@ public class EndState : MonoBehaviour {
 
             if(GameLoader.GameInstance.SceneNumber < SceneManager.sceneCountInBuildSettings)
             {
+                Debug.Log(GameLoader.GameInstance.SceneNumber);
                 GameLoader.GameInstance.SceneNumber += 1;
+                Debug.Log(GameLoader.GameInstance.SceneNumber);
+                levelTimer = levelDuration;
                 GameLoader.GameInstance.Play();
             }
             else

@@ -34,6 +34,7 @@ public class GameLoader : MonoBehaviour
     public Button ContinueButton;
     public Button OptionsButton;
     public Button QuitButton;
+    public VideoPlayer Videoplayer;
     public VideoClip[] Cutscenes;
     //public Button ShootButton;
     //public Dropdown UpDropdown;
@@ -174,6 +175,52 @@ public class GameLoader : MonoBehaviour
     }
 
     public void Play()
+    {
+        SceneNumber -= 1;
+        Videoplayer.clip = Cutscenes[SceneNumber];
+        SceneNumber += 1;
+
+        if (SceneNumber < 3)
+        {
+            WindowSize.gameObject.SetActive(false);
+
+            if(SceneNumber != 1 && SceneNumber < 3)
+            {
+                GameObject.Find("EGO Spawner Positioner").gameObject.SetActive(false);
+                GameObject.FindGameObjectWithTag("Player").SetActive(false);
+                GameObject.Find("EGO Total Spawner").gameObject.SetActive(false);
+                GameObject.Find("EGO Road Paver").gameObject.SetActive(false);
+                GameObject.Find("EGO Enviro Paver").gameObject.SetActive(false);
+
+                GameObject[] Roads = GameObject.FindGameObjectsWithTag("road");
+
+                foreach(GameObject Road in Roads)
+                {
+                   GameObject.Destroy(Road);
+                }
+
+                GameObject[] Environments = GameObject.FindGameObjectsWithTag("Environment");
+
+                foreach (GameObject Environment in Environments)
+                {
+                    GameObject.Destroy(Environment);
+                }
+            }
+
+            Videoplayer.enabled = true;
+            MusicSource.Stop();
+
+            Videoplayer.Play();
+
+            Videoplayer.loopPointReached += EndReached;
+        }
+        else
+        {
+            SceneManager.LoadScene(SceneNumber, LoadSceneMode.Single);
+        }
+    }
+
+    void EndReached(VideoPlayer videoplayer)
     {
         SceneManager.LoadScene(SceneNumber, LoadSceneMode.Single);
     }
