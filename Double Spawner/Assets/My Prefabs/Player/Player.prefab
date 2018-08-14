@@ -1570,8 +1570,8 @@ MonoBehaviour:
   shotgunObj: {fileID: 1288282571180624}
   myBullet: {fileID: 1264289126699948, guid: 2ab266d15ff72d7479c6601bb569d7e1, type: 2}
   pistolShot: {fileID: 8300000, guid: 434a20016686c944cb5d065346e584fd, type: 3}
-  idleFrame: {fileID: 0}
-  shotFrame: {fileID: 0}
+  idleFrame: {fileID: 1206896747845592}
+  shotFrame: {fileID: 1998814476855870}
 --- !u!114 &114341214086429688
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1590,11 +1590,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 9b22189ce3c05384c912b979ec07b9cb, type: 3}
   - {fileID: 21300000, guid: aa30f5d226999ad44be32a0e7369b764, type: 3}
   CanvasObject: {fileID: 0}
-  SoundManager: {fileID: 0}
   hasPickup: 1
-  MusicSource: {fileID: 0}
-  EngineSource: {fileID: 0}
-  SFXSource: {fileID: 0}
   tommyPickupAudio: {fileID: 8300000, guid: 3fea3c32a0ae3f8439a337abea8d6b9f, type: 3}
   shotgunPickupAudio: {fileID: 8300000, guid: 3fea3c32a0ae3f8439a337abea8d6b9f, type: 3}
   revertToPistolAudio: {fileID: 8300000, guid: f7ac41c1748ae594b8aa52de8f87eac5, type: 3}
@@ -1679,7 +1675,6 @@ MonoBehaviour:
   shooterSprite2: {fileID: 1551466005808856}
   shooterSprite3: {fileID: 1005155522395032}
   FullHouseIcon: {fileID: 0}
-  SoundManager: {fileID: 0}
   pickupTimer: 0
   pickupDuration: 0
   weaponTimerUI: {fileID: 0}
@@ -1688,9 +1683,6 @@ MonoBehaviour:
   triadBlockCollisionDamage: 1
   enemyCrashDamage: 10
   carIsFull: 0
-  MusicSource: {fileID: 0}
-  EngineSource: {fileID: 0}
-  SFXSource: {fileID: 0}
   playerDeathAudio: {fileID: 8300000, guid: 17db2512068bf494f8f6339def01ba00, type: 3}
   playerTakeDamageAudio: {fileID: 8300000, guid: 4b6cd7a6c4b259d419969e6996757310,
     type: 3}

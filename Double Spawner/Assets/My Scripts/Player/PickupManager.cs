@@ -11,13 +11,9 @@ public class PickupManager : MonoBehaviour {
     //public Sprite[] Sprites;
     public Sprite[] Sprites;
     public GameObject CanvasObject;
-    public GameObject SoundManager;
 
     public bool hasPickup;
 
-    public AudioSource MusicSource;
-    public AudioSource EngineSource;
-    public AudioSource SFXSource;
     public AudioClip tommyPickupAudio;
     public AudioClip shotgunPickupAudio;
     public AudioClip revertToPistolAudio;
@@ -27,8 +23,6 @@ public class PickupManager : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        SoundManager = GameObject.Find("SoundManager");
-        SFXSource = SoundManager.transform.GetChild(1).GetComponent<AudioSource>();
 
         CanvasObject = GameObject.Find("Canvas");
         CanvasObject.transform.GetChild(3).transform.GetChild(4).GetComponent<Image>().sprite = Sprites[0];
@@ -50,7 +44,8 @@ public class PickupManager : MonoBehaviour {
             bulletSpawn.GetComponent<TommyShooter>().enabled = false;
             bulletSpawn.GetComponent<ShotgunShooter>().enabled = false;
             GetComponent<PlayerAttributes>().weaponTimerUI.gameObject.SetActive(false);
-            SFXSource.PlayOneShot(revertToPistolAudio);
+
+            GameLoader.GameInstance.SFXSource.PlayOneShot(revertToPistolAudio);
 
             hasPickup = false;
         }
@@ -75,7 +70,7 @@ public class PickupManager : MonoBehaviour {
             GetComponent<PlayerAttributes>().weaponTimerUI.text = pickupTimer.ToString();
 
             Destroy(other.gameObject);
-            SFXSource.PlayOneShot(tommyPickupAudio);
+            GameLoader.GameInstance.SFXSource.PlayOneShot(tommyPickupAudio);
 
             hasPickup = true;
         }
@@ -92,7 +87,7 @@ public class PickupManager : MonoBehaviour {
             GetComponent<PlayerAttributes>().weaponTimerUI.text = pickupTimer.ToString();
 
             Destroy(other.gameObject);
-            SFXSource.PlayOneShot(shotgunPickupAudio);
+            GameLoader.GameInstance.SFXSource.PlayOneShot(shotgunPickupAudio);
 
             hasPickup = true;
 

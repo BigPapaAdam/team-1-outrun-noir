@@ -18,8 +18,6 @@ public class PlayerAttributes : MonoBehaviour {
     public GameObject shooterSprite2;
     public GameObject shooterSprite3;
     public GameObject FullHouseIcon;
-    public GameObject SoundManager;
-
 
     public enum activeWeapon { Pistol, Tommy, Shotgun }
     public float pickupTimer;
@@ -36,10 +34,6 @@ public class PlayerAttributes : MonoBehaviour {
 
     //Audio
 
-    public AudioSource MusicSource;
-    public AudioSource EngineSource;
-    public AudioSource SFXSource;
-
     public AudioClip playerDeathAudio;
     public AudioClip playerTakeDamageAudio;
     public AudioClip allyDeathAudio1;
@@ -52,15 +46,9 @@ public class PlayerAttributes : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        GameLoader.GameInstance.EngineSource.clip = EngineSound;
 
-        SoundManager = GameObject.Find("SoundManager");
-        MusicSource = SoundManager.transform.GetChild(0).GetComponent<AudioSource>();
-        SFXSource = SoundManager.transform.GetChild(1).GetComponent<AudioSource>();
-        EngineSource = SoundManager.transform.GetChild(2).GetComponent<AudioSource>();
-
-        EngineSource.clip = EngineSound;
-
-        EngineSource.Play();
+        GameLoader.GameInstance.EngineSource.Play();
 
         for (int i = 0; i < activeAllies; i++)
         {
@@ -81,7 +69,8 @@ public class PlayerAttributes : MonoBehaviour {
             GameLoader.GameInstance.Save();
             Destroy(gameObject);
 
-            SFXSource.PlayOneShot(playerDeathAudio);
+            GameLoader.GameInstance.SFXSource.PlayOneShot(playerDeathAudio);
+            GameLoader.GameInstance.SFXSource.clip = GameLoader.GameInstance.SFX01;
 
         }
 
@@ -146,7 +135,7 @@ public class PlayerAttributes : MonoBehaviour {
             if (activeAllies <= 0)
             {
                 playerHealth -= bulletDamage;
-                SFXSource.PlayOneShot(playerTakeDamageAudio);
+                GameLoader.GameInstance.SFXSource.PlayOneShot(playerTakeDamageAudio);
 
             }
             else
@@ -155,7 +144,7 @@ public class PlayerAttributes : MonoBehaviour {
                 {
                     activeAllies -= 1;
                     allyIcon[activeAllies].gameObject.SetActive(false);
-                    SFXSource.PlayOneShot(allyDeathAudio3);
+                    GameLoader.GameInstance.SFXSource.PlayOneShot(allyDeathAudio3);
 
                     carIsFull = false;
                 }
@@ -163,7 +152,7 @@ public class PlayerAttributes : MonoBehaviour {
                 {
                     activeAllies -= 1;
                     allyIcon[activeAllies].gameObject.SetActive(false);
-                    SFXSource.PlayOneShot(allyDeathAudio2);
+                    GameLoader.GameInstance.SFXSource.PlayOneShot(allyDeathAudio2);
 
                     carIsFull = false;
                 }
@@ -171,7 +160,7 @@ public class PlayerAttributes : MonoBehaviour {
                 {
                     activeAllies -= 1;
                     allyIcon[activeAllies].gameObject.SetActive(false);
-                    SFXSource.PlayOneShot(allyDeathAudio1);
+                    GameLoader.GameInstance.SFXSource.PlayOneShot(allyDeathAudio1);
 
                     carIsFull = false;
                 }
@@ -204,7 +193,7 @@ public class PlayerAttributes : MonoBehaviour {
             if (activeAllies <= 0)
             {
                 playerHealth -= triadBlockCollisionDamage;
-                SFXSource.PlayOneShot(crashAudio);
+                GameLoader.GameInstance.SFXSource.PlayOneShot(crashAudio);
 
             }
             else
@@ -213,7 +202,7 @@ public class PlayerAttributes : MonoBehaviour {
                 {
                     activeAllies -= 1;
                     allyIcon[activeAllies].gameObject.SetActive(false);
-                    SFXSource.PlayOneShot(crashAudio);
+                    GameLoader.GameInstance.SFXSource.PlayOneShot(crashAudio);
 
                     carIsFull = false;
                 }
@@ -225,7 +214,7 @@ public class PlayerAttributes : MonoBehaviour {
             if (activeAllies <= 0)
             {
                 playerHealth -= spikeDamage;
-                SFXSource.PlayOneShot(spikeTrapAudio);
+                GameLoader.GameInstance.SFXSource.PlayOneShot(spikeTrapAudio);
 
             }
             else
@@ -234,7 +223,7 @@ public class PlayerAttributes : MonoBehaviour {
                 {
                     activeAllies -= 1;
                     allyIcon[activeAllies].gameObject.SetActive(false);
-                    SFXSource.PlayOneShot(spikeTrapAudio);
+                    GameLoader.GameInstance.SFXSource.PlayOneShot(spikeTrapAudio);
 
                     carIsFull = false;
                 }
@@ -258,7 +247,7 @@ public class PlayerAttributes : MonoBehaviour {
             {
                 allyIcon[activeAllies].gameObject.SetActive(true);
                 activeAllies += 1;
-                SFXSource.PlayOneShot(pickupAllyAudio);
+                GameLoader.GameInstance.SFXSource.PlayOneShot(pickupAllyAudio);
 
             }
 
@@ -311,7 +300,7 @@ public class PlayerAttributes : MonoBehaviour {
             if (activeAllies <= 0)
             {
                 playerHealth -= enemyCrashDamage;
-                SFXSource.PlayOneShot(crashAudio);
+                GameLoader.GameInstance.SFXSource.PlayOneShot(crashAudio);
 
             }
             else
@@ -320,7 +309,7 @@ public class PlayerAttributes : MonoBehaviour {
                 {
                     activeAllies -= 1;
                     allyIcon[activeAllies].gameObject.SetActive(false);
-                    SFXSource.PlayOneShot(crashAudio);
+                    GameLoader.GameInstance.SFXSource.PlayOneShot(crashAudio);
 
                     carIsFull = false;
                 }
