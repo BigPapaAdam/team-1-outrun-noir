@@ -13,6 +13,9 @@ TagManager:
   - TriadBlock
   - MotoActivator
   - PlayerBullet
+  - MotoAimActivator
+  - pathBot
+  - pathTop
   layers:
   - Default
   - TransparentFX
