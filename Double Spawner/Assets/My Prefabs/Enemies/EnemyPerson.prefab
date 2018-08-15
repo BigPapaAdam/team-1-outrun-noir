@@ -56,6 +56,8 @@ GameObject:
   - component: {fileID: 65093652291829334}
   - component: {fileID: 114915020744038062}
   - component: {fileID: 82050348874930192}
+  - component: {fileID: 114754016723100184}
+  - component: {fileID: 114161130473251692}
   m_Layer: 10
   m_Name: EnemyPerson
   m_TagString: Enemy
@@ -273,9 +275,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1645465230818990}
-  m_LocalRotation: {x: 0.69048995, y: -0.15239307, z: 0.15239307, w: 0.69048995}
-  m_LocalPosition: {x: 0.33120468, y: 0.1, z: -0.76131606}
-  m_LocalScale: {x: 12, y: 12.000015, z: 1}
+  m_LocalRotation: {x: 0.5960083, y: 0.3804919, z: -0.3804919, w: 0.5960083}
+  m_LocalPosition: {x: -0.7613162, y: 0.1, z: -0.33120453}
+  m_LocalScale: {x: 12, y: 12.000019, z: 1}
   m_Children: []
   m_Father: {fileID: 4528135283786994}
   m_RootOrder: 2
@@ -286,7 +288,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1556246817654942}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0.020001728, y: 0, z: 2.9399996}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -295,7 +297,7 @@ Transform:
   - {fileID: 4481776582594996}
   m_Father: {fileID: 4719274546856196}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!4 &4385697230222470
 Transform:
   m_ObjectHideFlags: 1
@@ -303,7 +305,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1793272473622180}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 3}
+  m_LocalPosition: {x: 0.34, y: 0.5, z: 3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4343817365675294}
@@ -315,8 +317,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1571961425467856}
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.020001728, y: 0.1, z: -0.8299997}
+  m_LocalRotation: {x: 0.5, y: 0.5, z: -0.5, w: 0.5}
+  m_LocalPosition: {x: -0.8299998, y: 0.1, z: 0.020001829}
   m_LocalScale: {x: 12, y: 12, z: 1}
   m_Children: []
   m_Father: {fileID: 4528135283786994}
@@ -354,9 +356,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1411527503711926}
-  m_LocalRotation: {x: 0.69048995, y: -0.15239307, z: 0.15239307, w: 0.69048995}
-  m_LocalPosition: {x: 0.33120468, y: -0.1, z: -0.76131606}
-  m_LocalScale: {x: 12, y: 12.000015, z: 1}
+  m_LocalRotation: {x: 0.5960083, y: 0.3804919, z: -0.3804919, w: 0.5960083}
+  m_LocalPosition: {x: -0.7613162, y: -0.1, z: -0.33120453}
+  m_LocalScale: {x: 12, y: 12.000019, z: 1}
   m_Children: []
   m_Father: {fileID: 4343817365675294}
   m_RootOrder: 2
@@ -367,7 +369,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1939200930170458}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0.020001728, y: 0, z: 2.9399996}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -376,7 +378,7 @@ Transform:
   - {fileID: 4339658680722216}
   m_Father: {fileID: 4916034110433168}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!4 &4719274546856196
 Transform:
   m_ObjectHideFlags: 1
@@ -398,8 +400,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1199716445355130}
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.020001728, y: -0.1, z: -0.8299997}
+  m_LocalRotation: {x: 0.5, y: 0.5, z: -0.5, w: 0.5}
+  m_LocalPosition: {x: -0.8299998, y: -0.1, z: 0.020001829}
   m_LocalScale: {x: 12, y: 12, z: 1}
   m_Children: []
   m_Father: {fileID: 4343817365675294}
@@ -427,7 +429,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1885361539293378}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 3}
+  m_LocalPosition: {x: 0.39, y: 0.5, z: 3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4528135283786994}
@@ -582,6 +584,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &114161130473251692
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1347458117717134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53123845921fed843b9eef0e5f861a37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletSpawn1: {fileID: 1885361539293378}
+  bulletSpawn2: {fileID: 1793272473622180}
 --- !u!114 &114264212987949146
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -620,6 +635,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   straightAngle: 0
   rotationOffStraight: 30
+--- !u!114 &114754016723100184
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1347458117717134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e008f3aff30a4b4fb6b38d3ef8582e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  face: {fileID: 1733856911638016}
+  back: {fileID: 1562128658623374}
 --- !u!114 &114761088206773032
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -631,7 +659,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b6fea98055c2804384665d706d0c206, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyFireRate: 2.5
+  enemyFireRate: 1.2
   shootAnimationRatio: 0.1
   enemyObj: {fileID: 1347458117717134}
   gunObj: {fileID: 0}
@@ -655,7 +683,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b6fea98055c2804384665d706d0c206, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyFireRate: 2.5
+  enemyFireRate: 1.2
   shootAnimationRatio: 0.1
   enemyObj: {fileID: 1347458117717134}
   gunObj: {fileID: 0}

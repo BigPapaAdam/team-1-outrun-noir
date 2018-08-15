@@ -550,7 +550,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b6fea98055c2804384665d706d0c206, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyFireRate: 2
+  enemyFireRate: 1.5
   shootAnimationRatio: 0.1
   enemyObj: {fileID: 1319984664971954}
   gunObj: {fileID: 0}
@@ -582,7 +582,7 @@ MonoBehaviour:
   shotgunDrop: {fileID: 1739118581839880, guid: 63bbb6fd525aa73458054b722c99adb8,
     type: 2}
   Player: {fileID: 0}
-  randomDropChance: 4
+  randomDropChance: 8
   isCar: 1
   enemyDeathAudio: {fileID: 8300000, guid: a6c703e9d340c6f44a962d363ce1e5a9, type: 3}
   enemyTakeDamageAudio: {fileID: 8300000, guid: 43244e9a031734041b07692f3cb10558,

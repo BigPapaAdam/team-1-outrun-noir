@@ -393,7 +393,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 303543599}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 15, y: 0, z: -2.3}
+  m_LocalPosition: {x: 15, y: 0.1, z: -2.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2137464625}
@@ -1509,7 +1509,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1554278783}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 15, y: 0, z: 2.3}
+  m_LocalPosition: {x: 15, y: -0.1, z: 2.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2137464625}
@@ -1825,7 +1825,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerObj: {fileID: 1274696118}
   polCarPref: {fileID: 1319984664971954, guid: cfb0dcb0f25877d49b5d8e3dee040e8d, type: 2}
-  polBikePref: {fileID: 0}
+  polBikePref: {fileID: 1867340339081774, guid: d85feb409c4c85f43bddb0c76f55372f,
+    type: 2}
   polPersonPref: {fileID: 1347458117717134, guid: 335aa91d3a534f14ebabb897aa39fe46,
     type: 2}
   triCarPref: {fileID: 1319984664971954, guid: 046556b2563587f489411cd2a808b17c, type: 2}
@@ -1856,30 +1857,30 @@ MonoBehaviour:
   midLaneDetector: {fileID: 415438778}
   botLaneDetector: {fileID: 415438777}
   minL1Chance: 0
-  maxL1Chance: 24
-  minL2Chance: 25
-  maxL2Chance: 55
-  minL3Chance: 56
-  maxL3Chance: 80
-  minP1Chance: 81
-  maxP1Chance: 90
-  minP2Chance: 91
+  maxL1Chance: 22
+  minL2Chance: 23
+  maxL2Chance: 51
+  minL3Chance: 52
+  maxL3Chance: 74
+  minP1Chance: 75
+  maxP1Chance: 87
+  minP2Chance: 88
   maxP2Chance: 100
   minCarChance: 0
-  maxCarChance: 30
-  minBikeChance: 31
+  maxCarChance: 39
+  minBikeChance: 40
   maxBikeChance: 79
   minObstacleChance: 80
   maxObstacleChance: 100
   minPersonChance: 0
-  maxPersonChance: 50
-  minAllyChance: 51
+  maxPersonChance: 40
+  minAllyChance: 41
   maxAllyChance: 100
   minPolChance: 0
-  maxPolChance: 0
-  minTriChance: 0
+  maxPolChance: 69
+  minTriChance: 70
   maxTriChance: 100
-  SpawnTimer: 2
+  SpawnTimer: 2.5
   TempTimer: 0
   WhichLane: 0
   WhichEnemy: 0
@@ -2094,7 +2095,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1779040758}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -16.500002, y: 0, z: 2}
+  m_LocalPosition: {x: -16.500002, y: -0.1, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2137464625}
@@ -2448,7 +2449,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2145684788}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -16.5, y: 0, z: -2}
+  m_LocalPosition: {x: -16.5, y: 0.1, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2137464625}

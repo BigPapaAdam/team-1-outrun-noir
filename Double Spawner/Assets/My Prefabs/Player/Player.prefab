@@ -1688,7 +1688,7 @@ MonoBehaviour:
     type: 3}
   allyDeathAudio1: {fileID: 8300000, guid: 989b94c3cd662ed4da0512b27f97bc79, type: 3}
   allyDeathAudio2: {fileID: 8300000, guid: 0c0e33132b2d7614ead3a14064342b63, type: 3}
-  allyDeathAudio3: {fileID: 8300000, guid: 1aef8c793f73b554c84a2ef823b42583, type: 3}
+  allyDeathAudio3: {fileID: 8300000, guid: 44d750218989ad94ab739e2cf30d3d9c, type: 3}
   spikeTrapAudio: {fileID: 8300000, guid: 6bd6ac4b90a619f44a68ed5ae4b833e3, type: 3}
   crashAudio: {fileID: 8300000, guid: a2bc64a45da74234aabc822c3f4b59da, type: 3}
   pickupAllyAudio: {fileID: 8300000, guid: a240af1b23765e547b75ead673f92be0, type: 3}
