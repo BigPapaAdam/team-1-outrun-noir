@@ -107,7 +107,11 @@ MonoBehaviour:
   MusicSource: {fileID: 0}
   EngineSource: {fileID: 0}
   SFXSource: {fileID: 0}
-  SFX01: {fileID: 8300000, guid: 0bad28b5ea5e9614a83c00966e2c86d0, type: 3}
+  SFX01:
+  - {fileID: 8300000, guid: 0bad28b5ea5e9614a83c00966e2c86d0, type: 3}
+  - {fileID: 8300000, guid: 0f072be57afb94742b83a79084d667ed, type: 3}
+  - {fileID: 8300000, guid: 7997068d179bf084ab278613737a5eca, type: 3}
+  - {fileID: 8300000, guid: 7997068d179bf084ab278613737a5eca, type: 3}
   SFX02: {fileID: 0}
   SFX03: {fileID: 0}
   UpButton: {fileID: 0}
