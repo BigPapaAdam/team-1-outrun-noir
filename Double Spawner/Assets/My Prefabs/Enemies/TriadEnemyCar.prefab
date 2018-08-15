@@ -563,6 +563,8 @@ MonoBehaviour:
   shotgunDrop: {fileID: 1739118581839880, guid: 63bbb6fd525aa73458054b722c99adb8,
     type: 2}
   Player: {fileID: 0}
+  deathObject: {fileID: 1198591089567344, guid: a5494bf0005c54448926c0ae5164c996,
+    type: 2}
   randomDropChance: 6
   isCar: 1
   enemyDeathAudio: {fileID: 8300000, guid: a6c703e9d340c6f44a962d363ce1e5a9, type: 3}
