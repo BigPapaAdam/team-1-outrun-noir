@@ -13,6 +13,7 @@ public class EnemyTraits : MonoBehaviour {
     public GameObject shotgunDrop;
     public GameObject Player;
     public GameObject deathObject;
+    public Transform deathLocation;
     private int dropWeapon;
     public int randomDropChance;
     public bool isCar;
@@ -42,7 +43,8 @@ public class EnemyTraits : MonoBehaviour {
         {
             //Get scorecomponent of an object and add the pointWorth;
             WeaponDrop();
-            Instantiate(deathObject, transform.position, transform.rotation);
+            GameLoader.GameInstance.SFXSource.PlayOneShot(enemyDeathAudio);
+            Instantiate(deathObject, deathLocation.position, transform.rotation);
             Destroy(gameObject);
 
             //do NOT change this if statement

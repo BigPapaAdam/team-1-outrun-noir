@@ -25,6 +25,9 @@ public class PlayerAttributes : MonoBehaviour {
     public GameObject ally1Death;
     public GameObject ally2Death;
     public GameObject ally3Death;
+    public Transform death1Location;
+    public Transform death2Location;
+    public Transform death3Location;
 
     public enum activeWeapon { Pistol, Tommy, Shotgun }
     public float pickupTimer;
@@ -163,7 +166,7 @@ public class PlayerAttributes : MonoBehaviour {
                     activeAllies -= 1;
                     allyIcon[activeAllies].gameObject.SetActive(false);
                     GameLoader.GameInstance.SFXSource.PlayOneShot(allyDeathAudio3);
-                    Instantiate(ally3Death, transform.position, transform.rotation);
+                    Instantiate(ally3Death, death3Location.position, transform.rotation);
                     carIsFull = false;
                 }
                 else if (activeAllies > 1)
@@ -171,7 +174,7 @@ public class PlayerAttributes : MonoBehaviour {
                     activeAllies -= 1;
                     allyIcon[activeAllies].gameObject.SetActive(false);
                     GameLoader.GameInstance.SFXSource.PlayOneShot(allyDeathAudio2);
-                    Instantiate(ally2Death, transform.position, transform.rotation);
+                    Instantiate(ally2Death, death2Location.position, transform.rotation);
                     carIsFull = false;
                 }
                 else if (activeAllies > 0)
@@ -179,7 +182,7 @@ public class PlayerAttributes : MonoBehaviour {
                     activeAllies -= 1;
                     allyIcon[activeAllies].gameObject.SetActive(false);
                     GameLoader.GameInstance.SFXSource.PlayOneShot(allyDeathAudio1);
-                    Instantiate(ally1Death, transform.position, transform.rotation);
+                    Instantiate(ally1Death, death1Location.position, transform.rotation);
                     carIsFull = false;
                 }
             }
