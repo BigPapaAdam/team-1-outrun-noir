@@ -26,7 +26,7 @@ public class GameLoader : MonoBehaviour
     public AudioSource MusicSource;
     public AudioSource EngineSource;
     public AudioSource SFXSource;
-    public AudioClip SFX01;
+    public AudioClip[] SFX01;
     public AudioClip SFX02;
     public AudioClip SFX03;
     public Button UpButton;
@@ -51,8 +51,6 @@ public class GameLoader : MonoBehaviour
     public int SceneNumber = 1;
     public int Score = 0;
     public int HighScore = 0;
-
-    private int Value;
 
     private bool IsButtonPressed = false;
 
@@ -84,7 +82,7 @@ public class GameLoader : MonoBehaviour
         SFXSource = SoundManager.transform.GetChild(1).GetComponent<AudioSource>();
         EngineSource = SoundManager.transform.GetChild(2).GetComponent<AudioSource>();
 
-        MusicSource.clip = SFX01;
+        MusicSource.clip = SFX01[0];
 
         FullscreenToggle.onValueChanged.AddListener(delegate { OnFullScreenToggle(); });
         ResolutionDropdown.onValueChanged.AddListener(delegate { OnResolutionChanged(); });
@@ -99,9 +97,20 @@ public class GameLoader : MonoBehaviour
         ShootDropdown.ClearOptions();
 
         Resolutions = Screen.resolutions;
-        foreach (Resolution resolution in Resolutions)
+
+        if(Resolutions != null)
         {
-            ResolutionDropdown.options.Add(new Dropdown.OptionData(resolution.ToString()));
+            foreach (Resolution resolution in Resolutions)
+            {
+                ResolutionDropdown.options.Add(new Dropdown.OptionData(resolution.ToString()));
+            }
+        }
+        else
+        {
+            WindowSize.GetComponent<CanvasScaler>().uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
+            WindowSize.GetComponent<CanvasScaler>().screenMatchMode = CanvasScaler.ScreenMatchMode.MatchWidthOrHeight;
+            WindowSize.GetComponent<CanvasScaler>().matchWidthOrHeight = 0.5f;
+            WindowSize.GetComponent<CanvasScaler>().referenceResolution = new Vector2(1920, 1080);
         }
 
         Codes = Enum.GetNames(typeof(KeyCode));
@@ -178,10 +187,11 @@ public class GameLoader : MonoBehaviour
     {
         SceneNumber -= 1;
         Videoplayer.clip = Cutscenes[SceneNumber];
-        SceneNumber += 1;
 
         if (SceneNumber < 3)
         {
+            SceneNumber += 1;
+
             WindowSize.gameObject.SetActive(false);
 
             if(SceneNumber != 1 && SceneNumber < 3)
@@ -427,7 +437,7 @@ public class GameLoader : MonoBehaviour
         }
         else
         {
-            Gamemanager.ResolutionIndex = 1;
+            Gamemanager.ResolutionIndex = Screen.currentResolution.width;
             Gamemanager.FullScreen = FullscreenToggle.isOn;
             Gamemanager.MusicVolume = MusicSlider.value;
             Gamemanager.SFXVolume = SFXSlider.value;
@@ -436,11 +446,8 @@ public class GameLoader : MonoBehaviour
             Gamemanager.FireKey = CharacterShoot.ToString();
             Gamemanager.HighScore = 0;
 
-            Value = Screen.currentResolution.width;
-            ResolutionDropdown.value = 0;
-
             int i = 0;
-            while(Value != Resolutions[i].width)
+            while(Gamemanager.ResolutionIndex != Resolutions[i].width)
             {
                 i++;
             }

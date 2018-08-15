@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class PlayerAttributes : MonoBehaviour {
 
     public float playerMaxHealth;
@@ -47,7 +48,7 @@ public class PlayerAttributes : MonoBehaviour {
     // Use this for initialization
     void Start () {
         GameLoader.GameInstance.EngineSource.clip = EngineSound;
-
+        GameLoader.GameInstance.MusicSource.clip = GameLoader.GameInstance.SFX01[GameLoader.GameInstance.SceneNumber];
         GameLoader.GameInstance.EngineSource.Play();
 
         for (int i = 0; i < activeAllies; i++)
@@ -70,7 +71,8 @@ public class PlayerAttributes : MonoBehaviour {
             Destroy(gameObject);
 
             GameLoader.GameInstance.SFXSource.PlayOneShot(playerDeathAudio);
-            GameLoader.GameInstance.SFXSource.clip = GameLoader.GameInstance.SFX01;
+            GameLoader.GameInstance.MusicSource.clip = GameLoader.GameInstance.SFX01[0];
+            SceneManager.LoadScene(0, LoadSceneMode.Single);
 
         }
 
