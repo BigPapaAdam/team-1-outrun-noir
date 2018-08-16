@@ -1593,7 +1593,7 @@ MonoBehaviour:
   hasPickup: 1
   tommyPickupAudio: {fileID: 8300000, guid: 3fea3c32a0ae3f8439a337abea8d6b9f, type: 3}
   shotgunPickupAudio: {fileID: 8300000, guid: 3fea3c32a0ae3f8439a337abea8d6b9f, type: 3}
-  revertToPistolAudio: {fileID: 8300000, guid: f7ac41c1748ae594b8aa52de8f87eac5, type: 3}
+  revertToPistolAudio: {fileID: 0}
 --- !u!114 &114445382426516432
 MonoBehaviour:
   m_ObjectHideFlags: 1

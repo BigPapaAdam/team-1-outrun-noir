@@ -2936,6 +2936,11 @@ Prefab:
       propertyPath: CutsceneAudio.Array.data[2]
       value: 
       objectReference: {fileID: 8300000, guid: 329644a9ecb0db8459519cf68ec4a8d3, type: 3}
+    - target: {fileID: 114842970440432652, guid: 1ffb8a651f0d86e42b143e62edee6921,
+        type: 2}
+      propertyPath: SceneNumber
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1ffb8a651f0d86e42b143e62edee6921, type: 2}
   m_IsPrefabParent: 0

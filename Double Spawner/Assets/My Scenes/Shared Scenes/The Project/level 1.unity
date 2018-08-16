@@ -384,7 +384,12 @@ Prefab:
     - target: {fileID: 224238467146338368, guid: 3724f42bcd472f241981ea083dfc87f0,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -2.8504639
+      value: -2.8504333
+      objectReference: {fileID: 0}
+    - target: {fileID: 224238467146338368, guid: 3724f42bcd472f241981ea083dfc87f0,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 26.783936
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3724f42bcd472f241981ea083dfc87f0, type: 2}
@@ -709,6 +714,11 @@ Prefab:
       objectReference: {fileID: 379413931}
     - target: {fileID: 114842970440432652, guid: 1ffb8a651f0d86e42b143e62edee6921,
         type: 2}
+      propertyPath: ShootDropdown
+      value: 
+      objectReference: {fileID: 99354646}
+    - target: {fileID: 114842970440432652, guid: 1ffb8a651f0d86e42b143e62edee6921,
+        type: 2}
       propertyPath: ContinueButton
       value: 
       objectReference: {fileID: 591121842}
@@ -724,11 +734,6 @@ Prefab:
       objectReference: {fileID: 532002924}
     - target: {fileID: 114842970440432652, guid: 1ffb8a651f0d86e42b143e62edee6921,
         type: 2}
-      propertyPath: ShootDropdown
-      value: 
-      objectReference: {fileID: 99354646}
-    - target: {fileID: 114842970440432652, guid: 1ffb8a651f0d86e42b143e62edee6921,
-        type: 2}
       propertyPath: ScoreText
       value: 
       objectReference: {fileID: 1519928425}
@@ -742,6 +747,16 @@ Prefab:
       propertyPath: WindowSize
       value: 
       objectReference: {fileID: 99354648}
+    - target: {fileID: 328293508399548288, guid: 1ffb8a651f0d86e42b143e62edee6921,
+        type: 2}
+      propertyPath: m_Looping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114842970440432652, guid: 1ffb8a651f0d86e42b143e62edee6921,
+        type: 2}
+      propertyPath: SceneNumber
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1ffb8a651f0d86e42b143e62edee6921, type: 2}
   m_IsPrefabParent: 0
@@ -1252,6 +1267,11 @@ Prefab:
       propertyPath: weaponTimerUI
       value: 
       objectReference: {fileID: 416280062}
+    - target: {fileID: 114341214086429688, guid: 754fb017e3ffe3247ab303dcbc5b365e,
+        type: 2}
+      propertyPath: revertToPistolAudio
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 754fb017e3ffe3247ab303dcbc5b365e, type: 2}
   m_IsPrefabParent: 0
@@ -1527,11 +1547,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 13
       objectReference: {fileID: 0}
-    - target: {fileID: 114511750121075010, guid: 2a4f8027a7f487042af64d00838681fd,
-        type: 2}
-      propertyPath: playerObj
-      value: 
-      objectReference: {fileID: 1274696118}
     - target: {fileID: 114147289274943150, guid: 2a4f8027a7f487042af64d00838681fd,
         type: 2}
       propertyPath: levelDuration

@@ -52,7 +52,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72de1fb56ff1135408c2d40625c925df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelDuration: 300
+  levelTimer: 0
+  levelDuration: 12
 --- !u!114 &114511750121075010
 MonoBehaviour:
   m_ObjectHideFlags: 1

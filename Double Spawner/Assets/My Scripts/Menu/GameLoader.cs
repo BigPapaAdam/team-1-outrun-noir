@@ -201,7 +201,7 @@ public class GameLoader : MonoBehaviour
 
             WindowSize.gameObject.SetActive(false);
 
-            if(SceneNumber != 1 && SceneNumber < 3)
+            if(SceneNumber != 1 && SceneNumber <= 3)
             {
                 GameObject.Find("EGO Spawner Positioner").gameObject.SetActive(false);
                 GameObject.FindGameObjectWithTag("Player").SetActive(false);
@@ -215,6 +215,13 @@ public class GameLoader : MonoBehaviour
                 {
                    GameObject.Destroy(Road);
                 }
+
+                GameObject[] Enemies = GameObject.FindGameObjectsWithTag("Enemy");
+
+                foreach (GameObject Enemy in Enemies)
+                {
+                    GameObject.Destroy(Enemy);
+                }                
 
                 GameObject[] Environments = GameObject.FindGameObjectsWithTag("Environment");
 

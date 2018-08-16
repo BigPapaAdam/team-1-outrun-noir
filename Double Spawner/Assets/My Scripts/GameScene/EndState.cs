@@ -23,14 +23,18 @@ public class EndState : MonoBehaviour {
             if(GameLoader.GameInstance.SceneNumber < SceneManager.sceneCountInBuildSettings)
             {
                 GameLoader.GameInstance.SceneNumber += 1;
-                levelTimer = levelDuration;
+                levelTimer = 600.0f;
                 GameLoader.GameInstance.Play();
             }
             else
             {
                 SceneManager.LoadScene(0, LoadSceneMode.Single);
-            }
-
+            }            
         }
-	}
+
+        //if (levelTimer <= levelDuration && Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    SceneManager.LoadScene(GameLoader.GameInstance.SceneNumber, LoadSceneMode.Single);
+        //}
+    }
 }

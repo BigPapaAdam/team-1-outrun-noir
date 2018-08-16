@@ -276,6 +276,11 @@ Prefab:
       propertyPath: m_AnchoredPosition.x
       value: 0.0012207031
       objectReference: {fileID: 0}
+    - target: {fileID: 224238467146338368, guid: 3724f42bcd472f241981ea083dfc87f0,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 26.784058
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3724f42bcd472f241981ea083dfc87f0, type: 2}
   m_IsPrefabParent: 0
@@ -1322,11 +1327,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 13
       objectReference: {fileID: 0}
-    - target: {fileID: 114511750121075010, guid: 2a4f8027a7f487042af64d00838681fd,
-        type: 2}
-      propertyPath: playerObj
-      value: 
-      objectReference: {fileID: 1274696118}
     - target: {fileID: 114147289274943150, guid: 2a4f8027a7f487042af64d00838681fd,
         type: 2}
       propertyPath: levelDuration
@@ -1882,10 +1882,10 @@ MonoBehaviour:
   minAllyChance: 41
   maxAllyChance: 100
   minPolChance: 0
-  maxPolChance: 69
-  minTriChance: 70
+  maxPolChance: -1
+  minTriChance: 0
   maxTriChance: 100
-  SpawnTimer: 1.5
+  SpawnTimer: 2
   TempTimer: 0
   WhichLane: 0
   WhichEnemy: 0

@@ -695,6 +695,11 @@ Prefab:
       objectReference: {fileID: 379413931}
     - target: {fileID: 114842970440432652, guid: 1ffb8a651f0d86e42b143e62edee6921,
         type: 2}
+      propertyPath: ShootDropdown
+      value: 
+      objectReference: {fileID: 99354646}
+    - target: {fileID: 114842970440432652, guid: 1ffb8a651f0d86e42b143e62edee6921,
+        type: 2}
       propertyPath: ContinueButton
       value: 
       objectReference: {fileID: 99354651}
@@ -708,11 +713,6 @@ Prefab:
       propertyPath: QuitButton
       value: 
       objectReference: {fileID: 99354649}
-    - target: {fileID: 114842970440432652, guid: 1ffb8a651f0d86e42b143e62edee6921,
-        type: 2}
-      propertyPath: ShootDropdown
-      value: 
-      objectReference: {fileID: 99354646}
     - target: {fileID: 114842970440432652, guid: 1ffb8a651f0d86e42b143e62edee6921,
         type: 2}
       propertyPath: ScoreText
@@ -1344,11 +1344,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 13
       objectReference: {fileID: 0}
-    - target: {fileID: 114511750121075010, guid: 2a4f8027a7f487042af64d00838681fd,
-        type: 2}
-      propertyPath: playerObj
-      value: 
-      objectReference: {fileID: 1274696118}
     - target: {fileID: 114147289274943150, guid: 2a4f8027a7f487042af64d00838681fd,
         type: 2}
       propertyPath: levelDuration
@@ -1906,7 +1901,7 @@ MonoBehaviour:
   maxPolChance: 60
   minTriChance: 61
   maxTriChance: 100
-  SpawnTimer: 1.5
+  SpawnTimer: 2
   TempTimer: 0
   WhichLane: 0
   WhichEnemy: 0
