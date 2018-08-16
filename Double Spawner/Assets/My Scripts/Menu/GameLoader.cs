@@ -439,8 +439,8 @@ public class GameLoader : MonoBehaviour
         {
             Gamemanager.ResolutionIndex = Screen.currentResolution.width;
             Gamemanager.FullScreen = FullscreenToggle.isOn;
-            Gamemanager.MusicVolume = MusicSlider.value;
-            Gamemanager.SFXVolume = SFXSlider.value;
+            Gamemanager.MusicVolume = MusicSlider.value = 0.5f;
+            Gamemanager.SFXVolume = SFXSlider.value = 0.5f;
             Gamemanager.UpKey = CharacterMoveUp.ToString();
             Gamemanager.DownKey = CharacterMoveDown.ToString();
             Gamemanager.FireKey = CharacterShoot.ToString();
