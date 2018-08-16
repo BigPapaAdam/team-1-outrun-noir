@@ -273,7 +273,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1347458117717134}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -32.431004, y: 0, z: 2.48}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.3, y: 1, z: 0.3}
   m_Children:
   - {fileID: 4958569711562380}
@@ -727,6 +727,9 @@ MonoBehaviour:
   shotgunDrop: {fileID: 1739118581839880, guid: 63bbb6fd525aa73458054b722c99adb8,
     type: 2}
   Player: {fileID: 0}
+  deathObject: {fileID: 1236974719185596, guid: 4076f7d437d2f0e4fb75f09f098864a6,
+    type: 2}
+  deathLocation: {fileID: 4344982652819516}
   randomDropChance: 4
   isCar: 0
   enemyDeathAudio: {fileID: 8300000, guid: 222e758d87969bd48b57d318f7a5a440, type: 3}

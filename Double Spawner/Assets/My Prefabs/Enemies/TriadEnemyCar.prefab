@@ -162,6 +162,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1901747079062516
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4373763382740712}
+  m_Layer: 10
+  m_Name: explosion location
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1976452640978208
 GameObject:
   m_ObjectHideFlags: 1
@@ -185,7 +200,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1319984664971954}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -32.9, y: 0.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4443531707620078}
@@ -219,6 +234,19 @@ Transform:
   m_Father: {fileID: 4695520766951216}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!4 &4373763382740712
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1901747079062516}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.58, y: 0, z: -0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4443531707620078}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4434863631938750
 Transform:
   m_ObjectHideFlags: 1
@@ -245,6 +273,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4434863631938750}
+  - {fileID: 4373763382740712}
   m_Father: {fileID: 4152888411663786}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
@@ -563,6 +592,9 @@ MonoBehaviour:
   shotgunDrop: {fileID: 1739118581839880, guid: 63bbb6fd525aa73458054b722c99adb8,
     type: 2}
   Player: {fileID: 0}
+  deathObject: {fileID: 1973254304428864, guid: 87cf210408ea83b4a90f072c070e4b40,
+    type: 2}
+  deathLocation: {fileID: 4373763382740712}
   randomDropChance: 6
   isCar: 1
   enemyDeathAudio: {fileID: 8300000, guid: a6c703e9d340c6f44a962d363ce1e5a9, type: 3}

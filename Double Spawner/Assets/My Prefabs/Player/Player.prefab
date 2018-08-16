@@ -1675,6 +1675,14 @@ MonoBehaviour:
   shooterSprite2: {fileID: 1551466005808856}
   shooterSprite3: {fileID: 1005155522395032}
   FullHouseIcon: {fileID: 0}
+  carDamage1: {fileID: 1611861361320662}
+  carDamage2: {fileID: 1463392228897692}
+  ally1Death: {fileID: 1914706190176404, guid: fbd7ad2677d248d499ba0b8b7e04fea7, type: 2}
+  ally2Death: {fileID: 1393335682659234, guid: 1c6ea7dfbfc1c8e44a6452bdbeab8606, type: 2}
+  ally3Death: {fileID: 1818232547198912, guid: 4b0691bcc9f401b41bf916b534ceb030, type: 2}
+  death1Location: {fileID: 4735752834594984}
+  death2Location: {fileID: 4674077813456914}
+  death3Location: {fileID: 4317376634223436}
   pickupTimer: 0
   pickupDuration: 0
   weaponTimerUI: {fileID: 0}

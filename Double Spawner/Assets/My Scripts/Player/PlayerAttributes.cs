@@ -20,6 +20,15 @@ public class PlayerAttributes : MonoBehaviour {
     public GameObject shooterSprite3;
     public GameObject FullHouseIcon;
 
+    public GameObject carDamage1;
+    public GameObject carDamage2;
+    public GameObject ally1Death;
+    public GameObject ally2Death;
+    public GameObject ally3Death;
+    public Transform death1Location;
+    public Transform death2Location;
+    public Transform death3Location;
+
     public enum activeWeapon { Pistol, Tommy, Shotgun }
     public float pickupTimer;
     public float pickupDuration;
@@ -75,6 +84,16 @@ public class PlayerAttributes : MonoBehaviour {
             SceneManager.LoadScene(0, LoadSceneMode.Single);
 
         }
+        else if (playerHealth == 2)
+        {
+            carDamage1.SetActive(true);
+        }
+        else if (playerHealth == 1)
+        {
+            carDamage2.SetActive(true);
+        }
+
+        
 
         if (activeAllies == 0)
         {
@@ -147,7 +166,7 @@ public class PlayerAttributes : MonoBehaviour {
                     activeAllies -= 1;
                     allyIcon[activeAllies].gameObject.SetActive(false);
                     GameLoader.GameInstance.SFXSource.PlayOneShot(allyDeathAudio3);
-
+                    Instantiate(ally3Death, death3Location.position, transform.rotation);
                     carIsFull = false;
                 }
                 else if (activeAllies > 1)
@@ -155,7 +174,7 @@ public class PlayerAttributes : MonoBehaviour {
                     activeAllies -= 1;
                     allyIcon[activeAllies].gameObject.SetActive(false);
                     GameLoader.GameInstance.SFXSource.PlayOneShot(allyDeathAudio2);
-
+                    Instantiate(ally2Death, death2Location.position, transform.rotation);
                     carIsFull = false;
                 }
                 else if (activeAllies > 0)
@@ -163,7 +182,7 @@ public class PlayerAttributes : MonoBehaviour {
                     activeAllies -= 1;
                     allyIcon[activeAllies].gameObject.SetActive(false);
                     GameLoader.GameInstance.SFXSource.PlayOneShot(allyDeathAudio1);
-
+                    Instantiate(ally1Death, death1Location.position, transform.rotation);
                     carIsFull = false;
                 }
             }
