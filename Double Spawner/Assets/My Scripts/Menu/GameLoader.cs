@@ -146,6 +146,8 @@ public class GameLoader : MonoBehaviour
     public void OnMusicSliderChange()
     {
         MusicSource.volume = Gamemanager.Musicvolume = MusicSlider.value;
+        GetComponent<AudioSource>().volume = MusicSource.volume;
+
     }
 
     public void OnSFXSliderChange()
