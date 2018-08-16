@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 81973125412023692}
   - component: {fileID: 114842970440432652}
   - component: {fileID: 328293508399548288}
+  - component: {fileID: 82016717928448976}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -87,6 +88,101 @@ AudioListener:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1742856182996860}
   m_Enabled: 1
+--- !u!82 &82016717928448976
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1742856182996860}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!114 &114842970440432652
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -112,19 +208,23 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 0f072be57afb94742b83a79084d667ed, type: 3}
   - {fileID: 8300000, guid: 7997068d179bf084ab278613737a5eca, type: 3}
   - {fileID: 8300000, guid: 7997068d179bf084ab278613737a5eca, type: 3}
-  SFX02: {fileID: 0}
-  SFX03: {fileID: 0}
+  SFX02: {fileID: 8300000, guid: cab5d347f0bdea149b51e051ea7ecfc4, type: 3}
+  SFX03: {fileID: 8300000, guid: abcae3c5b42ab184587689e8260d1d12, type: 3}
   UpButton: {fileID: 0}
   DownButton: {fileID: 0}
+  ShootDropdown: {fileID: 0}
   ContinueButton: {fileID: 0}
   OptionsButton: {fileID: 0}
   QuitButton: {fileID: 0}
   Videoplayer: {fileID: 328293508399548288}
   Cutscenes:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  ShootDropdown: {fileID: 0}
+  - {fileID: 32900000, guid: 14d9619d5f5a43c4e978f3588c1bc4c7, type: 3}
+  - {fileID: 32900000, guid: b4c7352e8cd7c1844b44ea58bd23dcf2, type: 3}
+  - {fileID: 32900000, guid: ee9bbe792658df645b64a829c55f5cd9, type: 3}
+  CutsceneAudio:
+  - {fileID: 8300000, guid: debd482db66ada847b5d7c839c223245, type: 3}
+  - {fileID: 8300000, guid: 1ffcecd40f7c6d0448d342d20c84e13f, type: 3}
+  - {fileID: 8300000, guid: 561096d104f750f478da62c2df33e5fc, type: 3}
   ScoreText: {fileID: 0}
   HighScoreText: {fileID: 0}
   WindowSize: {fileID: 0}

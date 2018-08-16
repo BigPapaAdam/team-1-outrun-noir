@@ -31,15 +31,16 @@ public class GameLoader : MonoBehaviour
     public AudioClip SFX03;
     public Button UpButton;
     public Button DownButton;
+    public Dropdown ShootDropdown;
     public Button ContinueButton;
     public Button OptionsButton;
     public Button QuitButton;
     public VideoPlayer Videoplayer;
     public VideoClip[] Cutscenes;
+    public AudioClip[] CutsceneAudio;
     //public Button ShootButton;
     //public Dropdown UpDropdown;
     //public Dropdown DownDropdown;
-    public Dropdown ShootDropdown;
     public Text ScoreText;
     public Text HighScoreText;
     public Canvas WindowSize;
@@ -186,7 +187,12 @@ public class GameLoader : MonoBehaviour
     public void Play()
     {
         SceneNumber -= 1;
+        Debug.Log(SceneNumber);
         Videoplayer.clip = Cutscenes[SceneNumber];
+        GetComponent<AudioSource>().clip = CutsceneAudio[SceneNumber];
+        GetComponent<AudioSource>().Play();
+        MusicSource.clip = CutsceneAudio[SceneNumber];
+        MusicSource.Play();
 
         if (SceneNumber < 3)
         {
