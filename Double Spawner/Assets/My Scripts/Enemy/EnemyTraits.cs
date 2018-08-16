@@ -16,6 +16,8 @@ public class EnemyTraits : MonoBehaviour {
     public GameObject deathObject;
     public GameObject carDamage1;
     public GameObject carDamage2;
+    public GameObject alertIconObj;
+    public GameObject alertSpawnPoint;
     public Transform deathLocation;
     private int dropWeapon;
     public int randomDropChance;
@@ -36,6 +38,7 @@ public class EnemyTraits : MonoBehaviour {
         unchangedEnemySpeed = enemySpeed;
         GameLoader.GameInstance.SFXSource.PlayOneShot(spawnAudio);
         maxHealth = enemyHealth;
+        Instantiate(alertIconObj, alertSpawnPoint.transform.position, alertSpawnPoint.transform.rotation);
     }
 
     // Update is called once per frame
