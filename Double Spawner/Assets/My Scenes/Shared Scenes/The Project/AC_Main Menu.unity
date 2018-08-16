@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2921,6 +2921,21 @@ Prefab:
       propertyPath: WindowSize
       value: 
       objectReference: {fileID: 1819559091}
+    - target: {fileID: 114842970440432652, guid: 1ffb8a651f0d86e42b143e62edee6921,
+        type: 2}
+      propertyPath: CutsceneAudio.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 0fdec09829c12994dbc469bbbf32f388, type: 3}
+    - target: {fileID: 114842970440432652, guid: 1ffb8a651f0d86e42b143e62edee6921,
+        type: 2}
+      propertyPath: CutsceneAudio.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 7177a09ce4c1a87458ea15c19258c03d, type: 3}
+    - target: {fileID: 114842970440432652, guid: 1ffb8a651f0d86e42b143e62edee6921,
+        type: 2}
+      propertyPath: CutsceneAudio.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 329644a9ecb0db8459519cf68ec4a8d3, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1ffb8a651f0d86e42b143e62edee6921, type: 2}
   m_IsPrefabParent: 0
