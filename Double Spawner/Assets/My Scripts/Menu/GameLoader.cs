@@ -189,7 +189,6 @@ public class GameLoader : MonoBehaviour
     public void Play()
     {
         SceneNumber -= 1;
-        Debug.Log(SceneNumber);
         Videoplayer.clip = Cutscenes[SceneNumber];
         GetComponent<AudioSource>().clip = CutsceneAudio[SceneNumber];
         GetComponent<AudioSource>().Play();
@@ -210,7 +209,7 @@ public class GameLoader : MonoBehaviour
                 GameObject.Find("EGO Road Paver").gameObject.SetActive(false);
                 GameObject.Find("EGO Enviro Paver").gameObject.SetActive(false);
 
-                GameObject[] Roads = GameObject.FindGameObjectsWithTag("road");
+                GameObject[] Roads = GameObject.FindGameObjectsWithTag("Road");
 
                 foreach(GameObject Road in Roads)
                 {

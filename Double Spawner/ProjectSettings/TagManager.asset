@@ -16,6 +16,8 @@ TagManager:
   - MotoAimActivator
   - pathBot
   - pathTop
+  - Environment
+  - Road
   layers:
   - Default
   - TransparentFX
