@@ -1885,7 +1885,7 @@ MonoBehaviour:
   maxPolChance: 69
   minTriChance: 70
   maxTriChance: 100
-  SpawnTimer: 2.5
+  SpawnTimer: 1.5
   TempTimer: 0
   WhichLane: 0
   WhichEnemy: 0
