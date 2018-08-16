@@ -22,16 +22,13 @@ public class EndState : MonoBehaviour {
 
             if(GameLoader.GameInstance.SceneNumber < SceneManager.sceneCountInBuildSettings)
             {
-                Debug.Log(GameLoader.GameInstance.SceneNumber);
                 GameLoader.GameInstance.SceneNumber += 1;
-                Debug.Log(GameLoader.GameInstance.SceneNumber);
                 levelTimer = levelDuration;
                 GameLoader.GameInstance.Play();
             }
             else
             {
-                GameLoader.GameInstance.SceneNumber = 0;
-                GameLoader.GameInstance.Play();
+                SceneManager.LoadScene(0, LoadSceneMode.Single);
             }
 
         }
