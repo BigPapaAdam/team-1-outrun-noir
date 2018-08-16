@@ -594,6 +594,8 @@ MonoBehaviour:
   Player: {fileID: 0}
   deathObject: {fileID: 1973254304428864, guid: 87cf210408ea83b4a90f072c070e4b40,
     type: 2}
+  carDamage1: {fileID: 1066293518145038}
+  carDamage2: {fileID: 1985333568921306}
   deathLocation: {fileID: 4921757364783834}
   randomDropChance: 8
   isCar: 1

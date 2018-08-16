@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyTraits : MonoBehaviour {
     public int enemyHealth = 5;
     public float enemySpeed = 0.1f;
+    private float maxHealth;
     public float unchangedEnemySpeed;
     public int pointWorth;
 
@@ -13,6 +14,8 @@ public class EnemyTraits : MonoBehaviour {
     public GameObject shotgunDrop;
     public GameObject Player;
     public GameObject deathObject;
+    public GameObject carDamage1;
+    public GameObject carDamage2;
     public Transform deathLocation;
     private int dropWeapon;
     public int randomDropChance;
@@ -32,7 +35,7 @@ public class EnemyTraits : MonoBehaviour {
         Player = GameObject.FindGameObjectWithTag("Player");
         unchangedEnemySpeed = enemySpeed;
         GameLoader.GameInstance.SFXSource.PlayOneShot(spawnAudio);
-
+        maxHealth = enemyHealth;
     }
 
     // Update is called once per frame
@@ -48,24 +51,34 @@ public class EnemyTraits : MonoBehaviour {
             Destroy(gameObject);
 
             //do NOT change this if statement
-            if(Player.GetComponent<PlayerAttributes>().carIsFull == true && Player.GetComponent<PickupManager>().hasPickup == true)
+            if (Player.GetComponent<PlayerAttributes>().carIsFull == true && Player.GetComponent<PickupManager>().hasPickup == true)
             {
                 GameLoader.GameInstance.Score += (pointWorth * 2);
             }
             else
             {
                 GameLoader.GameInstance.Score += pointWorth;
-                
+
             }
 
             GameLoader.GameInstance.ScoreText.text = "Score: " + GameLoader.GameInstance.Score.ToString();
 
-            if(GameLoader.GameInstance.Score > GameLoader.GameInstance.HighScore)
+            if (GameLoader.GameInstance.Score > GameLoader.GameInstance.HighScore)
             {
                 GameLoader.GameInstance.HighScore = GameLoader.GameInstance.Score;
                 GameLoader.GameInstance.HighScoreText.text = "High Score : " + GameLoader.GameInstance.HighScore.ToString();
             }
         }
+        else if (enemyHealth <= maxHealth * 2/ 3 && enemyHealth > maxHealth / 3)
+        {
+            carDamage1.SetActive(true);
+        }
+        else if (enemyHealth <= maxHealth / 3)
+        {
+            carDamage2.SetActive(true);
+
+        }
+
     }
 
     public void OnCollisionEnter(Collision collide)

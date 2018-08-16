@@ -257,11 +257,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1646023230171062}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.34, y: 0, z: 1.2199998}
+  m_LocalPosition: {x: -0.09999989, y: 0.2, z: 0.9430009}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4775530085211834}
-  m_RootOrder: 2
+  m_Father: {fileID: 4387638931785304}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4373113855193070
 Transform:
@@ -274,7 +274,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4775530085211834}
-  m_RootOrder: 6
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4384618497618778
 Transform:
@@ -296,9 +296,13 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1460660879227620}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1.22}
+  m_LocalPosition: {x: 0.12, y: 0, z: 0.374}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 4551377251215008}
+  - {fileID: 4252266561506286}
+  - {fileID: 4937826994145948}
+  - {fileID: 4493804051095634}
   m_Father: {fileID: 4775530085211834}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -308,26 +312,26 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1909237335254240}
-  m_LocalRotation: {x: 0, y: 0.17364816, z: 0, w: 0.9848078}
-  m_LocalPosition: {x: 0.79, y: 0, z: 0.72}
+  m_LocalRotation: {x: 0, y: 0.06104851, z: 0, w: 0.99813485}
+  m_LocalPosition: {x: 0.29999992, y: 0.2, z: 0.44699883}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4775530085211834}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 20, z: 0}
+  m_Father: {fileID: 4387638931785304}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 7, z: 0}
 --- !u!4 &4551377251215008
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1325078090020008}
-  m_LocalRotation: {x: 0, y: -0.17364825, z: 0, w: 0.9848078}
-  m_LocalPosition: {x: -0.7, y: 0, z: 0.67}
+  m_LocalRotation: {x: 0, y: -0.061048605, z: 0, w: 0.99813485}
+  m_LocalPosition: {x: -0.14999996, y: 0.2, z: 0.44699883}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4775530085211834}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: -20, z: 0}
+  m_Father: {fileID: 4387638931785304}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: -7, z: 0}
 --- !u!4 &4559104727730084
 Transform:
   m_ObjectHideFlags: 1
@@ -339,7 +343,7 @@ Transform:
   m_LocalScale: {x: 2, y: 4, z: 2}
   m_Children: []
   m_Father: {fileID: 4775530085211834}
-  m_RootOrder: 5
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!4 &4765190174918398
 Transform:
@@ -365,10 +369,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 2}
   m_Children:
   - {fileID: 4387638931785304}
-  - {fileID: 4551377251215008}
-  - {fileID: 4252266561506286}
-  - {fileID: 4937826994145948}
-  - {fileID: 4493804051095634}
   - {fileID: 4559104727730084}
   - {fileID: 4373113855193070}
   m_Father: {fileID: 4870308697930182}
@@ -397,11 +397,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1693197928383494}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.29, y: 0, z: 1.2199998}
+  m_LocalPosition: {x: 0.29499993, y: 0.2, z: 0.94300103}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4775530085211834}
-  m_RootOrder: 3
+  m_Father: {fileID: 4387638931785304}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &23909122049019884
 MeshRenderer:
@@ -664,6 +664,8 @@ MonoBehaviour:
   Player: {fileID: 0}
   deathObject: {fileID: 1973254304428864, guid: 87cf210408ea83b4a90f072c070e4b40,
     type: 2}
+  carDamage1: {fileID: 0}
+  carDamage2: {fileID: 0}
   deathLocation: {fileID: 4373113855193070}
   randomDropChance: 4
   isCar: 0
