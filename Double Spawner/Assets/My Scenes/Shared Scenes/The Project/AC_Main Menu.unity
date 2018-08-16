@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1729,6 +1729,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 82905086625476952, guid: defe113f73613c84dacb023254c75aca,
+        type: 2}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: defe113f73613c84dacb023254c75aca, type: 2}
   m_IsPrefabParent: 0
@@ -2916,24 +2921,6 @@ Prefab:
       propertyPath: WindowSize
       value: 
       objectReference: {fileID: 1819559091}
-    - target: {fileID: 114842970440432652, guid: 1ffb8a651f0d86e42b143e62edee6921,
-        type: 2}
-      propertyPath: Cutscenes.Array.data[0]
-      value: 
-      objectReference: {fileID: 32900000, guid: 14d9619d5f5a43c4e978f3588c1bc4c7,
-        type: 3}
-    - target: {fileID: 114842970440432652, guid: 1ffb8a651f0d86e42b143e62edee6921,
-        type: 2}
-      propertyPath: Cutscenes.Array.data[1]
-      value: 
-      objectReference: {fileID: 32900000, guid: b4c7352e8cd7c1844b44ea58bd23dcf2,
-        type: 3}
-    - target: {fileID: 114842970440432652, guid: 1ffb8a651f0d86e42b143e62edee6921,
-        type: 2}
-      propertyPath: Cutscenes.Array.data[2]
-      value: 
-      objectReference: {fileID: 32900000, guid: ee9bbe792658df645b64a829c55f5cd9,
-        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1ffb8a651f0d86e42b143e62edee6921, type: 2}
   m_IsPrefabParent: 0
